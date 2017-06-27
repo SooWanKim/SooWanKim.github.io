@@ -3,7 +3,7 @@ layout: default
 title: Kim
 ---
 
-<div class= "posts" >
+<div class="posts">
   {% for post in site.posts %}
   {% if post.layout == "post" %}
     <div class="post-list-wrapper">
