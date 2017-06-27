@@ -3,15 +3,15 @@ layout: default
 title: Kim
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
-  {% if post.layout == "post" %}
-      <nav class="site-nav">
+  <nav class="site-nav">
             <a href="/about">About</a> 
             <a href="/">Posts</a>
             <!-- <a href="/slide">Slides</a> -->
           </nav>
-  
+
+<div class="posts">
+  {% for post in site.posts %}
+  {% if post.layout == "post" %}
     <div class="post-list-wrapper">
       <div class="post-list-date">
         {{ post.date | date_to_string }}
