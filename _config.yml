@@ -1,3 +1,7 @@
 theme: jekyll-theme-hacker
 title: Kim
-email: herosdoor@paran.com
+
+author:
+  name: swkim
+  url:  https://swkim.github.io/
+  email: herosdoor@paran.com
