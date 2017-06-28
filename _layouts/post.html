@@ -1,11 +1,15 @@
 ---
 layout: default
 ---
-<div class="post" max-width="200px">
+<div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <span class="post-date">{{ page.date | date_to_string }}</span>
   {{ content }}
 </div>
+
+<div class="post-content" >
+    {{ content }}
+  </div>
 
 <div class="fb-like" data-href="http://SooWanKim.github.io{{page.url}}" data-layout="standard" data-action="like" data-size="big" data-show-faces="false" data-share="true"></div>
 <div class="fb-comments" data-href="http://SooWanKim.github.io{{page.url}}" data-width="720" data-numposts="5"></div>
