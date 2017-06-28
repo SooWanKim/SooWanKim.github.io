@@ -3,7 +3,7 @@ layout: post
 title : 게임프로그래머와 기획
 ---
 
-http://blog.naver.com/mediahazard/220694033774
+[http://blog.naver.com/mediahazard/220694033774](http://blog.naver.com/mediahazard/220694033774)
 
 ```markdown
 프로그래머들은 우아한 프로그램 설계를 하고, 프로그램은 다루기 편하고 심플하게 동작합니다. 
