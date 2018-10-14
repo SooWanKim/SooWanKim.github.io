@@ -3,7 +3,7 @@ layout: post
 title: C# FindAllHTMLTag
 ---
 	
-**Regex를 사용해서 string안에 HTMLTag 다찾기 **
+**Regex를 사용해서 string안에 HTMLTag 다찾기**
 
 ```markdown
 string pattern2 = @"(<[^>]*>)";
