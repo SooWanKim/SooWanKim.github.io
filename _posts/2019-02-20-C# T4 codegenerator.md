@@ -5,8 +5,9 @@ title: C# T4 code generator로 cs 파일 자동 생성하기
 
 **T4를 사용해서 cs 파일 변수 전달해서 만들기**
 
-#Main
+
 ```markdown
+# Main
 
 using System;
 using System.Collections.Generic;
@@ -33,10 +34,10 @@ namespace T4Generate_
     }
 }
 ```
-#tt 확장자 파일
+
 
 ``` markdown
-
+# tt 확장자 파일
 <#@ template debug="true" hostspecific="true" language="C#" #>
 <#@ assembly name="System.Core" #>
 <#@ import namespace="System.Linq" #>
@@ -57,10 +58,9 @@ public class Player<#=StateName#>Test
 
 ```
 
+```markdown
 # 유니티에서 Editor로 state 코드 생성하기 
 # https://www.nuget.org/packages/Mono.TextTemplating/  TextTemplating를 받아야 사용가능
-
-```markdown
 
 using UnityEngine;
 using UnityEngine.UI;
