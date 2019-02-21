@@ -31,7 +31,7 @@
  
 ![](/_posts/study/TextTemplateTransformationToolkit/2.png)
 
-사용하는 laguage,  namepspace와 확장자.  debug할지 여부( 중단점을 걸면 가능) . hostspecific이거는 모름
+사용하는 laguage,  namespace와 확장자.  debug할지 여부( 중단점을 걸면 가능) . hostspecific 밑에서
 
 ![](/_posts/study/TextTemplateTransformationToolkit/3.png)
 
@@ -104,3 +104,64 @@ class MyGeneratedClass {
   private int P3 = 0;
 }
 ```
+
+프로그램 코드를 생성할 때는 템플릿에서 실행되는 생성 코드와 그 결과로 생성된, 솔루션의 일부분이 되는 코드를 혼동하지 않아야됨.
+
+# 텍스트 템플릿 구조 지정
+
+실제 프로그래밍에서는 대개 템플릿 코드를 다음의 두 부분으로 구분
+
+변수에서 값은 설정하지만 텍스트 블록은 포함하지 않는 구성(데이터 수집) 부분. 위의 예에서 이 부분은 properties 초기화
+
+변수의 값을 사용하는 텍스트 생성 부분. 위의 예에서는 foreach(...){...}에 해당
+
+코드를 반드시 이와 같이 분리해야 하는 것은 아니지만 이 스타일을 사용하면 텍스트를 포함하는 부분을 보다 단순하게 작성하여 
+
+템플릿을 더 쉽게 읽을 수 있다고 함
+
+# 파일 또는 기타 소스 읽기
+
+```markdown
+<# var properties = File.ReadLines("C:\\propertyList.txt");#>
+...
+<# foreach (string propertyName in properties) { #>
+...
+```
+
+# 상대 경로 이름을 사용하여 파일 열기
+
+텍스트 템플릿을 기준으로 하는 위치에서 파일을 로드하려는 경우 this.Host.ResolvePath()를 사용
+
+this.Host를 사용하려면 hostspecific="true"
+
+```markdown
+<# string fileName = this.Host.ResolvePath("filename.txt");
+  string [] properties = File.ReadLines(filename);
+#>
+...
+<#  foreach (string propertyName in properties { #>
+...
+```
+
+# 파일을 읽어서 내용을 변수 이름으로 할당하기
+```markdown
+
+<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ assembly name="System.Xml.dll" #>
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="System.IO" #>
+<#@ output extension=".cs" #>
+<# string fileName = this.Host.ResolvePath("readFile.txt");#>
+<# 
+	var fileContents = File.ReadAllText(fileName); 
+#>
+
+// This is generated code:
+class MyGeneratedClass {
+
+ private string <#= fileContents #>;
+	
+}
+
+``` 
+// readFile.txt에 myVariable 입력했으면 string 변수는 myVariable
