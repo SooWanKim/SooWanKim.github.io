@@ -28,5 +28,6 @@
  !(_posts/study/TextTemplateTransformationToolkit/1.png)
  !(1.png)
  !(TextTemplateTransformationToolkit/1.png)
- ![about](public/icon.jpg)
+ ![about](SooWanKim.github.io/public/icon.jpg)
+ public/icon.jpg
  ![a](_posts/study/TextTemplateTransformationToolkit/1.png)
