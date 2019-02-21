@@ -25,9 +25,10 @@
  
  # 만들기
  
- !(_posts/study/TextTemplateTransformationToolkit/1.png)
- !(1.png)
- !(TextTemplateTransformationToolkit/1.png)
- ![about](SooWanKim.github.io/public/icon.jpg)
- public/icon.jpg
- ![a](_posts/study/TextTemplateTransformationToolkit/1.png)
+ ![](/_posts/study/TextTemplateTransformationToolkit/1.png)
+
+파일을 만들면 
+ 
+![](/_posts/study/TextTemplateTransformationToolkit/2.png)
+
+사용하는 laguage,  namepspace와 확장자.  debug할지 여부( 중단점을 걸면 가능) . hostspecific이거는 모름
