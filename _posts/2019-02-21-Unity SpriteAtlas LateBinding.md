@@ -30,7 +30,7 @@ AssetBundle도 쓰고 SpriteAtlas 시스템을 사용하려면 Include in Build�
     
     void RequestLateBindingAtlas(string spriteAtlasName, System.Action<SpriteAtlas> action)
     {
- # 받아 놓은 Atlas가 있는지 체크
+# 받아 놓은 Atlas가 있는지 체크
         if (SpriteCollection.Instance.IsExistSpriteAtlas(spriteAtlasName))
         {
             return;
