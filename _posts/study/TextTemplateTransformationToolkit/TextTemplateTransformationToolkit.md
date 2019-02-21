@@ -25,4 +25,4 @@
  
  # 만들기
  
- _posts/study/1.png
+ _posts/study/TextTemplateTransformationToolkit/1.png
