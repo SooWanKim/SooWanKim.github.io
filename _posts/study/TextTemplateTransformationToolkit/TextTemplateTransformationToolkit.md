@@ -26,3 +26,5 @@
  # 만들기
  
  _posts/study/TextTemplateTransformationToolkit/1.png
+ 1.png
+ TextTemplateTransformationToolkit/1.png
