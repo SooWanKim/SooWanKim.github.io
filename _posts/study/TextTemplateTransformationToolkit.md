@@ -25,4 +25,5 @@
  
  # 만들기
  
+ _posts/study/1.png
  1.png
