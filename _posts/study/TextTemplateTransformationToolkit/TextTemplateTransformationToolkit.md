@@ -165,3 +165,68 @@ class MyGeneratedClass {
 
 ``` 
 // readFile.txt에 myVariable 입력했으면 string 변수는 myVariable
+
+# T4 텍스트 템플릿을 사용하여 런타임 텍스트 생성
+
+Text Template로 파일 만들고 Property를  TextTemplatingFilePreprocessor 이걸로 변경
+
+tt파일 만들기 
+```markdown
+
+<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+
+<#@ parameter type="System.String" name="StateName" #>
+
+<#@ output extension=".cs" #>
+
+public class Player<#=StateName#>Test
+{
+	public void Foo1()
+	{
+
+	}
+}
+	
+```
+
+```markdown
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Diagnostics;
+using Microsoft.VisualStudio.TextTemplating;
+using System.IO;
+
+namespace T4Generate_
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            TextTemplate1 page = new TextTemplate1();
+            page.Session = new TextTemplatingSession();
+            page.Session["StateName"] = "abc";
+            page.Initialize();
+
+            string pageContent = page.TransformText();
+            System.IO.File.WriteAllText("../outputPage.cs", pageContent);
+        }
+    }
+}
+
+```
+위에것 실행했을때 아래 파일이 만들어짐
+```markdown
+public class PlayerabcTest
+{
+	public void Foo1()
+	{
+
+	}
+}
+```
