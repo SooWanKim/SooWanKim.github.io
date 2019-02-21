@@ -3,17 +3,21 @@ layout: post
 title: Unity SpriteAtlas LateBinding
 ---
 
-**SpriteAtlas**에 **Include in Build** flag를 켜고 빌드하면 
+SpriteAtlas에 **Include in Build** flag를 켜고 빌드하면 
+
 Atlas는 포함된 상태로 빌드된다. 
 
 문제는 이러면 개별로 만든 AssetBundle에도 Atlas에 포함된 Sprite가 있으면 AssetBundle에도 포함되서 뽑힌다.
+
 용량만 커지는게 아니라 실제로 Game에서 AssetBundle을 불러와서 사용 하면 빌드에 포함된 Atlas가 있는데도
+
 Memory에 올라가게 된다. Assetbundle하나당 Atlas 하나씩 불러오기 때문에 Memory에 문제가 된다.
 
 AssetBundle도 쓰고 SpriteAtlas 시스템을 사용하려면 Include in Build를 해제하고 빌드 및 AssetBundle을 뽑아야 된다.
-이렇게 하면 AssetBundle에는 Atlas는 빠진 상태로 빌드되고 Scene에 배치된 Sprite도 연결된 SpriteAtlas를 사용하게 된다.
-이 방식을 쓰기위해서는 SpriteAtlas를 AssetBundle로 만들어야 하고 LateBinding을 할때 AssetBundle을 불러와서 생성해야한다.
 
+이렇게 하면 AssetBundle에는 Atlas는 빠진 상태로 빌드되고 Scene에 배치된 Sprite도 연결된 SpriteAtlas를 사용하게 된다.
+
+이 방식을 쓰기위해서는 SpriteAtlas를 AssetBundle로 만들어야 하고 LateBinding을 할때 AssetBundle을 불러와서 생성해야한다.
 
 ```markdown
 
