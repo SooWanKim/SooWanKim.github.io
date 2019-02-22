@@ -46,7 +46,7 @@ TestTextTemplate1.tt파일 밑에 자동으로 TextTextTemplate.txt파일이 만
 1. 템플릿을 편집하고 다른 Visual Studio 창으로 포커스를 변경
 2. 템플릿을 저장하는 경우
 3. Build Menu에서 Transform All T4 Template 누르기.Visual Studio 솔루션에서 모든 템플릿을 변환
-4. 템플릿이 읽는 데이터 파일이 변경 된 경우 실행 되도록 Visual Studio 프로젝트를 설정할 수 있습니다. 
+4. 템플릿이 읽는 데이터 파일이 변경 된 경우 실행 되도록 Visual Studio 프로젝트를 설정가능
 
 # 변수 텍스트 생성
 
