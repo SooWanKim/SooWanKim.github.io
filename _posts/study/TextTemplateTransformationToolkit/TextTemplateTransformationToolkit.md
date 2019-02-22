@@ -230,3 +230,62 @@ public class PlayerabcTest
 	}
 }
 ```
+
+# 유니티에서 사용하기
+
+1. tt 확장자 File, 속성은 TextTemplatingFilePreprocessor
+```markdown
+<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ parameter type="System.String" name="StateName" #>
+<#@ output extension=".cs" #>
+using UnityEngine;
+using System.Collections;
+using System;
+
+namespace Fish_
+{
+	public class <#=StateName#>State : State
+	{
+		FSMFish m_FSMFish = null;
+		// Fish m_Fish;
+
+		public <#=StateName#>State(FSMAnimation fsmAnimation) : base(fsmAnimation)
+		{
+			m_FSMFish = fsmAnimation as FSMFish;
+		}
+
+		public override void OnStart()
+		{
+			if (m_FSMFish == null)
+				return;
+
+			//m_Fish = m_FSMFish.fish;
+
+			if (m_FSMFish.animator != null)
+			{
+				//m_FSMFish.animator.ResetTrigger(MetaData.k_Hash_Move);
+				m_FSMFish.animator.SetTrigger(MetaData.k_Hash_Move);
+			}
+		}
+	}
+}
+```
+
+2. CodeGeneratorEditor
+
+```markdown
+FishStateTemplate page = new FishStateTemplate();
+page.Session = new TextTemplatingSession(); 
+page.Session["StateName"] = m_ClassName;
+page.Initialize();
+
+string pageContent = page.TransformText();
+System.IO.File.WriteAllText($"{filePath}/Fish{m_ClassName}State.cs", pageContent);
+```
+TextTemplatingSession 이것을 사용하려면 
+https://www.nuget.org/packages/Mono.TextTemplating/ 를 다운받아야 되고
+Editor가 Mono.TextTemplating.dll을 포함해야된다.
