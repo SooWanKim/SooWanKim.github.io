@@ -4,6 +4,7 @@ title: vs code에서 ssh 사용
 ---
 
 ![](/_posts/images/1.png)
+gitbash로 붙기
 
 
 # 접속
