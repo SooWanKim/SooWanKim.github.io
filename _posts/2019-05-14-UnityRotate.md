@@ -16,10 +16,6 @@ title: Unity Rotate
 ```
 
 # Quaterinon Rotate
-```markdown
-  Vector3 direction = 값;
-  direction = Quaternion.Euler(0.0f, 0.0f, -deltaAngle) * direction;
-```
 
 ```markdown
  rotateChild.rotation = Quaternion.RotateTowards(rotateChild.rotation, aa, Time.deltaTime * angleSpeed);
