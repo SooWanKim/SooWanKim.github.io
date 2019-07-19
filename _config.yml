@@ -11,7 +11,7 @@ author:
 nav:
   Home:           
     - '/'
-  Blog:           
+  Posts:           
     - '/blog/'
     - { Categories: '/blog/categories/' }
     - { Tags: '/blog/tags/' }
