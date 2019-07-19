@@ -12,7 +12,7 @@ nav:
   Home:           
     - '/'
   Posts:           
-    - '/blog/'
+    - '/_posts/'
     - { Categories: '/blog/categories/' }
     - { Tags: '/blog/tags/' }
   About:          
