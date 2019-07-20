@@ -1,4 +1,5 @@
 ---
 layout: category
-title: BooK
+title: Book
+permalink: '/Book'
 ---
