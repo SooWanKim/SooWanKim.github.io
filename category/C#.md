@@ -1,5 +1,5 @@
 ---
 layout: category
 title: C#
-permalink: '/C##'
+permalink: '/C#'
 ---
