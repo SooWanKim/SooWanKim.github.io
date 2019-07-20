@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Unity SpriteAtlas LateBinding
+categories: [Unity]
 ---
 
 SpriteAtlas에 **Include in Build** flag를 켜고 빌드하면 
