@@ -2,6 +2,7 @@
 layout: post
 title: UnitySerialize Asset
 categories: [Unity]
+
 ---
 	
 ScriptalbeAsset을 사용한 data serialize하기   
