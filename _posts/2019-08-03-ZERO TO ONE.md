@@ -5,6 +5,9 @@ categories: [Book]
 ---
 
 # ZERO TO ONE
+
+![텍스트](http://image.yes24.com/momo/TopCate413/MidCate007/41267180.jpg)
+
 ```markdown
 
 이미 경쟁된곳은 힘들다. 독점이 젤좋다.  책에서는 경쟁보다는 독점이 더 긍정적. 
