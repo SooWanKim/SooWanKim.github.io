@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ZERO TO ONE
-category: [Book]
+categories: [Book]
 ---
 
 # ZERO TO ONE
