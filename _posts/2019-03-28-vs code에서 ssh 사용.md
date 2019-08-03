@@ -1,6 +1,7 @@
 ---
 layout: post
 title: vs code에서 ssh 사용
+categories: [VSCode]
 ---
 
 ![](/_posts/images/1.png)

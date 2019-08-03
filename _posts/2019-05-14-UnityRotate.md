@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Unity Rotate
-category: Unity
+categories: [Unity]
 ---
 
 # Vector Rotate

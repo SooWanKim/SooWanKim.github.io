@@ -1,7 +1,7 @@
 ---
 layout: post
 title: C# FindAllHTMLTag
-category: C#
+categories: [C#]
 ---
 	
 **Regex를 사용해서 string안에 HTMLTag 다찾기**

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: C# List Shuffle
-categroy: [C#]
+categories: [C#]
 ---
 
 ```markdown
