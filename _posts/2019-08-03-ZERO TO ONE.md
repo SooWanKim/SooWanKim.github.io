@@ -4,8 +4,6 @@ title: ZERO TO ONE
 categories: [Book]
 ---
 
-# ZERO TO ONE
-
 [![텍스트](http://image.yes24.com/momo/TopCate413/MidCate007/41267180.jpg)](http://www.yes24.com/Product/Goods/14795766?scode=032&OzSrank=1)
 
 ```markdown

@@ -4,7 +4,8 @@ title: English for developers
 categories: [Book]
 ---
 
-# English for developers (it 트렌트로 배우는 개발자 영어 독해)
+[![텍스트](http://image.yes24.com/momo/TopCate566/MidCate009/56582107.jpg)](http://www.yes24.com/Product/Goods/19992192?scode=032&OzSrank=1)
+
 ```markdown
 
 책의 내용은 단순하다. it라는 직종에서 일하는 개발자들이 접할 수 있는 it관련 기사를 영어로 독해 할 수 있게 제공해주면서
