@@ -4,21 +4,15 @@ title: ZERO TO ONE
 categories: [Book]
 ---
 
-[![텍스트](http://image.yes24.com/momo/TopCate413/MidCate007/41267180.jpg)](http://www.yes24.com/Product/Goods/14795766?scode=032&OzSrank=1)
+[![텍스트](http://image.yes24.com/momo/TopCate413/MidCate007/41267180.jpg){: width="200" height="300"}](http://www.yes24.com/Product/Goods/14795766?scode=032&OzSrank=1)
 
 ```markdown
 
 이미 경쟁된곳은 힘들다. 독점이 젤좋다.  책에서는 경쟁보다는 독점이 더 긍정적. 
-
 기업은 경쟁을 할수록 얻는것은 줄어든다. 성공적인 기업은 독점을 해야됨.
-
 독점이 되려면 무에서 유, 0 에서 1정도의 의미. 검색 분야의 구글
-
 독점기업의 특징은 독자기술, 네트워크효과(트위터),  규모의 경제, 브랜드 전략(애플).
-
 작게 시작해서 독점해라. 아마존은 책부터 시작하여 카테고리를 늘려 모든걸 팔고 있다.
-
 시장을 파괴하려고 하지마라(ex 냅스터) 공존해야됨.
-
 엘론 머스크의 테슬라는 미래에 긍정적이면서도 확실한 확신을 가진 좋은 기업.
 ```
