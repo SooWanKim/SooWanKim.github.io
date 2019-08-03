@@ -1,4 +1,10 @@
+---
+layout: post
+title: C# T4 
+categories: [C#]
+---
 
+ 
  # What is TextTemplateTransformationToolkit?
  
  Text Template Transformation Toolkit (usually referred to as "T4") is a template based text generation framework 
