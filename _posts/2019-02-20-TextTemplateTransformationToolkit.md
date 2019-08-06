@@ -4,7 +4,7 @@ title: C# T4
 categories: [C#]
 ---
 
- # What is TextTemplateTransformationToolkit?
+# What is TextTemplateTransformationToolkit?
  
  Text Template Transformation Toolkit (usually referred to as "T4") is a template based text generation framework 
  
@@ -30,7 +30,7 @@ categories: [C#]
  
  # 자동 파일 만들기
  
- ![](study/TextTemplateTransformationToolkit/1.png)
+![](study/TextTemplateTransformationToolkit/1.png)
 
 파일을 만들면 
  
@@ -46,7 +46,7 @@ property에 customtool 항목이 TextTemplatingFileGenerator 이렇게 되있어
 
 TestTextTemplate1.tt파일 밑에 자동으로 TextTextTemplate.txt파일이 만들어진다.
 
- # 파일 만들어지는 시점
+# 파일 만들어지는 시점
  
 1. 템플릿을 편집하고 다른 Visual Studio 창으로 포커스를 변경
 2. 템플릿을 저장하는 경우
