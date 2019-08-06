@@ -6,7 +6,6 @@ categories: [Book]
 
 [![텍스트](http://image.yes24.com/Goods/11681152/800x0){: width="200" height="300"}](http://www.yes24.com/Product/Goods/11681152?scode=032&OzSrank=1)
 
-```markdown
 서술적인 이름을 사용하라
 
 길고 서술적인 이름이 짧고 어려운 이름보다 낫다. 
@@ -124,5 +123,3 @@ Timely: 테스트는 적시에 작성해야 한다. 단위 테스트는 테스�
 임계영역 설정으로 자료 범위를 제한하라. 
 
 쓰레드는 가능한 독립적으로 구현하라. 
-
-```

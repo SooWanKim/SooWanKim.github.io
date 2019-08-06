@@ -5,13 +5,13 @@ categories: [Unity]
 
 ---
 	
-ScriptalbeAsset을 사용한 data serialize하기   
+#ScriptalbeAsset을 사용한 data serialize하기   
 
 **Unity** 안의 **ScriptableAsset**을 사용하여 instance된 class를 serialize하여 asset export 게임에서 읽어서 바로 사용할 수있다.
 
 ex)  
 
-```markdown
+```c#
 public class animInfo`
 { 
 	string name; 
@@ -24,7 +24,7 @@ animInfo라는 class에 name, position, rotation의 값을 unity editor상에서
  
 # 1.Serialize할 class 만들기
 
-```markdown
+```c#
 [System.Serializable]
 public class AnimInfo
 { 
@@ -36,8 +36,8 @@ public class AnimInfo
 
 class를 serialize하기 위해서는attribute에 **[System.Serializable]** 추가해 줘야 한다.   class 멤버 변수 타입중에  List는 되는데 dictionary는 되지 않아서 따로 만들어야된다
 
-```markdown
 **ScriptableAsset**을 상속받는 class의 data를 List<TKey>, List<TValue> 로 만듬.
+```c#
 public class ScriptableAsset<TKey, TValue> : ScriptableObject 
 {    
 	public List<TKey> _listKey = new List<TKey>();    
@@ -45,12 +45,12 @@ public class ScriptableAsset<TKey, TValue> : ScriptableObject
 }
 ```
  
-```markdown
+```c#
 // AnimInfoAsset은 List<string>, List<AnimInfo>정보를 갖게 된다.
 public class AnimInfoAsset : ScriptableAsset<string, AnimInfo> { } 
 ```
 
-```markdown
+```c#
 //dictionary를 List에 넣기 위해서 따로 만든 class
 [Serializable] 
 public class SerializableDictionary<TKey, TValue> : Dictionary<TKey, TValue>, ISerializationCallbackReceiver  
@@ -94,7 +94,7 @@ public class PlanInfoAsset : ScriptableAsset<int, DictionaryOfStringAndString> {
  
 # 2.Asset 만들기
  
-```markdown
+```c#
 AnimInfoAsset asset = ScriptableObject.CreateInstance<AnimInfoAsset>(); 
 asset .position = 값
 asset.rotation = 값
@@ -112,7 +112,7 @@ BuildPipeline.BuildAssetBundles()
 
 # 4. Asset Import
 
-```markdown
+```c#
 Object[] obj = assetBundle.LoadAllAssets();
 Object type의 obj를  animInfo로 형변환후 사용하면된다.
 animInfo.position 에 export할때 입력한 값이 있을것이다.

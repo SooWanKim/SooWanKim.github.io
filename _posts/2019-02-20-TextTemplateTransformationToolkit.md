@@ -56,7 +56,7 @@ TestTextTemplate1.tt파일 밑에 자동으로 TextTextTemplate.txt파일이 만
 
 # 변수 텍스트 생성
 
-```markdown
+```c#
 <#@ template hostspecific="false" language="C#" #>
 <#@ output extension=".txt" #>
 <#int top = 10;
@@ -67,7 +67,7 @@ for (int i = 0; i<=top; i++)
 <# } #>
 ```
 출력결과물
-```markdown
+```c#
  The square of 0 is 0
  The square of 1 is 1
  The square of 2 is 4
@@ -84,7 +84,7 @@ for (int i = 0; i<=top; i++)
 변수 사용구문은 <# 내용 #> 이렇게
 
 클래스 변수에 템플릿 정보 사용
-```markdown
+```c#
 <#@ template debug="false" hostspecific="false" language="C#" #>
 <#@ output extension=".cs" #>
 <# var properties = new string [] {"P1", "P2", "P3"}; #>
@@ -99,7 +99,7 @@ class MyGeneratedClass {
 ```
 
 출력결과물
-```markdown
+```c#
 // This is generated code:
 class MyGeneratedClass {
   // Generated code:
@@ -127,7 +127,7 @@ class MyGeneratedClass {
 
 # 파일 또는 기타 소스 읽기
 
-```markdown
+```c#
 <# var properties = File.ReadLines("C:\\propertyList.txt");#>
 ...
 <# foreach (string propertyName in properties) { #>
@@ -140,7 +140,7 @@ class MyGeneratedClass {
 
 this.Host를 사용하려면 hostspecific="true"
 
-```markdown
+```c#
 <# string fileName = this.Host.ResolvePath("filename.txt");
   string [] properties = File.ReadLines(filename);
 #>
@@ -150,8 +150,7 @@ this.Host를 사용하려면 hostspecific="true"
 ```
 
 # 파일을 읽어서 내용을 변수 이름으로 할당하기
-```markdown
-
+```c#
 <#@ template debug="false" hostspecific="true" language="C#" #>
 <#@ assembly name="System.Xml.dll" #>
 <#@ import namespace="System.Xml" #>
@@ -177,8 +176,7 @@ class MyGeneratedClass {
 Text Template로 파일 만들고 Property를  TextTemplatingFilePreprocessor 이걸로 변경
 
 tt파일 만들기 
-```markdown
-
+```c#
 <#@ template debug="true" hostspecific="true" language="C#" #>
 <#@ assembly name="System.Core" #>
 <#@ import namespace="System.Linq" #>
@@ -199,7 +197,7 @@ public class Player<#=StateName#>Test
 	
 ```
 
-```markdown
+```c#
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -227,7 +225,7 @@ namespace T4Generate_
 
 ```
 위에것 실행했을때 아래 파일이 만들어짐
-```markdown
+```c#
 public class PlayerabcTest
 {
 	public void Foo1()
@@ -240,7 +238,7 @@ public class PlayerabcTest
 # 유니티에서 사용하기
 
 1. tt 확장자 File, 속성은 TextTemplatingFilePreprocessor
-```markdown
+```c#
 <#@ template debug="true" hostspecific="true" language="C#" #>
 <#@ assembly name="System.Core" #>
 <#@ import namespace="System.Linq" #>
@@ -283,7 +281,7 @@ namespace Fish_
 
 2. CodeGeneratorEditor
 
-```markdown
+```c#
 FishStateTemplate page = new FishStateTemplate();
 page.Session = new TextTemplatingSession(); 
 page.Session["StateName"] = m_ClassName;

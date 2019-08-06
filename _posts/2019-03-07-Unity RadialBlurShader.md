@@ -9,7 +9,7 @@ _Samples는 샘플링 수, _BlurSize는 블러를위해 이미지가 이동한 �
 _MainTex_TexelSize는 하나의 텍셀이 차지하는 크기, 여기서의 _MainTex = ScreenSize 이기 때문에 가로가 1024라면 1/1024 의 값
 
 # Shader code
-```markdown
+```c#
 Shader "ImageEffect/RadialBlur"
 {
     Properties
@@ -78,7 +78,7 @@ Shader "ImageEffect/RadialBlur"
 ```
 
 # CS Code
-```markdown
+```c#
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

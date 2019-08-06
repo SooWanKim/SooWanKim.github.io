@@ -6,7 +6,7 @@ categories: [C#]
 	
 **Regex를 사용해서 string안에 HTMLTag 다찾기**
 
-```markdown
+```c#
 string pattern2 = @"(<[^>]*>)";
 var allTagList = new List<string>();
 

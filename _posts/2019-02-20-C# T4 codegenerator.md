@@ -7,9 +7,8 @@ categories: [C#]
 **T4를 사용해서 cs 파일 변수 전달해서 만들기**
 
 
-```markdown
 # Main
-
+```c#
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,8 +36,8 @@ namespace T4Generate_
 ```
 
 
-``` markdown
 # tt 확장자 파일
+``` c#
 <#@ template debug="true" hostspecific="true" language="C#" #>
 <#@ assembly name="System.Core" #>
 <#@ import namespace="System.Linq" #>
@@ -59,10 +58,9 @@ public class Player<#=StateName#>Test
 
 ```
 
-```markdown
 # 유니티에서 Editor로 state 코드 생성하기 
 # https://www.nuget.org/packages/Mono.TextTemplating/  TextTemplating를 받아야 사용가능
-
+```c#
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
@@ -175,9 +173,6 @@ public class CodeGeneratorEditor : EditorWarpper
     }
 }
 
-
 #endif
 	
-	
-
 ```
