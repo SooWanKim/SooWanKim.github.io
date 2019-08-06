@@ -30,7 +30,7 @@ categories: [C#]
  
  # 자동 파일 만들기
  
-![](study/TextTemplateTransformationToolkit/1.png)
+![](../_posts/study/TextTemplateTransformationToolkit/1.png)
 
 파일을 만들면 
  
