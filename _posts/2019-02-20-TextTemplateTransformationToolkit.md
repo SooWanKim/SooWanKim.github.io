@@ -30,19 +30,19 @@ categories: [C#]
  
 # 자동 파일 만들기
  
-![](/_posts/study/TextTemplateTransformationToolkit/1.png)
+![](/assets/images/TextTemplateTransformationToolkit/1.png)
 
 파일을 만들면 
  
-![](study/TextTemplateTransformationToolkit/2.png)
+![](/assets/images/TextTemplateTransformationToolkit/2.png)
 
 사용하는 laguage,  namespace와 확장자.  debug할지 여부( 중단점을 걸면 가능) . hostspecific 밑에서
 
-![](study/TextTemplateTransformationToolkit/3.png)
+![](/assets/images/TextTemplateTransformationToolkit/3.png)
 
 property에 customtool 항목이 TextTemplatingFileGenerator 이렇게 되있어야한다. 이거에 따라 기능이 달라짐
 
-![](study/TextTemplateTransformationToolkit/4.png)
+![](/assets/images/TextTemplateTransformationToolkit/4.png)
 
 TestTextTemplate1.tt파일 밑에 자동으로 TextTextTemplate.txt파일이 만들어진다.
 
