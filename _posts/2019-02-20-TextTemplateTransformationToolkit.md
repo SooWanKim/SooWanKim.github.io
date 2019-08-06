@@ -17,7 +17,7 @@ categories: [C#]
  These text files can ultimately be any text format, such as code (for example C#), XML, HTML or XAML.
  
  
- # T4 텍스트 템플릿을 사용하여 디자인 타임 코드 생성
+# T4 텍스트 템플릿을 사용하여 디자인 타임 코드 생성
  
  디자인 타임? 
  
@@ -28,7 +28,7 @@ categories: [C#]
  
  모델을 변경하는 시점
  
- # 자동 파일 만들기
+# 자동 파일 만들기
  
 ![](/_posts/study/TextTemplateTransformationToolkit/1.png)
 
