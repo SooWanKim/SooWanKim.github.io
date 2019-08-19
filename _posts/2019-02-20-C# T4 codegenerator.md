@@ -59,7 +59,9 @@ public class Player<#=StateName#>Test
 ```
 
 # 유니티에서 Editor로 state 코드 생성하기 
-# https://www.nuget.org/packages/Mono.TextTemplating/  TextTemplating를 받아야 사용가능
+https://www.nuget.org/packages/Mono.TextTemplating/  
+TextTemplating를 받아야 사용가능
+
 ```c#
 using UnityEngine;
 using UnityEngine.UI;
