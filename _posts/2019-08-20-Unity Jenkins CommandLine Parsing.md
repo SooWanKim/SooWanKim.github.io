@@ -36,10 +36,10 @@ public static string GetCommand(string strLabel)
 ```
 
 
-#example jenkins batch command 
+# example jenkins batch command 
 -quit -batchmode -nographics -executeMethod ProjectBuilder.BuildiOS_Distribution -BundleName:com.my.org 
  
-#example parsing commandline code
+# example parsing commandline code
 ```c#
 public staic void BuildiOS_Distribution ()
 {
