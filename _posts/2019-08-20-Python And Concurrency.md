@@ -21,6 +21,7 @@ example) 마우스, 키보드, 디스플레이, 디스크
 병렬성(Parallelism)이란 많은 작업을 물리적으로 동시에 수행하는 것으로써, 작업자를 물리적으로 여럿 둠으로써 같은 작업을 동시에 수행할 수 있도록 만드는 것. 병렬성을 확보하게 되면 물리적으로 동일한 시간 내에 동일한 작업을 더 여러 번 수행할 수 있게된다. Concurrency와 Parallelism은 혼동하기 쉬운 개념. 서로 의존관계가 없이 분리되어 있는 개념. Parallelism은 한 개의 프로세서에서는 확보할 수 없는 개념. 한 개의 프로세서가 같은 시간에 두 개의 작업을 수행하는 것은 물리적으로 불가능. 반면, 한 개의 프로세서만 있다고 하더라도 동시성을 확보할 수 있다. (Nodejs의 비동기방식 )잘개 쪼갠 작업들이 서로 영향을 끼치지 않는다면, 하나의 작업자가 각 작업이 완료되지 않았더라도 번갈아가며(switching) 수행하는 것이 가능하다
 
 Node.js의 비동기 처리
+
 ![](/assets/images/pythonAndConcurrency/1.png)
 
 - 계산을 동시에 실행
@@ -33,15 +34,19 @@ example) (한 번에 여러 점을 출력하는) 벡터 점 제품
 
 # Python Thread
 Thread 1
+
 ![](/assets/images/pythonAndConcurrency/2.png)
 
 Thread 2
+
 ![](/assets/images/pythonAndConcurrency/3.png)
 
 MultiProcessing
+
 ![](/assets/images/pythonAndConcurrency/4.png)
 
 ProcessPoolExecutor
+
 ![](/assets/images/pythonAndConcurrency/5.png)
 
 
