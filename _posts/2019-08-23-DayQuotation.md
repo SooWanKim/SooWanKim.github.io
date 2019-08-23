@@ -1,6 +1,6 @@
 ---
 layout: post
-title : 2019 0823 Quotation
+title : Quotation
 categories: [Quotation]
 ---
 
