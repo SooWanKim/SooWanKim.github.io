@@ -9,17 +9,17 @@ categories: [C++]
 
 Breakpoints Window에서 
 
-![](../assets/images/2019-08-28-Debugging%20Memory%20Location/2019-08-28-12-16-52.png)
+![](assets/images/2019-08-28-Debugging%20Memory%20Location/2019-08-28-12-16-52.png)
 
 ***
 new 버튼을 누르고 
 
-![](../assets/images/2019-08-28-Debugging%20Memory%20Location/2019-08-28-12-17-46.png)
+![](assets/images/2019-08-28-Debugging%20Memory%20Location/2019-08-28-12-17-46.png)
 
 ***
 Data Breakpoint를 누르고 
 
-![](../assets/images/2019-08-28-Debugging%20Memory%20Location/2019-08-28-12-18-25.png)
+![](assets/images/2019-08-28-Debugging%20Memory%20Location/2019-08-28-12-18-25.png)
 
 ***
 원하는 주소값을 넣으면 ex) a의 주소값
