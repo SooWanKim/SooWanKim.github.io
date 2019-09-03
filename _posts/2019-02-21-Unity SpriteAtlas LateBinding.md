@@ -22,7 +22,7 @@ AssetBundle도 쓰고 SpriteAtlas 시스템을 사용하려면 Include in Build�
 
 ```c#
 
-# Asset을 받는 시점(Atlas가 필요하다고 판단되서 호출되는듯)에서 호출되는 event를 등록
+Asset을 받는 시점(Atlas가 필요하다고 판단되서 호출되는듯)에서 호출되는 event를 등록 
     void OnEnable()
     {
         SpriteAtlasManager.atlasRequested += RequestLateBindingAtlas;
@@ -35,18 +35,18 @@ AssetBundle도 쓰고 SpriteAtlas 시스템을 사용하려면 Include in Build�
     
     void RequestLateBindingAtlas(string spriteAtlasName, System.Action<SpriteAtlas> action)
     {
-# 받아 놓은 Atlas가 있는지 체크
+받아 놓은 Atlas가 있는지 체크
         if (SpriteCollection.Instance.IsExistSpriteAtlas(spriteAtlasName))
         {
             return;
         }
        
-# Atlas가 필요하다고 한 순간에 바로 Atlas AssetBundle를 다운 받는게 아니라 다음에 한꺼번에 몰아서 받기
+Atlas가 필요하다고 한 순간에 바로 Atlas AssetBundle를 다운 받는게 아니라 다음에 한꺼번에 몰아서 받기
         if (m_ActionSpriteAtlas.ContainsKey(spriteAtlasName) == false)
             m_ActionSpriteAtlas.Add(spriteAtlasName, action);
     }
     
-# 전체 Atlas를 다운 및 생성
+전체 Atlas를 다운 및 생성
     public IEnumerator LoadSpriteAtlas()
     {
         foreach(var atlasAsset in m_ActionSpriteAtlas)
@@ -67,7 +67,7 @@ AssetBundle도 쓰고 SpriteAtlas 시스템을 사용하려면 Include in Build�
 
         var spriteAtlas = AssetBundleLoader.ExtractAsset<SpriteAtlas>(MetaData.k_AssetBundleFileName_SpriteAtlas, assetName);
 
-# 등록된 event에 생성한 Atlas 전달하면 binding 끝
+등록된 event에 생성한 Atlas 전달하면 binding 끝
         action(spriteAtlas);
 
         SpriteCollection.Instance.AddSpriteAtlas(assetName, spriteAtlas);
