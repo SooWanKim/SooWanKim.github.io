@@ -7,7 +7,7 @@ categories: [Unity]
 
 # Dynamic Batching
 
-DynamicBatching은 Per VertecOverHead가 발생(**Batching**되는 Object의 Vertex가 많으면 CPU부하가 발생한다는 뜻)
+DynamicBatching은 Per VertexOverHead가 발생(**Batching**되는 Object의 Vertex가 많으면 CPU부하가 발생한다는 뜻)
 
 Unity에서는 모두 합쳐서 900개의 VertexAttribute이하의 Object에 대해서만 DynamicBatching이 발생하도록 설정
 
