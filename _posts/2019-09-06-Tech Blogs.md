@@ -4,6 +4,28 @@ title: Tech Blogs
 categories: [ETC]
 ---
 
+# Reddit
+
+https://www.reddit.com/r/programming/
+
+https://www.reddit.com/r/gamedev/
+
+# Hacker News
+
+https://news.ycombinator.com/
+
+# Gamasutra
+
+https://www.gamasutra.com/newswire
+
+# GPGStudy
+
+https://www.gpgstudy.com/
+
+# Dev
+
+https://dev.to/
+
 # Google Gamedev
 
 https://medium.com/googleplaydev
