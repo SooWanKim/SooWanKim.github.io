@@ -1,7 +1,7 @@
 ---
 layout : post
 title : Jenkins Restart
-categories: [CI%2CCD]
+categories: [CI.CD]
 
 ---
 
