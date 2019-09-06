@@ -1,6 +1,6 @@
 ---
 layout: post
-title: jenkins commandLine Parsing
+title: Jenkins CommandLine Parsing
 categories: [Unity, CI.CD]
 ---
 
