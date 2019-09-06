@@ -1,7 +1,7 @@
 ---
 layout: post
 title : 게임프로그래머와 기획
-categories: [Quotation]
+categories: [ETC]
 ---
 
 [http://blog.naver.com/mediahazard/220694033774](http://blog.naver.com/mediahazard/220694033774)

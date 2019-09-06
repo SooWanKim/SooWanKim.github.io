@@ -1,7 +1,7 @@
 ---
 layout: post
 title : Quotation
-categories: [Quotation]
+categories: [ETC]
 ---
 
 빨리 가려거든 혼자 가고, 멀리 가려거든 함께 가라.
