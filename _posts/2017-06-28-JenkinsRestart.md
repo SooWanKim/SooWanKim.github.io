@@ -1,6 +1,8 @@
 ---
 layout : post
 title : Jenkins Restart
+categories: [CI%2FCD]
+
 ---
 
 ### Jenkins가 Restart가 안될때
