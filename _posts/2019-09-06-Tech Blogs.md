@@ -4,23 +4,9 @@ title: Tech Blogs
 categories: [ETC]
 ---
 
-# Reddit
-
-[https://www.reddit.com/r/programming/](https://www.reddit.com/r/programming/)
-
-[https://www.reddit.com/r/gamedev/](https://www.reddit.com/r/gamedev/)
-
-# Hacker News
-
-[https://news.ycombinator.com/](https://news.ycombinator.com/)
-
 # Gamasutra
 
 [https://www.gamasutra.com/newswire](https://www.gamasutra.com/newswire)
-
-# GPGStudy
-
-[https://www.gpgstudy.com/](https://www.gpgstudy.com/)
 
 # Dev
 
@@ -33,6 +19,20 @@ categories: [ETC]
 # RiotGames
 
 [https://technology.riotgames.com/](https://technology.riotgames.com/)
+
+# Reddit
+
+[https://www.reddit.com/r/programming/](https://www.reddit.com/r/programming/)
+
+[https://www.reddit.com/r/gamedev/](https://www.reddit.com/r/gamedev/)
+
+# GPGStudy
+
+[https://www.gpgstudy.com/](https://www.gpgstudy.com/)
+
+# Hacker News
+
+[https://news.ycombinator.com/](https://news.ycombinator.com/)
 
 # 우아한 형제들
 
