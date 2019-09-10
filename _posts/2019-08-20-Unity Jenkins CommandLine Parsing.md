@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Jenkins CommandLine Parsing
-categories: [Unity, CI.CD]
+categories: [GameEngine, CI.CD]
 ---
 
 Jenkins로 유니티 빌드를 할때 static함수를 호출하는데 여기에 인자를 전달할 방법이 없다.

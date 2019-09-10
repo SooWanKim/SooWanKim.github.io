@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Unity SpriteAtlas LateBinding
-categories: [Unity]
+categories: [GameEngine]
 ---
 
-SpriteAtlas에 **Include in Build** flag를 켜고 빌드하면 
+SpriteAtlas에 **Include in Build** flag를 켜고 빌드하면
 
-Atlas는 포함된 상태로 빌드된다. 
+Atlas는 포함된 상태로 빌드된다.
 
 문제는 이러면 개별로 만든 AssetBundle에도 Atlas에 포함된 Sprite가 있으면 AssetBundle에도 포함되서 뽑힌다.
 
@@ -22,7 +22,7 @@ AssetBundle도 쓰고 SpriteAtlas 시스템을 사용하려면 Include in Build�
 
 ```c#
 
-Asset을 받는 시점(Atlas가 필요하다고 판단되서 호출되는듯)에서 호출되는 event를 등록 
+Asset을 받는 시점(Atlas가 필요하다고 판단되서 호출되는듯)에서 호출되는 event를 등록
     void OnEnable()
     {
         SpriteAtlasManager.atlasRequested += RequestLateBindingAtlas;
@@ -30,9 +30,9 @@ Asset을 받는 시점(Atlas가 필요하다고 판단되서 호출되는듯)에
 
     void OnDisable()
     {
-        SpriteAtlasManager.atlasRequested -= RequestLateBindingAtlas; 
+        SpriteAtlasManager.atlasRequested -= RequestLateBindingAtlas;
     }
-    
+
     void RequestLateBindingAtlas(string spriteAtlasName, System.Action<SpriteAtlas> action)
     {
 받아 놓은 Atlas가 있는지 체크
@@ -40,12 +40,12 @@ Asset을 받는 시점(Atlas가 필요하다고 판단되서 호출되는듯)에
         {
             return;
         }
-       
+
 Atlas가 필요하다고 한 순간에 바로 Atlas AssetBundle를 다운 받는게 아니라 다음에 한꺼번에 몰아서 받기
         if (m_ActionSpriteAtlas.ContainsKey(spriteAtlasName) == false)
             m_ActionSpriteAtlas.Add(spriteAtlasName, action);
     }
-    
+
 전체 Atlas를 다운 및 생성
     public IEnumerator LoadSpriteAtlas()
     {
