@@ -1,11 +1,12 @@
 theme: jekyll-theme-hacker
 title: Kim
 paginate: 5
+url: https://SooWanKim.github.io/
 
 author:
   name: swkim
   url:  https://SooWanKim.github.io/
   email: herosdoor@paran.com
-    
+
 category_path: "category" # <- default value
 category_layout: "category.html" # <- default value
