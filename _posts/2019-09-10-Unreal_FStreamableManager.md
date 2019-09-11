@@ -6,8 +6,7 @@ categories: [GameEngine]
 
 # FstreamableManager 구조체를 통한 UnrealEngine에서 런타임으로 애셋을 로딩
 
-# 임의로 만든 UMyGameInstance.h
-
+# UMyGameInstance.h
 ```c++
 #pragma once
 
@@ -30,7 +29,7 @@ public:
 
 ```
 
-# 임의로 만든 AABPawn.cpp
+# AABPawn.cpp
 
 ```c++
 void AABPawn::BeginPlay()
