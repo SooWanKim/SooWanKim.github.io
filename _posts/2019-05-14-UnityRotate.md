@@ -1,31 +1,31 @@
 ---
 layout: post
-title: Unity Rotate
+title: Unity Vector, Quaternion Rotate API
 categories: [GameEngine]
 ---
 
 # Vector Rotate
 ```c#
-  Vector3 direction = 값;
-  direction = Quaternion.Euler(0.0f, 0.0f, -deltaAngle) * direction;
+Vector3 direction = ?;
+direction = Quaternion.Euler(0.0f, 0.0f, deltaAngle) * direction;
 ```
 
 ```c#
-    Vector2 toTarget = (target.position - transform.position).normalized;
-    float step = Time.deltaTime * rotateAngleSpeed * Mathf.Deg2Rad;
-    rotateVector = Vector3.RotateTowards(rotateVector, toTarget, step, 0.0f);
+Vector2 toTarget = (target.position - transform.position).normalized;
+float step = Time.deltaTime * rotateAngleSpeed * Mathf.Deg2Rad; // radian?? ??
+rotateVector = Vector3.RotateTowards(rotateVector, toTarget, step, 0.0f);
 ```
 
 # Quaterinon Rotate
 
 ```c#
- rotateChild.rotation = Quaternion.RotateTowards(rotateChild.rotation, aa, Time.deltaTime * angleSpeed);
+Quaternion nextQuaternion = Quaternion.RotateTowards(sourceQuaternion, destQuaternion, Time.deltaTime * angleSpeed);
 ```
 
 ```c#
- Vector2 toTargetDir = (Vector2)targetPosition - (Vector2)transform.position;
- var quaternionToTarget = Quaternion.FromToRotation(transform.right, toTargetDir) * transform.rotation;
- transform.rotation = Quaternion.RotateTowards(transform.rotation, quaternionToTarget, Time.deltaTime * m_AimToTargetAngleSpeed);
+Vector2 toTargetDir = (Vector2)targetPosition - (Vector2)transform.position;
+var quaternionToTarget = Quaternion.FromToRotation(transform.right, toTargetDir.normalize) * transform.rotation;
+transform.rotation = Quaternion.RotateTowards(transform.rotation, quaternionToTarget, Time.deltaTime * rotateSpeed);
 ```
 
 # GetNegativeAngle

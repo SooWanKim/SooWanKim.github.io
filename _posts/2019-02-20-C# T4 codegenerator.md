@@ -1,13 +1,11 @@
 ---
 layout: post
-title: C# T4 code generator로 cs 파일 자동 생성하기
-categories: [C#]
+title:  Unity에서 C# T4 code generator로 cs 파일 자동 생성하기
+categories: [C#, GameEngine]
 ---
 
-**T4를 사용해서 cs 파일 변수 전달해서 만들기**
+## T4를 사용해서 cs 파일 변수 전달해서 만들기**
 
-
-# Main
 ```c#
 using System;
 using System.Collections.Generic;
@@ -24,7 +22,7 @@ namespace T4Generate_
         {
             TextTemplate1 page = new TextTemplate1();
             page.Session = new TextTemplatingSession();
-            page.Session["StateName"] = "abc"; // 변수전달 
+            page.Session["StateName"] = "abc"; // 변수전달
             page.Initialize();
 
             string pageContent = page.TransformText();
@@ -34,7 +32,6 @@ namespace T4Generate_
     }
 }
 ```
-
 
 # tt 확장자 파일
 ``` c#
@@ -58,8 +55,8 @@ public class Player<#=StateName#>Test
 
 ```
 
-# 유니티에서 Editor로 state 코드 생성하기 
-https://www.nuget.org/packages/Mono.TextTemplating/  
+# 유니티에서 Editor로 state 코드 생성하기
+https://www.nuget.org/packages/Mono.TextTemplating/
 TextTemplating를 받아야 사용가능
 
 ```c#
@@ -75,7 +72,7 @@ using Microsoft.VisualStudio.TextTemplating;
 using UnityEditor;
 using Assets.Editor.Scripts.CodeGen.Editor;
 
-public class CodeGeneratorEditor : EditorWarpper
+public class CodeGeneratorEditor : Editor
 {
     const string k_SavedPath = "CodeGeneratorEditor";
 
@@ -83,7 +80,7 @@ public class CodeGeneratorEditor : EditorWarpper
     {
         none,
         player,
-        fish, 
+        fish,
     }
 
     GenerateType m_CodeType = GenerateType.player;
@@ -145,12 +142,13 @@ public class CodeGeneratorEditor : EditorWarpper
 
             PlayerPrefs.SetString(k_SavedPath, m_CodeGenFilePath);
 
+			// 생성
             switch (m_CodeType)
             {
-                case GenerateType.player: 
+                case GenerateType.player:
                     {
                         PlayerStateTemplate page = new PlayerStateTemplate();
-                        page.Session = new TextTemplatingSession(); 
+                        page.Session = new TextTemplatingSession();
                         page.Session["StateName"] = m_ClassName;
                         page.Initialize();
 
@@ -159,10 +157,10 @@ public class CodeGeneratorEditor : EditorWarpper
 
                         break;
                     }
-                case GenerateType.fish:   
+                case GenerateType.fish:
                     {
                         FishStateTemplate page = new FishStateTemplate();
-                        page.Session = new TextTemplatingSession(); 
+                        page.Session = new TextTemplatingSession();
                         page.Session["StateName"] = m_ClassName;
                         page.Initialize();
 
@@ -176,5 +174,5 @@ public class CodeGeneratorEditor : EditorWarpper
 }
 
 #endif
-	
+
 ```

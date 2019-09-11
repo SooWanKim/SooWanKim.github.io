@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Unity SpriteAtlas LateBinding
+title: Unity SpriteAtlas LateBinding (SpriteAtlas AssetBundle)
 categories: [GameEngine]
 ---
 
@@ -21,57 +21,56 @@ AssetBundle도 쓰고 SpriteAtlas 시스템을 사용하려면 Include in Build�
 이 방식을 쓰기위해서는 SpriteAtlas를 AssetBundle로 만들어야 하고 LateBinding을 할때 AssetBundle을 불러와서 생성해야한다.
 
 ```c#
-
 Asset을 받는 시점(Atlas가 필요하다고 판단되서 호출되는듯)에서 호출되는 event를 등록
-    void OnEnable()
-    {
-        SpriteAtlasManager.atlasRequested += RequestLateBindingAtlas;
-    }
+void OnEnable()
+{
+    SpriteAtlasManager.atlasRequested += RequestLateBindingAtlas;
+}
 
-    void OnDisable()
-    {
-        SpriteAtlasManager.atlasRequested -= RequestLateBindingAtlas;
-    }
+void OnDisable()
+{
+    SpriteAtlasManager.atlasRequested -= RequestLateBindingAtlas;
+}
 
-    void RequestLateBindingAtlas(string spriteAtlasName, System.Action<SpriteAtlas> action)
-    {
+void RequestLateBindingAtlas(string spriteAtlasName, System.Action<SpriteAtlas> action)
+{
 받아 놓은 Atlas가 있는지 체크
-        if (SpriteCollection.Instance.IsExistSpriteAtlas(spriteAtlasName))
-        {
-            return;
-        }
+    if (SpriteCollection.Instance.IsExistSpriteAtlas(spriteAtlasName))
+    {
+        return;
+    }
 
 Atlas가 필요하다고 한 순간에 바로 Atlas AssetBundle를 다운 받는게 아니라 다음에 한꺼번에 몰아서 받기
-        if (m_ActionSpriteAtlas.ContainsKey(spriteAtlasName) == false)
-            m_ActionSpriteAtlas.Add(spriteAtlasName, action);
-    }
+    if (m_ActionSpriteAtlas.ContainsKey(spriteAtlasName) == false)
+        m_ActionSpriteAtlas.Add(spriteAtlasName, action);
+}
 
 전체 Atlas를 다운 및 생성
-    public IEnumerator LoadSpriteAtlas()
+public IEnumerator LoadSpriteAtlas()
+{
+    foreach(var atlasAsset in m_ActionSpriteAtlas)
     {
-        foreach(var atlasAsset in m_ActionSpriteAtlas)
-        {
-            yield return LoadSpriteAtlas(atlasAsset.Key, atlasAsset.Value);
-        }
-
-        m_ActionSpriteAtlas.Clear();
-
-        AssetBundleLoader.UnloadLoadedAssetbundle(MetaData.k_AssetBundleFileName_SpriteAtlas);
-
-        yield return null;
+        yield return LoadSpriteAtlas(atlasAsset.Key, atlasAsset.Value);
     }
 
-    private IEnumerator LoadSpriteAtlas(string assetName, System.Action<SpriteAtlas> action)
-    {
-        yield return StartCoroutine(AssetBundleLoader.LoadFromCachedOrDownloadAssetBundle(MetaData.k_AssetBundleFileName_SpriteAtlas, null));
+    m_ActionSpriteAtlas.Clear();
 
-        var spriteAtlas = AssetBundleLoader.ExtractAsset<SpriteAtlas>(MetaData.k_AssetBundleFileName_SpriteAtlas, assetName);
+    AssetBundleLoader.UnloadLoadedAssetbundle(MetaData.k_AssetBundleFileName_SpriteAtlas);
+
+    yield return null;
+}
+
+private IEnumerator LoadSpriteAtlas(string assetName, System.Action<SpriteAtlas> action)
+{
+    yield return StartCoroutine(AssetBundleLoader.LoadFromCachedOrDownloadAssetBundle(MetaData.k_AssetBundleFileName_SpriteAtlas, null));
+
+    var spriteAtlas = AssetBundleLoader.ExtractAsset<SpriteAtlas>(MetaData.k_AssetBundleFileName_SpriteAtlas, assetName);
 
 등록된 event에 생성한 Atlas 전달하면 binding 끝
-        action(spriteAtlas);
+    action(spriteAtlas);
 
-        SpriteCollection.Instance.AddSpriteAtlas(assetName, spriteAtlas);
+    SpriteCollection.Instance.AddSpriteAtlas(assetName, spriteAtlas);
 
-        AssetBundleLoader.UnloadLoadedAssetbundle(MetaData.k_AssetBundleFileName_SpriteAtlas);
-    }
+    AssetBundleLoader.UnloadLoadedAssetbundle(MetaData.k_AssetBundleFileName_SpriteAtlas);
+}
 ```

@@ -4,7 +4,6 @@ title: Unity Draw Call
 categories: [GameEngine]
 ---
 
-
 # Dynamic Batching
 
 DynamicBatching은 Per VertexOverHead가 발생(**Batching**되는 Object의 Vertex가 많으면 CPU부하가 발생한다는 뜻)

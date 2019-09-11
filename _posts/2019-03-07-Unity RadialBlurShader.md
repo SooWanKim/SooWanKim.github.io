@@ -8,7 +8,6 @@ CenterPos 중심으로 Blur를 설정한다.
 _Samples는 샘플링 수, _BlurSize는 블러를위해 이미지가 이동한 거리
 _MainTex_TexelSize는 하나의 텍셀이 차지하는 크기, 여기서의 _MainTex = ScreenSize 이기 때문에 가로가 1024라면 1/1024 의 값
 
-# Shader code
 ```c#
 Shader "ImageEffect/RadialBlur"
 {
