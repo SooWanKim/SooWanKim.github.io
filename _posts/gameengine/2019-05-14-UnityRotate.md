@@ -28,9 +28,9 @@ var quaternionToTarget = Quaternion.FromToRotation(transform.right, toTargetDir.
 transform.rotation = Quaternion.RotateTowards(transform.rotation, quaternionToTarget, Time.deltaTime * rotateSpeed);
 ```
 
-# GetNegativeAngle
+# GetSignAngle
 ``` c#
-public static float GetNegativeAngle(Vector3 v1, Vector3 v2)
+public static float GetSignAngle(Vector3 v1, Vector3 v2)
 {
   int sign = Vector3.Cross(v1, v2).z < 0 ? -1 : 1;
   return sign * Vector3.Angle(v1, v2);
