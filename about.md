@@ -6,4 +6,4 @@ title: About
 
 - Jeju, South Korea
 - herosdoor@paran.com
-
+- [https://linkedin.com/in/soowan-kim](https://linkedin.com/in/soowan-kim)

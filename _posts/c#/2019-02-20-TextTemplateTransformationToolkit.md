@@ -1,39 +1,39 @@
 ---
 layout: post
-title: C# T4 
+title: C# T4
 categories: [C#]
 ---
 
 # What is TextTemplateTransformationToolkit?
- 
- Text Template Transformation Toolkit (usually referred to as "T4") is a template based text generation framework 
- 
+
+ Text Template Transformation Toolkit (usually referred to as "T4") is a template based text generation framework
+
  included with Visual Studio.
- 
+
  T4 source files are usually denoted by the file extension ".tt".
- 
- T4 is used by developers as part of an application or tool framework to automate the creation of text files with a variety of parameters. 
- 
+
+ T4 is used by developers as part of an application or tool framework to automate the creation of text files with a variety of parameters.
+
  These text files can ultimately be any text format, such as code (for example C#), XML, HTML or XAML.
- 
- 
+
+
 # T4 텍스트 템플릿을 사용하여 디자인 타임 코드 생성
- 
- 디자인 타임? 
- 
+
+ 디자인 타임?
+
  참조하는 모델을 변경 하거나 수정
- 
- 모델는 응용 프로그램의 특정 측면을 설명 하는 데이터 원본입니다. 모든 형태와 종류의 파일 또는 데이터베이스일 수 있으며 
+
+ 모델는 응용 프로그램의 특정 측면을 설명 하는 데이터 원본입니다. 모든 형태와 종류의 파일 또는 데이터베이스일 수 있으며
  UML 모델이나 DSL(Domain-Specific Language) 모델 등의 특정 형태가 아니어도 됩니다. 일반적인 모델은 테이블 또는 XML 파일 형식입니다.
- 
+
  모델을 변경하는 시점
- 
+
 # 자동 파일 만들기
- 
+
 ![](/assets/images/TextTemplateTransformationToolkit/1.png)
 
-파일을 만들면 
- 
+파일을 만들면
+
 ![](/assets/images/TextTemplateTransformationToolkit/2.png)
 
 사용하는 laguage,  namespace와 확장자.  debug할지 여부( 중단점을 걸면 가능) . hostspecific 밑에서
@@ -47,7 +47,7 @@ property에 customtool 항목이 TextTemplatingFileGenerator 이렇게 되있어
 TestTextTemplate1.tt파일 밑에 자동으로 TextTextTemplate.txt파일이 만들어진다.
 
 # 파일 만들어지는 시점
- 
+
 1. 템플릿을 편집하고 다른 Visual Studio 창으로 포커스를 변경
 2. 템플릿을 저장하는 경우
 3. Build Menu에서 Transform All T4 Template 누르기.Visual Studio 솔루션에서 모든 템플릿을 변환
@@ -120,7 +120,7 @@ class MyGeneratedClass {
 
 변수의 값을 사용하는 텍스트 생성 부분. 위의 예에서는 foreach(...){...}에 해당
 
-코드를 반드시 이와 같이 분리해야 하는 것은 아니지만 이 스타일을 사용하면 텍스트를 포함하는 부분을 보다 단순하게 작성하여 
+코드를 반드시 이와 같이 분리해야 하는 것은 아니지만 이 스타일을 사용하면 텍스트를 포함하는 부분을 보다 단순하게 작성하여
 
 템플릿을 더 쉽게 읽을 수 있다고 함
 
@@ -156,25 +156,25 @@ this.Host를 사용하려면 hostspecific="true"
 <#@ import namespace="System.IO" #>
 <#@ output extension=".cs" #>
 <# string fileName = this.Host.ResolvePath("readFile.txt");#>
-<# 
-	var fileContents = File.ReadAllText(fileName); 
+<#
+	var fileContents = File.ReadAllText(fileName);
 #>
 
 // This is generated code:
 class MyGeneratedClass {
 
  private string <#= fileContents #>;
-	
+
 }
 
-``` 
+```
 // readFile.txt에 myVariable 입력했으면 string 변수는 myVariable
 
 # T4 텍스트 템플릿을 사용하여 런타임 텍스트 생성
 
 Text Template로 파일 만들고 Property를  TextTemplatingFilePreprocessor 이걸로 변경
 
-tt파일 만들기 
+tt파일 만들기
 ```c#
 <#@ template debug="true" hostspecific="true" language="C#" #>
 <#@ assembly name="System.Core" #>
@@ -193,7 +193,7 @@ public class Player<#=StateName#>Test
 
 	}
 }
-	
+
 ```
 
 ```c#
@@ -234,61 +234,3 @@ public class PlayerabcTest
 }
 ```
 
-# 유니티에서 사용하기
-
-1. tt 확장자 File, 속성은 TextTemplatingFilePreprocessor
-```c#
-<#@ template debug="true" hostspecific="true" language="C#" #>
-<#@ assembly name="System.Core" #>
-<#@ import namespace="System.Linq" #>
-<#@ import namespace="System.Text" #>
-<#@ import namespace="System.Collections.Generic" #>
-<#@ parameter type="System.String" name="StateName" #>
-<#@ output extension=".cs" #>
-using UnityEngine;
-using System.Collections;
-using System;
-
-namespace Fish_
-{
-	public class <#=StateName#>State : State
-	{
-		FSMFish m_FSMFish = null;
-		// Fish m_Fish;
-
-		public <#=StateName#>State(FSMAnimation fsmAnimation) : base(fsmAnimation)
-		{
-			m_FSMFish = fsmAnimation as FSMFish;
-		}
-
-		public override void OnStart()
-		{
-			if (m_FSMFish == null)
-				return;
-
-			//m_Fish = m_FSMFish.fish;
-
-			if (m_FSMFish.animator != null)
-			{
-				//m_FSMFish.animator.ResetTrigger(MetaData.k_Hash_Move);
-				m_FSMFish.animator.SetTrigger(MetaData.k_Hash_Move);
-			}
-		}
-	}
-}
-```
-
-2. CodeGeneratorEditor
-
-```c#
-FishStateTemplate page = new FishStateTemplate();
-page.Session = new TextTemplatingSession(); 
-page.Session["StateName"] = m_ClassName;
-page.Initialize();
-
-string pageContent = page.TransformText();
-System.IO.File.WriteAllText($"{filePath}/Fish{m_ClassName}State.cs", pageContent);
-```
-TextTemplatingSession 이것을 사용하려면 
-https://www.nuget.org/packages/Mono.TextTemplating/ 를 다운받아야 되고
-Editor가 Mono.TextTemplating.dll을 포함해야된다.

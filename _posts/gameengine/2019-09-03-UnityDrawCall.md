@@ -1,9 +1,8 @@
 ---
 layout: post
-title: Draw Call 
-categories: [Unity]
+title: Unity Draw Call
+categories: [GameEngine]
 ---
-
 
 # Dynamic Batching
 
@@ -34,7 +33,7 @@ Shader의 pass하나당 drawcall 하나가 올라감
 
 # Material
 
-배칭될 Material을 코드에서 참조하거나 ex) Material material = render.mateial,  SkinnedMeshRenderer을 사용하면 
+배칭될 Material을 코드에서 참조하거나 ex) Material material = render.mateial,  SkinnedMeshRenderer을 사용하면
 
 Material이 배칭되지 않고 Instance가 생성 되어 개별로 그려진다.
 
