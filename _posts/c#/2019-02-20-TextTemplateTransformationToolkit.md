@@ -4,13 +4,13 @@ title: C# T4
 categories: [C#]
 ---
 
-# What is TextTemplateTransformationToolkit?
+# What is TextTemplateTransformationToolkit? ()
 
- Text Template Transformation Toolkit (usually referred to as "T4") is a template based text generation framework
+ Text Template Transformation Toolkit의 약자
 
- included with Visual Studio.
+ 템플릿 기반 텍스트 생성 프레임워크 (included with Visual Studio)
 
- T4 source files are usually denoted by the file extension ".tt".
+ 확장자 .tt 사용
 
  T4 is used by developers as part of an application or tool framework to automate the creation of text files with a variety of parameters.
 
@@ -19,34 +19,27 @@ categories: [C#]
 
 # T4 텍스트 템플릿을 사용하여 디자인 타임 코드 생성
 
- 디자인 타임?
-
- 참조하는 모델을 변경 하거나 수정
-
- 모델는 응용 프로그램의 특정 측면을 설명 하는 데이터 원본입니다. 모든 형태와 종류의 파일 또는 데이터베이스일 수 있으며
- UML 모델이나 DSL(Domain-Specific Language) 모델 등의 특정 형태가 아니어도 됩니다. 일반적인 모델은 테이블 또는 XML 파일 형식입니다.
-
- 모델을 변경하는 시점
+ 모델을 변경하는 시점에 참조하는 모델을 변경 하거나 수정
 
 # 자동 파일 만들기
 
+Text Template타입의 파일을 만들면
+
 ![](/assets/images/TextTemplateTransformationToolkit/1.png)
 
-파일을 만들면
+아래와 같은 내용이 자동 생성된다. (사용하는 laguage, namespace와 확장자, debug할지 여부)
 
 ![](/assets/images/TextTemplateTransformationToolkit/2.png)
 
-사용하는 laguage,  namespace와 확장자.  debug할지 여부( 중단점을 걸면 가능) . hostspecific 밑에서
+property에 customtool 항목이 TextTemplatingFileGenerator 이렇게 되있어야 자동생성 기능이 됨.(이 속성에 따라 기능이 달라진다)
 
 ![](/assets/images/TextTemplateTransformationToolkit/3.png)
 
-property에 customtool 항목이 TextTemplatingFileGenerator 이렇게 되있어야한다. 이거에 따라 기능이 달라짐
+위의 파일 수정 후 같은 이름의 .txt 확장 파일이 자동으로 만들어 진다.
 
 ![](/assets/images/TextTemplateTransformationToolkit/4.png)
 
-TestTextTemplate1.tt파일 밑에 자동으로 TextTextTemplate.txt파일이 만들어진다.
-
-# 파일 만들어지는 시점
+# 파일이 만들어지는 시점 4개
 
 1. 템플릿을 편집하고 다른 Visual Studio 창으로 포커스를 변경
 2. 템플릿을 저장하는 경우
@@ -116,13 +109,11 @@ class MyGeneratedClass {
 
 실제 프로그래밍에서는 대개 템플릿 코드를 다음의 두 부분으로 구분
 
-변수에서 값은 설정하지만 텍스트 블록은 포함하지 않는 구성(데이터 수집) 부분. 위의 예에서 이 부분은 properties 초기화
+1. 변수에서 값은 설정하지만 텍스트 블록은 포함하지 않는 구성(데이터 수집) 부분. 위의 예에서 이 부분은 properties 초기화
 
-변수의 값을 사용하는 텍스트 생성 부분. 위의 예에서는 foreach(...){...}에 해당
+2. 변수의 값을 사용하는 텍스트 생성 부분. 위의 예에서는 foreach(...){...}에 해당
 
-코드를 반드시 이와 같이 분리해야 하는 것은 아니지만 이 스타일을 사용하면 텍스트를 포함하는 부분을 보다 단순하게 작성하여
-
-템플릿을 더 쉽게 읽을 수 있다고 함
+코드를 반드시 이와 같이 분리해야 하는 것은 아니지만 이 스타일을 사용하면 텍스트를 포함하는 부분을 보다 단순하게 작성하여 템플릿을 더 쉽게 읽을 수 있다고 한디.
 
 # 파일 또는 기타 소스 읽기
 
@@ -168,11 +159,11 @@ class MyGeneratedClass {
 }
 
 ```
-// readFile.txt에 myVariable 입력했으면 string 변수는 myVariable
+readFile.txt에 myVariable 입력했으면 string 변수는 myVariable
 
-# T4 텍스트 템플릿을 사용하여 런타임 텍스트 생성
+# T4 텍스트 템플릿을 사용하여 런타임에 텍스트 생성
 
-Text Template로 파일 만들고 Property를  TextTemplatingFilePreprocessor 이걸로 변경
+Text Template로 파일 만들고 Property를  TextTemplatingFilePreprocessor 이걸로 변경(**중요**)
 
 tt파일 만들기
 ```c#
@@ -223,7 +214,7 @@ namespace T4Generate_
 }
 
 ```
-위에것 실행했을때 아래 파일이 만들어짐
+위에 파일을 실행 했을때 아래 파일이 런타임에 만들어짐
 ```c#
 public class PlayerabcTest
 {
