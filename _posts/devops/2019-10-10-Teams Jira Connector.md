@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Teams Webhook 활용하기
+title: Teams Jira Connector 
 categories: [Devops]
 ---
 
