@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Reading Jenkins CommandLine
-categories: [GameEngine, CI.CD]
+categories: [GameEngine,Devops]
 ---
 
 Jenkins로 유니티 빌드를 할때 static함수를 호출하는데 여기에 인자를 전달할 방법이 없다.( 인자 있는 함수를 호출 못함)

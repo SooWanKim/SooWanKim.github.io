@@ -1,5 +1,5 @@
 ---
 layout: category
-title: DEVOPS
-permalink: '/DEVOPS'
+title: Devops
+permalink: '/Devops'
 ---
