@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Unity에 FireBase 애널리틱스 넣기
+title: Unity에 FireBase Analytics 사용하기
 categories: [GameEngine, Devops]
 ---
 
