@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Jira Issue들을 Filter 사용해서 Mail로 발송하기~
+title: Filter를 통한 Jira Issue Mail로 발송하기~
 categories: [Python]
 ---
 
