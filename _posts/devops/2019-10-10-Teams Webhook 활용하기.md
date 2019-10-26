@@ -4,7 +4,7 @@ title: Teams Webhook 활용하기
 categories: [Devops]
 ---
 
-# 기능
+## 기능
 
 Teams에서 incomingwebhook 으로 생성한 주소로 json 방식으로 메시지를 보내면
 

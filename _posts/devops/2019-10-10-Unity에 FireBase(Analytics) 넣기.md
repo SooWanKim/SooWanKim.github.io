@@ -4,14 +4,16 @@ title: Unity에 FireBase Analytics 사용하기
 categories: [GameEngine, Devops]
 ---
 
-# 왜 사용?
+## 사용 목적
 
 Event 분석을 위해 사용
 
 [https://console.firebase.google.com/?hl=ko&pli=1](https://console.firebase.google.com/?hl=ko&pli=1)
 
 ![](/assets/images/2019-10-10-Unity에%20FireBase%20넣기/2019-10-10-14-08-53.png)
+***
 
+## 사용 방법
 
 임의 프로젝트 추가로 생성
 
@@ -24,11 +26,9 @@ Ios는 GoogleServices-Info.Plist를 /Assets 밑에 다운받습니다. 사실상
 ![](/assets/images/2019-10-10-Unity에%20FireBase%20넣기/2019-10-10-14-13-12.png)
 
 
-세팅 하는법이 잘나와 있습니다.
-
-[https://firebase.google.com/docs/unity/setup?authuser=0](https://firebase.google.com/docs/unity/setup?authuser=0)
-
-이 unity package 받아서 import해서 사용하면 됩니다.
+[https://firebase.google.com/docs/unity/setup?authuser=0](https://firebase.google.com/docs/unity/setup?authuser=0) (세팅하는법)
+***
+아래의 unity package 받아서 import해서 사용하면 됩니다.
 
 ![](/assets/images/2019-10-10-Unity에%20FireBase%20넣기/2019-10-10-14-15-31.png)
 
@@ -36,18 +36,19 @@ Ios는 GoogleServices-Info.Plist를 /Assets 밑에 다운받습니다. 사실상
 FireBase init하는 코드입니다.
 
 ![](/assets/images/2019-10-10-Unity에%20FireBase%20넣기/2019-10-10-14-18-06.png)
-
+***
 
 analytics에 Event를 보내는 함수 입니다.
 
 ![](/assets/images/2019-10-10-Unity에%20FireBase%20넣기/2019-10-10-14-18-42.png)
-
+***
 
 Parameter마다 함수가 등록되어 있어서, Generic하게 사용하기 위해 별도 Temlate 함수 등록했습니다.
 
 ![](/assets/images/2019-10-10-Unity에%20FireBase%20넣기/2019-10-10-14-19-18.png)
-
+***
 
 Ios는 FirebaseCore lib 경로이슈가 있어서 여기서 2번째 선택해야 됩니다.
 
 ![](/assets/images/2019-10-10-Unity에%20FireBase%20넣기/2019-10-10-14-19-56.png)
+***

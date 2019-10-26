@@ -25,6 +25,7 @@ mail_format.html로 메일 발송 서식 분리
 
 
 ## 작업 코드
+
 ```python
 def MakeJira(config):
     options = {'server':'지라 주소'}

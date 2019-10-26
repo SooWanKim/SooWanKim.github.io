@@ -76,7 +76,7 @@ Shader "ImageEffect/RadialBlur"
 }
 ```
 
-# CS Code
+##  CS Code
 ```c#
 using System.Collections;
 using System.Collections.Generic;

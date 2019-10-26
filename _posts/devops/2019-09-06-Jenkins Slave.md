@@ -4,13 +4,14 @@ title: Jenkins Slave
 categories: [Devops]
 ---
 
-# SetUp Node
+##  SetUp Node
 
 ![](/assets/images/2019-09-06-Jenkins%20Slave/2019-09-06-12-26-29.png)
 
 **Labels**는 연결된 Job만 돌리게 설정
+***
 
-example)
+## example
 
 ![](/assets/images/2019-09-06-Jenkins%20Slave/2019-09-06-12-27-24.png)
 

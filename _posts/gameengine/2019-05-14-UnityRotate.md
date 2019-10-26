@@ -4,7 +4,7 @@ title: Unity Vector, Quaternion Rotate API
 categories: [GameEngine]
 ---
 
-# Vector Rotate
+##  Vector Rotate
 ```c#
 Vector3 direction = ?;
 direction = Quaternion.Euler(0.0f, 0.0f, deltaAngle) * direction;
@@ -16,7 +16,7 @@ float step = Time.deltaTime * rotateAngleSpeed * Mathf.Deg2Rad; // radian?? ??
 rotateVector = Vector3.RotateTowards(rotateVector, toTarget, step, 0.0f);
 ```
 
-# Quaterinon Rotate
+##  Quaterinon Rotate
 
 ```c#
 Quaternion nextQuaternion = Quaternion.RotateTowards(sourceQuaternion, destQuaternion, Time.deltaTime * angleSpeed);
@@ -28,7 +28,7 @@ var quaternionToTarget = Quaternion.FromToRotation(transform.right, toTargetDir.
 transform.rotation = Quaternion.RotateTowards(transform.rotation, quaternionToTarget, Time.deltaTime * rotateSpeed);
 ```
 
-# GetSignAngle
+## GetSignAngle
 ``` c#
 public static float GetSignAngle(Vector3 v1, Vector3 v2)
 {

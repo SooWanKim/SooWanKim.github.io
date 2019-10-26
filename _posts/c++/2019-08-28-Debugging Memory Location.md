@@ -4,20 +4,19 @@ title: Debugging With Memory Location
 categories: [C++]
 ---
 
-# 주소값안에 값이(Value) 변경 됬을때 시점 찾기
+## 주소값안에 값이(Value) 변경 됬을때 시점 찾기
 
-
-Breakpoints Window에서 
+Breakpoints Window에서
 
 ![](/assets/images/2019-08-28-Debugging%20Memory%20Location/2019-08-28-12-16-52.png)
 
 ***
-new 버튼을 누르고 
+new 버튼을 누르고
 
 ![](/assets/images/2019-08-28-Debugging%20Memory%20Location/2019-08-28-12-17-46.png)
 
 ***
-Data Breakpoint를 누르고 
+Data Breakpoint를 누르고
 
 ![](/assets/images/2019-08-28-Debugging%20Memory%20Location/2019-08-28-12-18-25.png)
 
@@ -32,7 +31,7 @@ Data Breakpoint를 누르고
 ![](/assets/images/2019-08-28-Debugging%20Memory%20Location/2019-08-28-12-20-52.png)
 
 ***
-이 상태에서 다음스텝으로 넘어가면 
+이 상태에서 다음스텝으로 넘어가면
 
 ![](/assets/images/2019-08-28-Debugging%20Memory%20Location/2019-08-28-12-22-51.png)
 

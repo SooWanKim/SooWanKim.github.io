@@ -4,6 +4,8 @@ title: Unity SpriteAtlas LateBinding (SpriteAtlas AssetBundle)
 categories: [GameEngine]
 ---
 
+## 사용 방법
+
 SpriteAtlas에 **Include in Build** flag를 켜고 빌드하면
 
 Atlas는 포함된 상태로 빌드된다.
@@ -19,7 +21,7 @@ AssetBundle도 쓰고 SpriteAtlas 시스템을 사용하려면 Include in Build�
 이렇게 하면 AssetBundle에는 Atlas는 빠진 상태로 빌드되고 Scene에 배치된 Sprite도 연결된 SpriteAtlas를 사용하게 된다.
 
 이 방식을 쓰기위해서는 SpriteAtlas를 AssetBundle로 만들어야 하고 LateBinding을 할때 AssetBundle을 불러와서 생성해야한다.
-
+***
 ```c#
 
 // SpriteAtlasManager.atlasRequested :  Asset을 받는 시점(Atlas가 필요하다고 판단되서 호출되는듯)에서 호출되는 event를 등록
