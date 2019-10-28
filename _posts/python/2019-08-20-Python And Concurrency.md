@@ -15,6 +15,7 @@ categories: [Python]
 - I/O Bound
 
 example) 마우스, 키보드, 디스플레이, 디스크
+
 ***
 
 ##  병렬성
