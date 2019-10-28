@@ -8,12 +8,16 @@ categories: [Python]
 
 jql 사용해서 원하는 jira issue 들을 요약하여 html 서식으로 mail 발송하기 위함
 
+***
+
 ## 작업 순서
 
 1. jira 권한 처리
 2. jql로 원하는 jira issue 가져오기
 3. html 형식에 맞게 issue 요약
 4. stmp를 통한 mail 발송 (scheduling로 원하는 시간대별 처리 가능)
+
+***
 
 ## 비고
 
@@ -23,6 +27,7 @@ config.ini로 계정 정보 및 설정 분리
 
 mail_format.html로 메일 발송 서식 분리
 
+***
 
 ## 작업 코드
 

@@ -19,7 +19,9 @@ public class ObjectInfo
 	public Vector3 rotation;
 }
 ```
+
 ***
+
 ObjectInfo class에 name, position, rotation의 값을 unity editor상에서 세팅한것을 asset 하여 게임에서 읽어 사용한다.
 
 # 1.Serialize할 class 만들기
@@ -33,7 +35,9 @@ public class ObjectInfo
 	public Vector3 rotation;
 }
 ```
+
 ***
+
 class를 serialize하기 위해서는 attribute에 **[System.Serializable]** 추가해 줘야 한다. class 멤버 변수 타입중에  List는 되는데 dictionary는 되지 않아서 따로 만들어야된다
 
 **ScriptableObject**을 상속받는 class의 data를 List<TKey>, List<TValue> 로 만듬.
@@ -91,12 +95,16 @@ public void OnAfterDeserialize()   // deserialize하고 나서 List에 있는 ke
 		this.Add(keys[i], values[i]);
 	}
 }
+
 ***
+
 DataInfoAsset은  key정보는 List<int>, value정보는 List<string, Dictionary<string, string>>을 갖게 된다.
 
 public class DataInfoAsset : ScriptableAsset<int, DictionaryOfStringAndString> { }
  ```
+
 ***
+
 # 2.Making Asset
 
 ```c#
@@ -107,7 +115,9 @@ asset.name = 값
 AssetDatabase.CreateAsset(asset, path + name + extension);   // ObjectInfo 정보가 있는 .asset파일을 path 경로 name.extention 으로 생성
 AssetDatabase.SaveAssets();
 ```
+
 ***
+
 # 3.Export Asset
 
 // export path, path + name + extension, buildtarget을 지정해줘서 뽑으면 ObjectInfo class가 export 된다.
@@ -115,7 +125,9 @@ AssetDatabase.SaveAssets();
 ```c#
 BuildPipeline.BuildAssetBundles()
 ```
+
 ***
+
 # 4. Import Asset
 
 ```c#

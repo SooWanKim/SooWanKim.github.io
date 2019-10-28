@@ -6,21 +6,24 @@ categories: [C#]
 
 # What is TextTemplateTransformationToolkit? ()
 
- Text Template Transformation Toolkit의 약자
+Text Template Transformation Toolkit의 약자
 
- 템플릿 기반 텍스트 생성 프레임워크 (included with Visual Studio)
+템플릿 기반 텍스트 생성 프레임워크 (included with Visual Studio)
 
- 확장자 .tt 사용
+확장자 .tt 사용
 
- T4 is used by developers as part of an application or tool framework to automate the creation of text files with a variety of parameters.
+T4 is used by developers as part of an application or tool framework to automate the creation of text files with a variety of parameters.
 
- These text files can ultimately be any text format, such as code (for example C#), XML, HTML or XAML.
+These text files can ultimately be any text format, such as code (for example C#), XML, HTML or XAML.
+
 ***
 
 # T4 텍스트 템플릿을 사용하여 디자인 타임 코드 생성
 
- 모델을 변경하는 시점에 참조하는 모델을 변경 하거나 수정
+모델을 변경하는 시점에 참조하는 모델을 변경 하거나 수정
+
 ***
+
 # 자동 파일 만들기
 
 Text Template타입의 파일을 만들면
@@ -38,13 +41,16 @@ property에 customtool 항목이 TextTemplatingFileGenerator 이렇게 되있어
 위의 파일 수정 후 같은 이름의 .txt 확장 파일이 자동으로 만들어 진다.
 
 ![](/assets/images/TextTemplateTransformationToolkit/4.png)
+
 ***
+
 # 파일이 만들어지는 시점 4개
 
 1. 템플릿을 편집하고 다른 Visual Studio 창으로 포커스를 변경
 2. 템플릿을 저장하는 경우
 3. Build Menu에서 Transform All T4 Template 누르기.Visual Studio 솔루션에서 모든 템플릿을 변환
 4. 템플릿이 읽는 데이터 파일이 변경 된 경우 실행 되도록 Visual Studio 프로젝트를 설정가능
+
 ***
 
 # 변수 텍스트 생성
@@ -105,6 +111,7 @@ class MyGeneratedClass {
 ```
 
 프로그램 코드를 생성할 때는 템플릿에서 실행되는 생성 코드와 그 결과로 생성된, 솔루션의 일부분이 되는 코드를 혼동하지 않아야됨.
+
 ***
 
 # 텍스트 템플릿 구조 지정
@@ -115,7 +122,8 @@ class MyGeneratedClass {
 
 2. 변수의 값을 사용하는 텍스트 생성 부분. 위의 예에서는 foreach(...){...}에 해당
 
-코드를 반드시 이와 같이 분리해야 하는 것은 아니지만 이 스타일을 사용하면 텍스트를 포함하는 부분을 보다 단순하게 작성하여 템플릿을 더 쉽게 읽을 수 있다고 한디.
+코드를 반드시 이와 같이 분리해야 하는 것은 아니지만 이 스타일을 사용하면 텍스트를 포함하는 부분을 보다 단순하게 작성하여 템플릿을 더 쉽게 읽을 수 있다고 한다.
+
 ***
 
 # 파일 또는 기타 소스 읽기
@@ -142,6 +150,7 @@ this.Host를 사용하려면 hostspecific="true"
 <#  foreach (string propertyName in properties { #>
 ...
 ```
+
 ***
 
 # 파일을 읽어서 내용을 변수 이름으로 할당하기
@@ -165,6 +174,7 @@ class MyGeneratedClass {
 
 ```
 readFile.txt에 myVariable 입력했으면 string 변수는 myVariable
+
 ***
 
 # T4 텍스트 템플릿을 사용하여 런타임에 텍스트 생성

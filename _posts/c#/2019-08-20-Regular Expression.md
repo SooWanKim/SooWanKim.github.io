@@ -5,13 +5,15 @@ categories: [C#]
 ---
 
 # 정규 표헌식이란
-정규표현식(正規表現式, Regular Expression)은 문자열을 처리하는 방법 중의 하나로 특정한 조건의 문자를 '검색'하거나 '치환'하는 과정을 매우 간편하게 처리 할 수 있도록 하는 수단이다
+정규표현식(正規表現式, Regular Expression)은 문자열을 처리하는 방법 중의 하나로 특정한 조건의 문자를 '검색'하거나 '치환'하는 과정을 매우 간편하게 처리 할 수 있도록 하는 수단이다.
+
 ***
 
 
 ## C#에서 사용
 System.Text.RegularExpressions.Regex 정규식 엔진 사용
 Regex.IsMatch, Regex.Match, Regex.Replace 사용
+
 ***
 
 
@@ -28,10 +30,12 @@ Match 2
 - NextMatch() 로 찾은거 하나씩 넘어가기
 
 ***
+
 ## Matches
 Matches 1
 
 ![](/assets/images/regular_expression/3.png)
+
 ***
 
 ## Split
@@ -44,6 +48,7 @@ Split 2
 ![](/assets/images/regular_expression/5.png)
 
 - 기본적으로 Regex가 꽤 느림. String에서 지원하는게 있으면 쓰는게 효율적임. 15배 정도 느림
+-
 ***
 
 ## 메타문자
@@ -53,6 +58,7 @@ Split 2
  자주 사용하는것들
 
 ![](/assets/images/regular_expression/6.png)
+
 ***
 
 ## 수량자
@@ -68,12 +74,14 @@ Split 2
 
 수량자2
 ![](/assets/images/regular_expression/0.png)
+
 ***
 
 ## 문자클래스
 - 문자 집합을 정의
 - 긍정 문자 그룹 : 입력 문자열의 문자는 지정된 문자 집합 중 하나와 일치해야 된다.
 - 부정 문자 그룹: 입력 문자열의 문자는 지정된 문자 집합중 하나와 일치하면 안된다.
+
 ***
 
 ## 긍정 문자 그룹
@@ -83,6 +91,7 @@ Split 2
 ![](/assets/images/regular_expression/9.png)
 
 ![](/assets/images/regular_expression/10.png)
+
 ***
 
 ## 부정 문자
@@ -91,6 +100,7 @@ Split 2
 ![](/assets/images/regular_expression/11.png)
 
 ![](/assets/images/regular_expression/12.png)
+
 ***
 
 ## 그룹화
@@ -98,6 +108,7 @@ Split 2
 - Group[0]은 전체 정규식 패턴에 의해 일치되는 텍스트
 
 ![](/assets/images/regular_expression/13.png)
+
 ***
 
 ## 명명된 일치하는 하위 식
@@ -106,6 +117,7 @@ Split 2
 - 이름 또는 번호로 해당 하위 식에 액세스 할 수 있게 해줌
 
 ![](/assets/images/regular_expression/14.png)
+
 ***
 
 ## 대체

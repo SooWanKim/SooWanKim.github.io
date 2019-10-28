@@ -16,6 +16,8 @@ float step = Time.deltaTime * rotateAngleSpeed * Mathf.Deg2Rad; // radian?? ??
 rotateVector = Vector3.RotateTowards(rotateVector, toTarget, step, 0.0f);
 ```
 
+***
+
 ##  Quaterinon Rotate
 
 ```c#
@@ -27,6 +29,8 @@ Vector2 toTargetDir = (Vector2)targetPosition - (Vector2)transform.position;
 var quaternionToTarget = Quaternion.FromToRotation(transform.right, toTargetDir.normalize) * transform.rotation;
 transform.rotation = Quaternion.RotateTowards(transform.rotation, quaternionToTarget, Time.deltaTime * rotateSpeed);
 ```
+
+***
 
 ## GetSignAngle
 ``` c#
