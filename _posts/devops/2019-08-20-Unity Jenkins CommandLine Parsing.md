@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Reading Jenkins CommandLine
-categories: [GameEngine,Devops]
+categories: [C#, GameEngine,Devops]
 ---
 
 ## 사용 목적
