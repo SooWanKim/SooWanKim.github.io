@@ -6,7 +6,7 @@ categories: [C#, GameEngine]
 
 ##  Vector Rotate
 ```c#
-Vector3 direction = ?;
+Vector3 direction = some value;
 direction = Quaternion.Euler(0.0f, 0.0f, deltaAngle) * direction;
 ```
 
