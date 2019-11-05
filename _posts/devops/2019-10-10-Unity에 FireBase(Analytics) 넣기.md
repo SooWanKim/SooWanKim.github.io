@@ -56,6 +56,8 @@ Parameter마다 함수가 등록되어 있어서, Generic하게 사용하기 위
 
 Ios는 FirebaseCore lib 경로이슈가 있어서 여기서 2번째 선택해야 됩니다.
 
-![](/assets/images/2019-10-10-Unity에%20FireBase%20넣기/2019-10-10-14-19-56.png)
+![](/assets/images/2019-10-10-Unity에%20FireBase(Analytics)%20넣기/2019-11-05-18-10-46.png)
+
+![](/assets/images/2019-10-10-Unity에%20FireBase(Analytics)%20넣기/2019-11-05-18-11-03.png)
 
 ***
