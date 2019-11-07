@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Outlook Flow로 이메일 받았을때 Webhook 사용하기
+title: Mircrosoft Flow
 categories: [Devops]
 ---
 
