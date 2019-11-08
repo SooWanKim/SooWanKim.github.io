@@ -53,6 +53,8 @@ outlook 트리거 및 템플릿
 
 ## Flow 사용 예제
 
+**jenkins build mail을 파싱해서 채팅방으로 공유하려고 만든 것**
+
 특정 발신, 수신인 지정된 outlook mail 수신 -> 메일의 body 내용을 변수들에 담고 -> http에 실어서 보낸다 (slack 채팅방이 될수 있고, 텔레그램, Teasm 다 가능)
 
 ![](/assets/images/2019-11-07-Outlook%20Flow/2019-11-07-14-11-14.png)
@@ -61,3 +63,14 @@ outlook 트리거 및 템플릿
 작업 분기 처리도 가능하다.
 
 ![](/assets/images/2019-11-07-Outlook%20Flow/2019-11-07-14-13-26.png)
+
+
+***
+
+**점심 메뉴가 궁금한데 채팅방에서 보고 싶어서 간단히 만든 것.**
+
+teams 채널에 특정 메시지를 입력하면, 채널에 webhook을 통해 messagecard를 보냄
+
+![](/assets/images/2019-11-07-Mircrosoft%20Flow/2019-11-08-10-58-00.png)
+
+![](/assets/images/2019-11-07-Mircrosoft%20Flow/2019-11-08-10-59-32.png)
