@@ -6,7 +6,6 @@
     <url>
         <loc>{{ site.url }}{{ post.url | remove: 'index.html' }}</loc>
     </url>
-    {% endif %}
     {% endfor %}
 
     {% for page in site.pages %}
