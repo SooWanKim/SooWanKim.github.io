@@ -34,31 +34,39 @@ layout: default
     <div class="related">
         <h2>Related Posts</h2>
         <ul class="related-posts">
-                </h3>{{page.categories}} <h3>
-                    </h3>test <h3>
-            {% assign category = page.categories | default: page.title %}
-            {% for post in site.categories[category] %}
-            <li>
-                <h3>
-                    <a href="{{ site.baseurl }}{{ post.url }}">
-                        {{ post.title }}
-                        <small>{{ post.date | date_to_string }}</small>
-                    </a>
-                </h3>
-            </li>
-            {% endfor %}
-            {% for category in site.categories %}
-            <li>
-                    <h3>{{category}}</h3>
+            </h3>{{page.categories}} <h3>
+            </h3>test <h3>
+                {% assign category = page.categories | default: page.title %}
+                {% for post in site.categories[category] %}
+                <li>
+                    <h3>
+                        <a href="{{ site.baseurl }}{{ post.url }}">
+                            {{ post.title }}
+                            <small>{{ post.date | date_to_string }}</small>
+                        </a>
+                    </h3>
+                </li>
+                {% endfor %}
+                {% for category in site.categories %}
+                <li>
                     {% for posts in category %}
                     {% for post in posts %}
                     <h3>
-                            {{ post.title }}
+                        {{ post.title }}
                     </h3>
 
-            </li>
-            {% endfor %}
-            {% endfor %}
-            {% endfor %}
+                </li>
+                {% endfor %}
+                {% endfor %}
+                {% endfor %}
+
+                {% for category in page.categories %}
+                <h3>{{ category[0] }}</h3>
+                <ul>
+                    {% for post in category[1] %}
+                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                    {% endfor %}
+                </ul>
+                {% endfor %}
         </ul>
     </div>
