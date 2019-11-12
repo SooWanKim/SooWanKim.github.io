@@ -35,7 +35,7 @@ layout: default
         <h2>Related Posts</h2>
         <ul class="related-posts">
             {% assign category = page.category | default: page.title %}
-            {% for post in site.categories[pageCategory] %}
+            {% for post in site.categories[category] %}
             <li>
                 <h3>
                     <a href="{{ site.baseurl }}{{ post.url }}">
