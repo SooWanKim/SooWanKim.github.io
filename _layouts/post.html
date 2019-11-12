@@ -46,8 +46,8 @@ layout: default
                         </a>
                     </h3>
                 </li>
-                {% endfor %} -->
-                <!-- {% for category in site.categories %}
+                {% endfor %}
+                {% for category in site.categories %}
                 <li>
                     {% for posts in category %}
                     {% for post in posts %}
@@ -61,7 +61,16 @@ layout: default
                 {% endfor %} -->
 
                 {% for category in page.categories %}
-                <h3>{{ category }}</h3>
+                {% for post in site.categories[category] %}
+                <li>
+                    <h3>
+                        <a href="{{ site.baseurl }}{{ post.url }}">
+                            {{ post.title }}
+                            <small>{{ post.date | date_to_string }}</small>
+                        </a>
+                    </h3>
+                </li>
+                {% endfor %}
                 {% endfor %}
         </ul>
     </div>
