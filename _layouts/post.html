@@ -34,10 +34,7 @@ layout: default
     <div class="related">
         <h2>Related Posts</h2>
         <ul class="related-posts">
-                </h3>{{page.categories}} <h3>
-                    </h3>test <h3>
-            {% assign category = page.category | default: page.title %}
-            {% for post in site.categories[category] %}
+            {% for post in site.categories[page.categories] %}
             <li>
                 <h3>
                     <a href="{{ site.baseurl }}{{ post.url }}">
