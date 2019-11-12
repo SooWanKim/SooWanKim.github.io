@@ -1,10 +1,10 @@
 ---
 layout: post
-title: C# T4
+title: C# Test TextTemplateTransformationToolkit
 categories: [C#]
 ---
 
-# What is TextTemplateTransformationToolkit? ()
+# What is TextTemplateTransformationToolkit?
 
 Text Template Transformation Toolkit의 약자
 
