@@ -1,6 +1,6 @@
 ---
 layout: post
-title: python socket option no delay
+title: Python socket option no delay
 categories: [Python]
 ---
 

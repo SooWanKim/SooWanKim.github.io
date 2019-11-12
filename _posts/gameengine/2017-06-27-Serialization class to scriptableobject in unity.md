@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Unity Serialize Asset
+title: Serialization class to scriptableobject in unity
 categories: [C#,GameEngine]
 
 ---
