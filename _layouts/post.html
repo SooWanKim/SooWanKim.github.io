@@ -3,44 +3,48 @@ layout: default
 ---
 
 <div class="wrap">
-      <div class="masthead">
+    <div class="masthead">
         <div class="container" max-width="1000">
-          <h2 class="masthead-title">
-            <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
-            <small>{{ site.tagline }}</small>
-          </h2>
-          <nav class="site-nav">
-            <a href="/about">About</a> 
-            <a href="/">Posts</a>
-            <!-- <a href="/slide">Slides</a> -->
-          </nav>
+            <h2 class="masthead-title">
+                <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+                <small>{{ site.tagline }}</small>
+            </h2>
+            <nav class="site-nav">
+                <a href="/about">About</a>
+                <a href="/">Posts</a>
+                <!-- <a href="/slide">Slides</a> -->
+            </nav>
         </div>
-      </div>
-  
-<div class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
-  <span class="post-date">{{ page.date | date_to_string }}</span>
-  {{ content }}
-</div>
-      
-      <div class="container content" max-width="auto">
-      </div>
+    </div>
 
-<div class="fb-like" data-href="http://SooWanKim.github.io{{page.url}}" data-layout="standard" data-action="like" data-size="big" data-show-faces="false" data-share="true"></div>
-<div class="fb-comments" data-href="http://SooWanKim.github.io{{page.url}}" data-width="720" data-numposts="5"></div>
+    <div class="post">
+        <h1 class="post-title">{{ page.title }}</h1>
+        <span class="post-date">{{ page.date | date_to_string }}</span>
+        {{ content }}
+    </div>
 
-<div class="related">
-  <h2>Related Posts</h2>
-  <ul class="related-posts">
-    {% for post in site.related_posts limit:3 %}
-      <li>
-        <h3>
-          <a href="{{ site.baseurl }}{{ post.url }}">
-            {{ post.title }}
-            <small>{{ post.date | date_to_string }}</small>
-          </a>
-        </h3>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
+    <div class="container content" max-width="auto">
+    </div>
+
+    <div class="fb-like" data-href="http://SooWanKim.github.io{{page.url}}" data-layout="standard" data-action="like"
+        data-size="big" data-show-faces="false" data-share="true"></div>
+    <div class="fb-comments" data-href="http://SooWanKim.github.io{{page.url}}" data-width="720" data-numposts="5">
+    </div>
+
+    <div class="related">
+        <h2>Related Posts</h2>
+        <ul class="related-posts">
+            {% assign category = page.category | default: page.title %}
+            {% for post in site.categories[category] limit:3 %}
+            <!-- {% for post in site.related_posts limit:3 %} -->
+            <li>
+                <h3>
+                    <a href="{{ site.baseurl }}{{ post.url }}">
+                        {{ post.title }}
+                        <small>{{ post.date | date_to_string }}</small>
+                    </a>
+                </h3>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
