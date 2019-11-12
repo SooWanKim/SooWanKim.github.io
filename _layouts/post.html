@@ -11,7 +11,7 @@ layout: default
             </h2>
             <nav class="site-nav">
                 <a href="/about">About</a>
-                <!-- <a href="/">Posts</a> -->
+                <a href="/">Posts</a>
                 <!-- <a href="/slide">Slides</a> -->
             </nav>
         </div>
@@ -34,8 +34,8 @@ layout: default
     <div class="related">
         <h2>Related Posts</h2>
         <ul class="related-posts">
-            {% assign category = page.category | default: page.title %}
-            {% for post in site.categories[category] limit:3 %}
+            {% capture pageCategory %}{{ page.category }}{% endcapture %}
+            {% for post in site.categories[pageCategory] limit:3 %}
             <li>
                 <h3>
                     <a href="{{ site.baseurl }}{{ post.url }}">
