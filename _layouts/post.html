@@ -17,12 +17,19 @@ layout: default
         </div>
     </div>
 
-    <div class="post">
+    <!-- <div class="post">
         <h1 class="post-title">{{ page.title }}</h1>
         <span class="post-date">{{ page.date | date_to_string }}</span>
         {{ content }}
         <h2>Related Posts test</h2>
-    </div>
+    </div> -->
+
+    <article class="post">
+        <h1 class="post-title">{{ page.title }}</h1>
+        <p class="post-date">{{ page.date | date_to_string }}</p>
+        {{ content }}
+        <h2>Related Posts test</h2>
+      </article>
 
     <div class="container content" max-width="auto">
     </div>
