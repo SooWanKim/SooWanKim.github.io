@@ -34,10 +34,8 @@ layout: default
     <div class="related">
         <h2>Related Posts</h2>
         <ul class="related-posts">
-            <h3>{{page.category}}</h3>
-            <h3>test</h3>
-            {% capture pageCategory %}{{ page.category }}{% endcapture %}
-            {% for post in site.categories[pageCategory] limit:3 %}
+            {% assign category = page.category | default: page.title %}
+            {% for post in site.categories[pageCategory] %}
             <li>
                 <h3>
                     <a href="{{ site.baseurl }}{{ post.url }}">
