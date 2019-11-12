@@ -59,9 +59,12 @@ layout: default
                 {% endfor %}
                 {% endfor %}
                 {% endfor %} -->
-
+                {% assign maxpostcount = 3 %}
+                {% assign currentpostcount = 0 %}
+                {% if currentpostcount < maxpostcount %}
                 {% for category in page.categories %}
                 {% for post in site.categories[category] %}
+                {% assign currentpostcount = currentpostcount | plus: 1 %}
                 <li>
                     <h3>
                         <a href="{{ site.baseurl }}{{ post.url }}">
@@ -70,6 +73,7 @@ layout: default
                         </a>
                     </h3>
                 </li>
+                {% endif %}
                 {% endfor %}
                 {% endfor %}
         </ul>
