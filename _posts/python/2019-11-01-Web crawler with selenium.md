@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 웹 크롤러 테스트 해보기~
+title: test webcrawler with selenium
 categories: [Python]
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Filter를 통한 Jira Issue Mail로 발송하기~
+title:  Using python, mailing jira issue
 categories: [Python]
 ---
 

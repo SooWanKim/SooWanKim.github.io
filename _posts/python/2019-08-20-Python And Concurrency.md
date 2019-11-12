@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Python And Concurrency
+title: Python and Concurrency
 categories: [Python]
 ---
 

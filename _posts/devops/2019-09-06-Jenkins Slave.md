@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Jenkins Slave
+title: Jenkins slave
 categories: [Devops]
 ---
 

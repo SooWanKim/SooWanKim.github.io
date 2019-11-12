@@ -1,6 +1,6 @@
 ---
 layout : post
-title : Jenkins Restart
+title : When jenkins doesn`t restart
 categories: [Devops]
 ---
 

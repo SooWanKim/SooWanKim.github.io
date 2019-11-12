@@ -1,6 +1,6 @@
 ---
 layout: post
-title : Quotation
+title : Day quotation
 categories: [ETC]
 ---
 

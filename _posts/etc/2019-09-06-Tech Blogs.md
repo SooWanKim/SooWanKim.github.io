@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tech Blogs
+title: Tech blogs
 categories: [ETC]
 ---
 

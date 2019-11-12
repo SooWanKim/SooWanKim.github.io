@@ -1,6 +1,6 @@
 ---
 layout: post
-title: hook 사용하기, Unity Meta에서 커밋 체크
+title: Checking meta file with using git hook
 categories: [Git]
 ---
 

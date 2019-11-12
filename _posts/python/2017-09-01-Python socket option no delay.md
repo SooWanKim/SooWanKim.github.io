@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Python TCP/IP Delay Packet
+title: python socket option no delay
 categories: [Python]
 ---
 

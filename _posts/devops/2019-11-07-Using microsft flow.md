@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mircrosoft Flow
+title: using microsoft flow
 categories: [Devops]
 ---
 

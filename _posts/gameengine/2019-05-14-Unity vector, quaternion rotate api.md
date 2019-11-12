@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Unity Vector, Quaternion Rotate API
+title: Unity vector, quaternion rotate api
 categories: [C#, GameEngine]
 ---
 

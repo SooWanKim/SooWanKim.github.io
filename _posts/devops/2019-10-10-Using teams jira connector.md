@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Teams Jira Connector
+title: Using teams jira connector
 categories: [Devops]
 ---
 

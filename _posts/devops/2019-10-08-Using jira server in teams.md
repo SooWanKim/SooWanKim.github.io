@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Teams에 Jira Server App 붙이기
+title: Using jira server in teams
 categories: [Devops]
 ---
 
