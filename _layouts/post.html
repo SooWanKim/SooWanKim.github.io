@@ -61,9 +61,9 @@ layout: default
                 {% endfor %} -->
                 {% assign maxpostcount = 3 %}
                 {% assign currentpostcount = 0 %}
-                {% if currentpostcount < maxpostcount %}
                 {% for category in page.categories %}
                 {% for post in site.categories[category] %}
+                {% if currentpostcount < maxpostcount %}
                 {% assign currentpostcount = currentpostcount | plus: 1 %}
                 <li>
                     <h3>
@@ -73,8 +73,8 @@ layout: default
                         </a>
                     </h3>
                 </li>
-                {% endfor %}
-                {% endfor %}
                 {% endif %}
+                {% endfor %}
+                {% endfor %}
         </ul>
     </div>
