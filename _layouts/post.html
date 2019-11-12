@@ -47,7 +47,7 @@ layout: default
                 </h3>
             </li>
             {% endfor %}
-            {% for category in site.categories %}
+            {% for category in  site.categories[category] %}
             <li>
                     {% for posts in category %}
                     {% for post in posts %}
