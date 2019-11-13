@@ -4,11 +4,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     {% for post in site.posts %}
     <url>
-        <loc>{{ site.url }}{{ post.url | remove: 'index.html' }}</loc>
+        <loc>{{ site.url }}{{ post.url | remove: 'index.html' | remove: 'index.old.html'}}</loc>
     </url>
     {% endfor %}
 
-    {% for page in site.pages %}
+    <!-- {% for page in site.pages %}
     {% if page.layout != nil %}
     {% if page.layout != 'feed' %}
     <url>
@@ -16,5 +16,5 @@
     </url>
     {% endif %}
     {% endif %}
-    {% endfor %}
+    {% endfor %} -->
 </urlset>
