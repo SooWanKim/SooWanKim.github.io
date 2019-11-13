@@ -7,14 +7,4 @@
         <loc>{{ site.url }}{{ post.url | remove: 'index.html' | remove: 'index.old.html'}}</loc>
     </url>
     {% endfor %}
-
-    <!-- {% for page in site.pages %}
-    {% if page.layout != nil %}
-    {% if page.layout != 'feed' %}
-    <url>
-        <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
-    </url>
-    {% endif %}
-    {% endif %}
-    {% endfor %} -->
 </urlset>
