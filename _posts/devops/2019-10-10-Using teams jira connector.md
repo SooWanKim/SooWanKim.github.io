@@ -30,7 +30,7 @@ Teams jira connector를 사용해서 jira issue들이 갱신되거나 생성되�
 
 아래세팅도 Jira에서 세팅하는거라 jira admin 권한이 있는 사람이 세팅해야됩니다.
 
-![](/assets/images/2019-10-10-Teams%20Jira%20Connector/2019-10-10-11-25-56.png)
+![](/assets/images/2019-10-10-Using%20teams%20jira%20connector/2019-11-21-15-55-26.png)
 
 ***
 저장을 누르면 아래와 같이 채널에 Jira server가 추가됩니다.
