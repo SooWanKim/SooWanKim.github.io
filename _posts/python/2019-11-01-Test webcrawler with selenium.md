@@ -8,26 +8,25 @@ categories: [Python]
 
 웹에 있는 크래시 리포팅정보에서 앱의 크래시율을 매일 아침 메일로 받아보기 위함
 
-크래시 리포팅을 해주는곳에서 정보를 얻어올 수 있는 AIP가 없어서 웹정보를 가져오기로 함
+크래시 리포팅을 해주는곳에서 정보를 얻어올 수 있는 API가 없어서 웹에서 정보를 가져오기로 함
 
-찾아본 결과  selenium 모듈과 크롬 웹브라우저를 사용하는게 괜찮아 보여서 테스트 함
+찾아본 결과 selenium 모듈과 크롬 웹브라우저를 사용하는게 괜찮아 보여서 테스트 함
 
 ## chrome 세팅
-
-chorme를 사용
 
 chrome 버전 확인하고
 
 ![](/assets/images/2019-11-01-웹크롤러테스트/2019-11-01-10-54-48.png)
 
 버전에 맞는 크롬 드라이버를 다운로드 해야 된다.
+
 [https://sites.google.com/a/chromium.org/chromedriver/downloads](https://sites.google.com/a/chromium.org/chromedriver/downloads)
 
-다운받고 압축을 푼다음 chromedriver.exe 파일 위치를 복사해 놓는다.
+다운받고 압축을 푼다음 chromedriver.exe 파일 위치를 기억해 놓는다.
 
-## 사용 테스트 코드
+## 테스트 코드
 
-selector값이 필요
+찾을 selector 값이 필요
 
 ![](/assets/images/2019-11-01-웹크롤러테스트/2019-11-01-11-20-38.png)
 
@@ -77,7 +76,6 @@ def Login():
     # action.move_to_element(flowCanvas)
     # action.move_by_offset(500, 0).perform() -> flowCanvs로 이동후 right 500으로 이동
 
-
     # 밑에 코드도 동작함, 클릭이 가능할때 처리
     # WebDriverWait(g_browser, 20).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="loginBtn"]'))).click()
 
@@ -123,6 +121,6 @@ Main()
 
 ![](/assets/images/2019-11-01-웹크롤러테스트/2019-11-01-11-09-14.png)
 
-기사의 메인 제목
+찾은 기사의 메인 제목
 
 ![](/assets/images/2019-11-01-웹크롤러테스트/2019-11-01-11-22-01.png)

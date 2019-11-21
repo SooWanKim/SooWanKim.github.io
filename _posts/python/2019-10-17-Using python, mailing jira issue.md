@@ -6,25 +6,18 @@ categories: [Python]
 
 ## 사용 목적
 
-jql 사용해서 원하는 jira issue 들을 요약하여 html 서식으로 mail 발송하기 위함
+jira filter(jql) 사용해서 원하는 jira issue 들을 요약하여 html 서식으로 mail 발송
 
 ***
 
-## 작업 순서
+## 기능
 
-1. jira 권한 처리
+1. jira 인증
 2. jql로 원하는 jira issue 가져오기
 3. html 형식에 맞게 issue 요약
-4. stmp를 통한 mail 발송 (scheduling로 원하는 시간대별 처리 가능)
-
-***
-
-## 비고
-
-jira, stmp, schedule 모듈 사용
+4. stmp를 통한 mail 발송 (scheduling 원하는 시간대별 처리)
 
 config.ini로 계정 정보 및 설정 분리
-
 mail_format.html로 메일 발송 서식 분리
 
 ***
@@ -37,15 +30,18 @@ def MakeJira(config):
     jira = JIRA(options, basic_auth=( config['jira_info']['account_id'],config['jira_info']['account_password']))
     return jira
 
+
 def ReadConfig():
     config = configparser.ConfigParser()
     config.sections()
     config.read('temp_config.ini')
     return config
 
+
 def ReadHtml():
     with open('mail_format.html','r', encoding="utf8") as file:
         return file.read()
+
 
 def FindJiraIssueInfoByFilter(jira, config):
     jira_filter = config['jira_info']['filter']
@@ -58,6 +54,7 @@ def FindJiraIssueInfoByFilter(jira, config):
         jira_issue_content += jira_issue_format.format(issue.key, issue.key, issue.fields.summary, issue.fields.assignee.displayName)
 
     return jira_issue_content , allIssue.total
+
 
 def SendEmail(config, mail_content):
     titletext = config['mail_info']['mail_title']
@@ -82,7 +79,7 @@ def SendEmail(config, mail_content):
     s.sendmail(sender, address_book, text.encode('utf-8'))
     s.quit()
 
-#read config
+
 config = ReadConfig()
 
 jira = MakeJira(config)
@@ -95,14 +92,12 @@ def SendScheduleMail():
     html_info = html_info.replace("{내용}", jira_issue_content)
     SendEmail(config, html_info)
 
-#schedule.every(30).seconds.do(SendScheduleMail)
-#schedule.every().day.at(config['mail_info']['schedule_time']).do(SendScheduleMail)
-
-SendScheduleMail()
+schedule.every(30).seconds.do(SendScheduleMail)
+schedule.every().day.at(config['mail_info']['schedule_time']).do(SendScheduleMail)
 
 print("start working")
 
-# while True:
-#     schedule.run_pending()
-#
+while True:
+    schedule.run_pending()
+
 ```
