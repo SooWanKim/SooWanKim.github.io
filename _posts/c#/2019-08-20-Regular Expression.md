@@ -9,13 +9,11 @@ categories: [C#]
 
 ***
 
-
 ## C#에서 사용
 System.Text.RegularExpressions.Regex 정규식 엔진 사용
 Regex.IsMatch, Regex.Match, Regex.Replace 사용
 
 ***
-
 
 ## Match
 Match 1
@@ -73,6 +71,7 @@ Split 2
 ![](/assets/images/regular_expression/8.png)
 
 수량자2
+
 ![](/assets/images/regular_expression/0.png)
 
 ***

@@ -30,13 +30,19 @@ Text Template타입의 파일을 만들면
 
 ![](/assets/images/TextTemplateTransformationToolkit/1.png)
 
+***
+
 아래와 같은 내용이 자동 생성된다. (사용하는 laguage, namespace와 확장자, debug할지 여부)
 
 ![](/assets/images/TextTemplateTransformationToolkit/2.png)
 
+***
+
 property에 customtool 항목이 TextTemplatingFileGenerator 이렇게 되있어야 자동생성 기능이 됨.(이 속성에 따라 기능이 달라진다)
 
 ![](/assets/images/TextTemplateTransformationToolkit/3.png)
+
+***
 
 위의 파일 수정 후 같은 이름의 .txt 확장 파일이 자동으로 만들어 진다.
 
@@ -65,6 +71,9 @@ for (int i = 0; i<=top; i++)
    The square of <#= i #> is <#= i*i #>
 <# } #>
 ```
+
+***
+
 출력결과물
 ```c#
  The square of 0 is 0
@@ -79,6 +88,8 @@ for (int i = 0; i<=top; i++)
  The square of 9 is 81
  The square of 10 is 100
 ```
+
+***
 
 변수 사용구문은 <# 내용 #> 이렇게
 
@@ -97,6 +108,8 @@ class MyGeneratedClass {
 }
 ```
 
+***
+
 출력결과물
 ```c#
 // This is generated code:
@@ -109,6 +122,8 @@ class MyGeneratedClass {
   private int P3 = 0;
 }
 ```
+
+***
 
 프로그램 코드를 생성할 때는 템플릿에서 실행되는 생성 코드와 그 결과로 생성된, 솔루션의 일부분이 되는 코드를 혼동하지 않아야됨.
 
