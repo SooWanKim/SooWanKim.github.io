@@ -8,7 +8,7 @@ categories: [VSCode]
 
 ![](/assets/images/2019-11-28-vs%20code%20extentions/2019-11-28-11-27-53.png)
 
-- vs code의 설치된 extentions, setting, keyboard shortcuts를 gitgub gist로 모두 동기화 해준다. gitgub 계정만 있으면 쉽게 연동 가능
+- vs code의 설치된 extentions, setting, keyboard shortcuts를 gitgub gist로 모두 동기화 해준다. github 계정만 있으면 쉽게 연동 가능
 - 회사에서 쓰다가 집에와서 써도 세팅이 똑같다~
 
 ## 파이썬용 : Python for VSCode, Python, Python Extention Pack, Python Indent
@@ -19,7 +19,7 @@ categories: [VSCode]
 
 - clipboard에 저장된 (캡쳐된 이미지)를 vs code에서 붙여 넣기하면 자동으로 원하는 경로에 이미지 파일 생성해주고 아래와 같은 형식으로 문서에 넣어준다.
 
-![](/assets/images/2019-11-28-vs%20code%20extentions/2019-11-28-11-33-02.png)
+![](/assets/images/2019-11-28-vs%20code%20extentions/2019-11-28-11-33-02.pn
 
 ## Todo Tree
 
