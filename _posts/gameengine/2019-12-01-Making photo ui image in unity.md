@@ -27,7 +27,7 @@ private void CaptureCamera(Vector3 capturePosition, Bounds captureBounds)
 #if UNITY_IPHONE || UNITY_EDITOR || UNITY_STANDALONE // RenderTexture 생성하는게 iphone, Editor와 android를 인자를 다르게해야한다.
 		m_RenderTexture = new RenderTexture(Screen.width, Screen.height, 24);
 #elif UNITY_ANDROID
-         m_RenderTexture = new RenderTexture(Screen.width, Screen.height, 24, RenderTextureFormat.Default, RenderTextureReadWrite.Linear);
+        m_RenderTexture = new RenderTexture(Screen.width, Screen.height, 24, RenderTextureFormat.Default, RenderTextureReadWrite.Linear);
 #endif
 
     Camera captureCamera = CameraManager.Instance.captureCamera; // capture camera. main camera랑 sorting order를 다르게 한다.
