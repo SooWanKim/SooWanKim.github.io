@@ -26,8 +26,15 @@ Read articles, listen to podcasts, watch tutorials and follow online courses
 
 ***
 
-브롤스타즈 리드 개발자 프랭크 카이엔부르크
+We are not just talking about it, we're living it
 
->We are not just talking about it, we're living it
+>브롤스타즈 리드 개발자 프랭크 카이엔부르크
 
 ***
+
+I've always liked Hamming's famous double-barrelled question: what are the most important problems in your field, and why aren't you working on one of them? It's a great way to shake yourself up. But it may be overfitting a bit. It might be at least as useful to ask yourself: if you could take a year off to work on something that probably wouldn't be important but would be really interesting, what would it be?
+
+>[http://paulgraham.com/genius.html](http://paulgraham.com/genius.html)
+
+***
+
