@@ -25,3 +25,9 @@ Read articles, listen to podcasts, watch tutorials and follow online courses
 >Kent Beck
 
 ***
+
+브롤스타즈 리드 개발자 프랭크 카이엔부르크
+
+>We are not just talking about it, we're living it
+
+***
