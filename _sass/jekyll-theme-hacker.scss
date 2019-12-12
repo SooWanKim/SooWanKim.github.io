@@ -3,7 +3,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: #002451 url("../images/bkg.png") 0 0;
+  background: #002451;
   color: #eaeaea;
   font-size: 16px;
   line-height: 1.5;
@@ -38,7 +38,7 @@ li {
 */
 
 header {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0,36,81,0);
   width: 100%;
   border-bottom: 1px dashed #b5e853;
   padding: 20px 0;
