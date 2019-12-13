@@ -25,25 +25,25 @@ mail_format.html로 메일 발송 서식 분리
 ## 작업 코드
 
 ```python
-def MakeJira(config):
+def make_jira(config):
     options = {'server':'지라 주소'}
     jira = JIRA(options, basic_auth=( config['jira_info']['account_id'],config['jira_info']['account_password']))
     return jira
 
 
-def ReadConfig():
+def read_config():
     config = configparser.ConfigParser()
     config.sections()
     config.read('temp_config.ini')
     return config
 
 
-def ReadHtml():
+def read_html():
     with open('mail_format.html','r', encoding="utf8") as file:
         return file.read()
 
 
-def FindJiraIssueInfoByFilter(jira, config):
+def find_jira_issue_info(jira, config):
     jira_filter = config['jira_info']['filter']
     jira_issue_format = config['jira_info']['issue_format']
 
@@ -56,7 +56,7 @@ def FindJiraIssueInfoByFilter(jira, config):
     return jira_issue_content , allIssue.total
 
 
-def SendEmail(config, mail_content):
+def send_email(config, mail_content):
     titletext = config['mail_info']['mail_title']
     address_book = [config['mail_info']['receiver']]
 
@@ -80,20 +80,20 @@ def SendEmail(config, mail_content):
     s.quit()
 
 
-config = ReadConfig()
+config = read_config()
 
-jira = MakeJira(config)
+jira = make_jira(config)
 
-def SendScheduleMail():
-    html_info = ReadHtml()
+def run_scheduled_mail():
+    html_info = read_html()
     html_info = html_info.replace("{제목}", config['mail_info']['content_title'])
-    jira_issue_content , issue_total_count = FindJiraIssueInfoByFilter(jira, config)
+    jira_issue_content , issue_total_count = find_jira_issue_info(jira, config)
     html_info = html_info.replace("{이슈 합계}", str(issue_total_count))
     html_info = html_info.replace("{내용}", jira_issue_content)
-    SendEmail(config, html_info)
+    send_email(config, html_info)
 
-schedule.every(30).seconds.do(SendScheduleMail)
-schedule.every().day.at(config['mail_info']['schedule_time']).do(SendScheduleMail)
+schedule.every(30).seconds.do(run_scheduled_mail)
+schedule.every().day.at(config['mail_info']['schedule_time']).do(run_scheduled_mail)
 
 print("start working")
 

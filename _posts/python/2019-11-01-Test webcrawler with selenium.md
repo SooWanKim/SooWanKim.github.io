@@ -46,7 +46,7 @@ g_browser = None
 g_wait = None
 
 
-def Login():
+def login():
     global g_browser
     global g_wait
 
@@ -98,7 +98,7 @@ def Login():
     time.sleep(5)
 
 
-def Main():
+def main():
     global g_browser
     global g_wait
 
@@ -108,10 +108,10 @@ def Main():
     g_browser.implicitly_wait(3)
     g_wait = WebDriverWait(g_browser, 10)  # wait for at most 10s
 
-    Login()
+    login()
 
 
-Main()
+main()
 
 ```
 

@@ -21,7 +21,7 @@ categories: [Python]
 ```python
 
 #
-def MakeReport(date):
+def make_report(date):
     fig, ax1 = plt.subplots(figsize=(13, 7))
 
     my_data1 = []
