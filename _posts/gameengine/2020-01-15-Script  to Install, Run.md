@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Script to Install, Run
+title: Script to apk install and launch
 categories: [GameEngine]
 ---
 
@@ -12,4 +12,7 @@ adb install -r my.apk && adb shell monkey -p <packagename> -c android.intent.cat
 ```
 
 -r 은 재설치
+
+install : adb install -r my.apk
+launch : adb shell monkey -p <packagename> -c android.intent.category.LAUNCHER 1
 
