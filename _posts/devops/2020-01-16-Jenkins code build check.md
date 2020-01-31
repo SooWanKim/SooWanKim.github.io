@@ -103,11 +103,23 @@ def ScanIssues()
                 def action = publishIssues issues: [buildissue]
                 def result = action.getResult()
                 def newIssues = result.getNewSize()
+                def totalErrorSize = result.getTotalErrorsSize()
 
                 println(result)
                 println(newIssues)
+                println(totalErrorSize)
 
-				if( newIssues != 0)
+                // 이슈 상세정보 로그 출력
+                String totalIssue = ''
+                def infoMessages = result.getIssues()
+                println(infoMessages.size())
+                infoMessages.each{
+                    item -> println(item)
+                    totalIssue += item
+                    totalIssue += "\r\n"
+                }
+
+				if( totalErrorSize != 0)
 				{
 					def errorURL = "${BUILD_URL}msbuild/new"
 
