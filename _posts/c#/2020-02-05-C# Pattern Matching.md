@@ -46,7 +46,7 @@ public static double ComputeAreaModernIs(object shape)
 }
 ```
 
-if(shape is Square s) 이렇게 타입 체크를 하면서 할당까지 바로 한다.
+if(shape is Square s) **타입 체크를 하면서 할당까지 바로 한다.**
 
 
 ## Swtich statement
@@ -70,7 +70,7 @@ public static double ComputeAreaModernSwitch(object shape)
 }
 ```
 
-case Square s:  로 case 문에서 바로 할당까지 한다
+case Square s:   **case 문에서 바로 할당까지 한다**
 
 
 ## When clauses in case expressions
