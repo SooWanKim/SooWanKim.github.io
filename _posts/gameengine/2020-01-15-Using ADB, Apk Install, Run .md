@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Script to apk install and launch
+title: Using ADB apk install and launch
 categories: [GameEngine]
 ---
 
