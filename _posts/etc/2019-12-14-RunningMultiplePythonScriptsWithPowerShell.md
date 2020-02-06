@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Running multiple python scripts sequentially with powershell(set width, set height)
-categories: [Python]
+categories: [ETC]
 ---
 
 ## 사용 목적
