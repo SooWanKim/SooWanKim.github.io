@@ -134,3 +134,13 @@ Content-Type: application/json
 log의 field type은 object이고 하이라키 밑으로 여러개의 타입을 추가할 수 있다.
 
 mapping type [https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping.html)
+
+
+
+## Index Template
+
+index mapping type을 template으로 만들어 놓을 수 있다.
+
+![](/assets/images/2020-02-17-Elasticsearch%20index%20mapping/2020-02-17-12-20-20.png)
+
+위와 같이 설정해 놓으면 연결된 index로 자동 mapping
