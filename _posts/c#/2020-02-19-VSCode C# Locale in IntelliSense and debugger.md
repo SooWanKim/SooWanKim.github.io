@@ -7,7 +7,7 @@ categories: [C#]
 
 ## 문제
 
-C# Intellisense Local 안바뀐다.
+C# Intellisense 언어가 안바뀐다.
 
 Display Languange Mode를 영어로 바꿨는데도, c# Error가 한글로 나옴
 
@@ -16,7 +16,7 @@ Display Languange Mode를 영어로 바꿨는데도, c# Error가 한글로 나�
 
 ## 해결책
 
-Omnisharp의 local이 안바뀌는 문제여서 찾아봄
+Omnisharp의 언어가 안바뀌는 문제여서 찾아봄
 
 [https://github.com/OmniSharp/omnisharp-vscode/issues/2513](https://github.com/OmniSharp/omnisharp-vscode/issues/2513)
 
