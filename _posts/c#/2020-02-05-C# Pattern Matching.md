@@ -100,7 +100,9 @@ public static double ComputeArea_Version3(object shape)
 }
 ```
 case Square s when s.Side == 0:  **할당 및 when으로 조건 비교까지 case에서 사용**
+
 case Triangle t when t.Base == 0 || t.Height == 0:   **or 연산도 사용**
+
 case null:  **nullType도 체크**
 
 

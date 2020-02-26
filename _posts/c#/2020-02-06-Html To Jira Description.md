@@ -19,6 +19,7 @@ renderer을 할 수 있는 방법을 찾아봄. c#으로 만든거라 c#에서 �
 이름그대로 html정보를 쉽게 markdown형식으로 컨터팅 해준다. ("a href", "th", "td")
 
 **지원해주는 tag**
+
 ![](/assets/images/2020-02-06-Html%20To%20Jira%20Description/2020-02-06-19-58-11.png)
 
 
@@ -41,13 +42,14 @@ string result = converter.Convert(html);
 
 Jira에 쓸려고하니 Description에 이미지를 넣을때 문제가 생김
 
-Jira의 이미지 링크 포맷은 !https://img.png | width=800, height=400! 이런 방식임
+Jira의 이미지 링크 포맷은 "!https://img.png | width=800, height=400!" 이런 방식임
 
 ReverseMarkDown은 markdown형식으로 아래 처럼 return 한다.
 
 ```cs
 return $"![{StringUtils.EscapeLinkText(alt)}]({src}{title})";
 ```
+
 
 파싱해서 리턴하는 부분만 Jira에 맞게 아래 처럼 변경
 
