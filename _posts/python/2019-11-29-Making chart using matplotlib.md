@@ -20,7 +20,6 @@ categories: [Python]
 
 ```python
 
-#
 def make_report(date):
     fig, ax1 = plt.subplots(figsize=(13, 7))
 
@@ -72,6 +71,12 @@ def make_report(date):
 
 ```
 
-## 결과 이미지
+## 위의 결과 이미지
 
 ![](/assets/images/2019-11-29-Python%20matplotlib/2019-11-29-13-41-03.png)
+
+
+## 테이블도 만듬
+
+![](/assets/images/2019-11-29-Making%20chart%20using%20matplotlib/2020-02-27-14-55-12.png)
+
