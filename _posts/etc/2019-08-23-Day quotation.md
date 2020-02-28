@@ -42,3 +42,7 @@ I've always liked Hamming's famous double-barrelled question: what are the most 
 효율적이고 가치 있게 만드는 방향으로 일할 것이다.
 좋은 프로그래머는 의사 소통을 한다. 그들은 잘 말하고 작성하며 코딩하고 듣고 읽는다.
 >훌룡한 프로그래머가 되는법
+
+Fail early and often
+당신이 두려워하는 것을 일찍, 그리고 자주해야 합니다
+>워드 커닝햄
