@@ -46,3 +46,8 @@ I've always liked Hamming's famous double-barrelled question: what are the most 
 Fail early and often
 당신이 두려워하는 것을 일찍, 그리고 자주해야 합니다
 >워드 커닝햄
+
+디테일에 집착 하지 않으면 위대한 성취는 없다.
+
+내가 아는 언어의 한계가 곧 내가 아는 세상의 한계
+
