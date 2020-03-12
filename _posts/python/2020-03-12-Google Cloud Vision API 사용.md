@@ -128,6 +128,6 @@ while True:
 
 ## 결과
 
-![](/assets/images/2020-03-12-Google%20Cloud%20Vision%20API%20사용/2020-03-12-17-25-31.png)
+![](/assets/images/2020-03-12-Google%20Cloud%20Vision%20API%20사용/2020-03-12-17-54-28.png)
 
 텍스트는 정렬좀 해야할듯 ㅋ
