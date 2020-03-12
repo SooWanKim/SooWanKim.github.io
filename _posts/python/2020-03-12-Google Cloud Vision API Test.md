@@ -128,3 +128,4 @@ while True:
 
 ## 결과
 
+![](/assets/images/2020-03-12-Google%20Cloud%20Vision%20API%20Test/2020-03-12-20-18-32.png)
