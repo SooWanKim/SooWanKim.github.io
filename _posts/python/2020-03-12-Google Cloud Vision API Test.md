@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Google Cloud Vision API 사용
+title: Google Cloud Vision API Test
 categories: [Python]
 ---
 
