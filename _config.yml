@@ -13,3 +13,16 @@ category_layout: "category.html" # <- default value
 
 timezone:           Asia/Seoul
 permalink:          /:year-:month-:day/:title/
+
+# Sass
+sass:
+  sass_dir:         _sass
+  style:            :compressed
+
+# Markdown
+markdown:           kramdown
+kramdown:
+  input:            GFM
+
+  copyright:
+  name:             Kim
