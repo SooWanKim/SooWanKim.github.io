@@ -26,3 +26,23 @@ kramdown:
 
   copyright:
   name:             Kim
+
+  # Scopes
+defaults:
+  -
+    scope:
+      path:         ""
+      type:         "pages"
+    values:
+      layout:       "page"
+  -
+    scope:
+      path:         ""
+      type:         "posts"
+    values:
+      layout:       "post"
+      
+gems:
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-admin
