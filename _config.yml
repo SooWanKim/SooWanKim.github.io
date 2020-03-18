@@ -10,3 +10,6 @@ author:
 
 category_path: "category" # <- default value
 category_layout: "category.html" # <- default value
+
+timezone:           Asia/Seoul
+permalink:          /:year-:month-:day/:title/
