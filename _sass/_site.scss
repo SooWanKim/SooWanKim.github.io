@@ -17,13 +17,13 @@ body {
 }
 
 .content-container {
-  max-width: 48rem;
-  padding: 5rem 1rem;
+  max-width: 50rem;
+  padding: 5rem 0.5rem;
   margin-left:  auto;
   margin-right: auto;
 
-  @media (max-width: 48rem){
-    padding: 2rem 1.3rem;
+  @media (max-width: 50){
+    padding: 0.5rem 0.5rem;
   }
 }
 
@@ -184,7 +184,7 @@ body {
 .list {
   &-post {
     padding: 4% 2%;
-    
+
     &:hover {
       background-color: $background-over-color;
       border-color: transparent;

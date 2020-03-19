@@ -6,49 +6,42 @@ layout: default
 	<header class="header">
         <div class="header-title">
             <a href="{{ site.url }}{{ site.baseurl }}">{{ site.name }}</a>
-          </div>
-			<!-- <h2 class="masthead-title">
-				<a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
-				<small>{{ site.tagline }}</small>
-			</h2> -->
-			<nav class="header-nav">
-				<a href="/about">About</a>
-				<a href="/">Posts</a>
-
-				<!-- <a href="/slide">Slides</a> -->
-			</nav>
+        </div>
+		<nav class="header-nav">
+			<a href="/about">About</a>
+			<a href="/">Posts</a>
+		</nav>
 	</header>
-		<element class='tag'>
-			<li><a href="Book">Book</a>
-            </li>
-			<li><a href="GameEngine">GameEngine</a>
-			</li>
+	<div class='tag'>
+		<li><a href="Book">Book</a>
+        </li>
+		<li><a href="GameEngine">GameEngine</a>
+		</li>
 
-			<li><a href="C%23">C#</a>
-			</li>
+		<li><a href="C%23">C#</a>
+		</li>
 
-			<li><a href="C++">C++</a>
-			</li>
+		<li><a href="C++">C++</a>
+		</li>
 
-			<li><a href="Python">Python</a>
-			</li>
+		<li><a href="Python">Python</a>
+		</li>
 
-			<li><a href="VSCode">VSCode</a>
-			</li>
+		<li><a href="VSCode">VSCode</a>
+		</li>
 
-			<li><a href="Devops">Devops</a>
-			</li>
+		<li><a href="Devops">Devops</a>
+		</li>
 
-			<li><a href="Git">Git</a>
-			</li>
+		<li><a href="Git">Git</a>
+		</li>
 
-			<li><a href="ETC">ETC</a>
-			</li>
-		</element>
+		<li><a href="ETC">ETC</a>
+		</li>
+	</div>
 
 	<div class="list">
         {% for post in paginator.posts %}
-		<!-- {% for post in site.posts %} -->
 		{% if post.layout == "post" %}
 		<div class="list-post">
 			<div class="list-post-date">
