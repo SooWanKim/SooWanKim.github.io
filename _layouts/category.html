@@ -23,12 +23,12 @@ layout: default
         {% for post in site.categories[category] %}
         <div class="archive-list-post">
               <a href="{{ site.baseurl }}{{ post.url }}">
-                <span class="archive-list-post-title">
+                <div class="archive-list-post-title">
                     {{ post.title }}
-                  </span>
-                  <span class="archive-list-post-date">
-                    <time>| {{ post.date | date_to_string }}</time>
-                  </span>
+                  </div>
+                  <div class="archive-list-post-date">
+                    <time>{{ post.date | date_to_string }}</time>
+                  </div>
               </a>
         </div>
         {% endfor %}
