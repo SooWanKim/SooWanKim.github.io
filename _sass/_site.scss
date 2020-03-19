@@ -302,8 +302,14 @@ body {
   &-title {
     font-size: 1.4rem;
     font-weight: 600;
-    text-transform: lowercase;
+    // text-transform: lowercase;
     padding: 1rem 0;
+    a {
+        color: $base-color;
+        margin-bottom: .3rem;
+        font-size : 1.0rem;
+        font-weight: 300;
+      }
   }
 
   &-post {
@@ -329,6 +335,12 @@ body {
   Archive
   -------------- */
 .archive {
+    border-top: 3px solid #eee;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-size : 2.0rem;
+    font-weight: 400;
+
   &-list {
     &-post {
       padding: 0.1rem;
