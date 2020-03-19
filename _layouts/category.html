@@ -19,9 +19,9 @@ layout: default
 
 <div class="archive">
     <div class="archive-list">
-        <div class="archive-list-post">
         {% assign category = page.category | default: page.title %}
         {% for post in site.categories[category] %}
+        <div class="archive-list-post">
               <a href="{{ site.baseurl }}{{ post.url }}">
                 <span class="archive-list-post-title">
                     {{ post.title }}

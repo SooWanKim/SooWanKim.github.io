@@ -30,26 +30,24 @@ layout: default
 <div class="archive">
     <h2>Related Posts</h2>
     <div class="archive-list">
-        <div class="archive-list-post">
             {% assign maxpostcount = 3 %}
             {% assign currentpostcount = 0 %}
             {% for category in page.categories %}
             {% for post in site.categories[category] %}
-            {% if currentpostcount < maxpostcount %}
-            {% assign currentpostcount = currentpostcount | plus: 1 %}
-
-                    <a href="{{ site.baseurl }}{{ post.url }}">
-                        <span class="archive-list-post-title">
-                            {{ post.title }}
-                        </span>
-                        <span class="archive-list-post-date">
-                            <time> {{ post.date | date_to_string }}</time>
-                        </span>
-                    </a>
-
+            <div class="archive-list-post">
+                {% if currentpostcount < maxpostcount %}
+                {% assign currentpostcount = currentpostcount | plus: 1 %}
+                        <a href="{{ site.baseurl }}{{ post.url }}">
+                            <span class="archive-list-post-title">
+                                {{ post.title }}
+                            </span>
+                            <span class="archive-list-post-date">
+                                <time> {{ post.date | date_to_string }}</time>
+                            </span>
+                        </a>
             {% endif %}
             {% endfor %}
+            </div>
             {% endfor %}
         </div>
-    </div>
 </div>
