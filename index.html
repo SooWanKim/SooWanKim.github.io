@@ -2,84 +2,83 @@
 layout: default
 ---
 
-<!-- <div class="wrap"> -->
-	<header class="header">
-        <div class="header-title">
-            <a href="{{ site.url }}{{ site.baseurl }}">{{ site.name }}</a>
-        </div>
-		<nav class="header-nav">
-			<a href="/about">About</a>
-			<a href="/">Posts</a>
-		</nav>
-	</header>
-	<div class='tag'>
-		<li><a href="Book">Book</a>
-        </li>
-		<li><a href="GameEngine">GameEngine</a>
-		</li>
-
-		<li><a href="C%23">C#</a>
-		</li>
-
-		<li><a href="C++">C++</a>
-		</li>
-
-		<li><a href="Python">Python</a>
-		</li>
-
-		<li><a href="VSCode">VSCode</a>
-		</li>
-
-		<li><a href="Devops">Devops</a>
-		</li>
-
-		<li><a href="Git">Git</a>
-		</li>
-
-		<li><a href="ETC">ETC</a>
-		</li>
-	</div>
-
-	<div class="list">
-        {% for post in paginator.posts %}
-		{% if post.layout == "post" %}
-		<div class="list-post">
-			<div class="list-post-date">
-				{{ post.date | date_to_string }}
-			</div>
-			<div class="list-post-title">
-				<a href="{{ post.url }}">
-					{{ post.title }}
-                </a>
-			</div>
-			<div class="list-post-desc">
-				{{ post.content | strip_html | truncatewords:25}}<br><br>
-			</div>
-		</div>
-		{% endif %}
-		{% endfor %}
-
-        <div class="list-pagination">
-            <span class="list-pagination-previous">
-              {% if paginator.previous_page %}
-                <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous">
-                  &#xE000; previous
-                </a>
-              {% else %}
-
-              {% endif %}
-            </span>
-
-            <span class="list-pagination-next">
-              {% if paginator.next_page %}
-                <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next">
-                  next &#xE001;
-                </a>
-              {% else %}
-
-              {% endif %}
-            </span>
-
-          </div>
+<header class="header">
+    <div class="header-title">
+        <a href="{{ site.url }}{{ site.baseurl }}">{{ site.name }}</a>
     </div>
+	<nav class="header-nav">
+		<a href="/about">About</a>
+		<a href="/">Posts</a>
+	</nav>
+</header>
+<div class="tag">
+	<li><a href="Book">Book</a>
+    </li>
+	<li><a href="GameEngine">GameEngine</a>
+	</li>
+
+	<li><a href="C%23">C#</a>
+	</li>
+
+	<li><a href="C++">C++</a>
+	</li>
+
+	<li><a href="Python">Python</a>
+	</li>
+
+	<li><a href="VSCode">VSCode</a>
+	</li>
+
+	<li><a href="Devops">Devops</a>
+	</li>
+
+	<li><a href="Git">Git</a>
+	</li>
+
+	<li><a href="ETC">ETC</a>
+	</li>
+</div>
+
+<div class="list">
+    {% for post in paginator.posts %}
+	{% if post.layout == "post" %}
+	<div class="list-post">
+		<div class="list-post-date">
+			{{ post.date | date_to_string }}
+		</div>
+		<div class="list-post-title">
+			<a href="{{ post.url }}">
+				{{ post.title }}
+            </a>
+		</div>
+		<div class="list-post-desc">
+			{{ post.content | strip_html | truncatewords:25}}<br><br>
+		</div>
+	</div>
+	{% endif %}
+	{% endfor %}
+
+    <div class="list-pagination">
+        <span class="list-pagination-previous">
+          {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous">
+              &#xE000; previous
+            </a>
+          {% else %}
+
+          {% endif %}
+        </span>
+
+        <span class="list-pagination-next">
+          {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next">
+              next &#xE001;
+            </a>
+          {% else %}
+
+          {% endif %}
+        </span>
+
+      </div>
+</div>
 
