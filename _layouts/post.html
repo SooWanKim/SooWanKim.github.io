@@ -38,12 +38,12 @@ layout: default
                 {% if currentpostcount < maxpostcount %}
                 {% assign currentpostcount = currentpostcount | plus: 1 %}
                         <a href="{{ site.baseurl }}{{ post.url }}">
-                            <span class="archive-list-post-title">
+                            <div class="archive-list-post-title">
                                 {{ post.title }}
-                            </span>
-                            <span class="archive-list-post-date">
+                            </div>
+                            <div class="archive-list-post-date">
                                 <time> {{ post.date | date_to_string }}</time>
-                            </span>
+                            </div>
                         </a>
             {% endif %}
             </div>
