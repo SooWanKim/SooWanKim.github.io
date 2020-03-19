@@ -3,7 +3,7 @@ layout: default
 ---
 
 <ul class="category-title"><h1>{{page.title}}</h1></ul>
-<ul class="posts-list">
+<!-- <ul class="posts-list">
   {% assign category = page.category | default: page.title %}
   {% for post in site.categories[category] %}
     <li>
@@ -15,4 +15,22 @@ layout: default
       </h3>
     </li>
   {% endfor %}
-</ul>
+</ul> -->
+
+<div class="archive">
+    <div class="archive-list">
+        <div class="archive-list-post">
+        {% assign category = page.category | default: page.title %}
+        {% for post in site.categories[category] %}
+              <a href="{{ site.baseurl }}{{ post.url }}">
+                <span class="archive-list-post-title">
+                    {{ post.title }}
+                  </span>
+                  <span class="archive-list-post-date">
+                    <time>| {{ post.date | date_to_string }}</time>
+                  </span>
+              </a>
+        {% endfor %}
+        </div>
+  </div>
+</div>
