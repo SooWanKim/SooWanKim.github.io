@@ -1,7 +1,9 @@
 # theme: jekyll-theme-hacker
-title: Kim
+# title: Kim
 paginate: 5
+paginate_path: /page:num/
 url: https://SooWanKim.github.io/
+name: "Kim"
 
 author:
   name: swkim
@@ -41,7 +43,7 @@ defaults:
       type:         "posts"
     values:
       layout:       "post"
-      
+
 gems:
   - jekyll-seo-tag
   - jekyll-paginate

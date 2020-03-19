@@ -8,19 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   <meta property="fb:app_id" content="1435148273215661" />
-  <title>
-    {% if page.title == "Home" %}
-      {{ site.title }} &middot; {{ site.tagline }}
-    {% else %}
-      {{ page.title }} &middot; {{ site.title }}
-    {% endif %}
-  </title>
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
 
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css" type="text/css">
 
 <!-- Font -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+<link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
 <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
 
 <link rel="shortcut icon" href="{{ site.baseurl }}/public/icon.ico">
