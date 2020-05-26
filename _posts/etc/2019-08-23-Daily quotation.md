@@ -1,6 +1,6 @@
 ---
 layout: post
-title : Day quotation
+title : Daily quotation
 categories: [ETC]
 ---
 
@@ -43,11 +43,27 @@ I've always liked Hamming's famous double-barrelled question: what are the most 
 좋은 프로그래머는 의사 소통을 한다. 그들은 잘 말하고 작성하며 코딩하고 듣고 읽는다.
 >훌룡한 프로그래머가 되는법
 
+***
+
 Fail early and often
 당신이 두려워하는 것을 일찍, 그리고 자주해야 합니다
 >워드 커닝햄
 
+***
+
 디테일에 집착 하지 않으면 위대한 성취는 없다.
+
+***
 
 내가 아는 언어의 한계가 곧 내가 아는 세상의 한계
 
+***
+
+시란 영원히 미완성이라 끝없는 제 작업이 필요하며 포기할 때에만 끝난다
+>프랑스 시인 폴발레리
+
+***
+
+덴마크 속담. 사소한 곳에서 발휘된 정직은 사소하지않다
+
+***
