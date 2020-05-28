@@ -7,7 +7,7 @@ categories: [C#]
 
 ## 사용 목적
 
-```c#
+```cs
 void Func()
 {
     object objClass = MakeClass(); // object를 받는다
@@ -41,7 +41,7 @@ public class GenericClass
 
 Reflection의 **MakeGenericMethod** 사용하자.
 
-```c#
+```cs
 
 void Func()
 {

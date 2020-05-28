@@ -94,7 +94,7 @@ for (int i = 0; i<=top; i++)
 변수 사용구문은 <# 내용 #> 이렇게
 
 클래스 변수에 템플릿 정보 사용
-```c#
+```cs
 <#@ template debug="false" hostspecific="false" language="C#" #>
 <#@ output extension=".cs" #>
 <# var properties = new string [] {"P1", "P2", "P3"}; #>
@@ -111,7 +111,7 @@ class MyGeneratedClass {
 ***
 
 출력결과물
-```c#
+```cs
 // This is generated code:
 class MyGeneratedClass {
   // Generated code:
@@ -143,7 +143,7 @@ class MyGeneratedClass {
 
 # 파일 또는 기타 소스 읽기
 
-```c#
+```cs
 <# var properties = File.ReadLines("C:\\propertyList.txt");#>
 ...
 <# foreach (string propertyName in properties) { #>
@@ -157,7 +157,7 @@ class MyGeneratedClass {
 
 this.Host를 사용하려면 hostspecific="true"
 
-```c#
+```cs
 <# string fileName = this.Host.ResolvePath("filename.txt");
   string [] properties = File.ReadLines(filename);
 #>
@@ -169,7 +169,7 @@ this.Host를 사용하려면 hostspecific="true"
 ***
 
 # 파일을 읽어서 내용을 변수 이름으로 할당하기
-```c#
+```cs
 <#@ template debug="false" hostspecific="true" language="C#" #>
 <#@ assembly name="System.Xml.dll" #>
 <#@ import namespace="System.Xml" #>

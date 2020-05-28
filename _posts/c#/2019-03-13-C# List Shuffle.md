@@ -4,7 +4,7 @@ title: C# List Shuffle
 categories: [C#]
 ---
 
-```c#
+```cs
 public static void Shuffle<T>(System.Random random, List<T> list)
 {
     int n = list.Count;

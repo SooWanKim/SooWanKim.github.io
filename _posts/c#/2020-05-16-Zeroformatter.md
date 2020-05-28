@@ -30,7 +30,7 @@ C# Serializezation.Formatter에 있는 BinaryFormatter와  [ZeroFormatter](https
 
 간단한 사용
 
-```
+```cs
 public static byte[] SerializeClass(object classInstance)
 {
     IFormatter formatter = new BinaryFormatter();
