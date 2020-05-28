@@ -77,7 +77,7 @@ Class 사용법
 [ZeroFormattable] 붙여줘야하며, 변수에는 index순서를 넣어줘야 한다.
 [Serializable]는 BinaryFormatter와 비교하기위해 넣어준것.
 
-```c#
+```cs
 [ZeroFormattable]
 [Serializable]
 public class Base_Data
@@ -139,7 +139,7 @@ public class DataClass
 
 zfc.exe 을 사용해서 Editor상에서 cs파일 생성(zfc는 zeroformatter에 들어 있다)
 
-```C#
+```cs
 void GenerateZeroformatterClass()
 {
     string targetProjectName = "target.csproj";
@@ -171,8 +171,7 @@ void GenerateZeroformatterClass()
 
 Serialize, Deserialize
 
-```C#
-
+```cs
 public static byte[] Serialize<T>(T serializeClass)
 {
     var bytes = ZeroFormatterSerializer.Serialize(serializeClass);
@@ -202,7 +201,7 @@ DataClass를 만들고 DataClass안의 listdata에 Base_Data를 10000개 넣는�
 serialize 속도 비교는 하지 않는 이유가 serialize는 Editor에서 사용 하는거라 엄청 느리지 않는 이상 크게 의미가 없다.
 
 
-```c#
+```cs
 void SpeedTest()
 {
     ZeroFormatterInitializer.Register();
