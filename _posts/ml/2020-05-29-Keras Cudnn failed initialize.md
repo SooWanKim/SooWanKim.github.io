@@ -8,7 +8,7 @@ categories: [ML]
 
 딥러닝 강의를 공부하던중에
 
-https://github.com/hunkim/DeepLearningZeroToAll/blob/master/tf2/tf2-11-1-mnist_cnn.py
+[https://github.com/hunkim/DeepLearningZeroToAll/blob/master/tf2/tf2-11-1-mnist_cnn.py](https://github.com/hunkim/DeepLearningZeroToAll/blob/master/tf2/tf2-11-1-mnist_cnn.py)
 
 예제를 로컬에서 테스트
 
@@ -26,7 +26,7 @@ CUDA, Tensorflow,cuDNN, NVIDIA 버전이 안맞거나, 메모리가 부족하다
 
 ## 해결 방안
 
-https://stackoverflow.com/questions/53698035/failed-to-get-convolution-algorithm-this-is-probably-because-cudnn-failed-to-in
+[https://stackoverflow.com/questions/53698035/failed-to-get-convolution-algorithm-this-is-probably-because-cudnn-failed-to-in](https://stackoverflow.com/questions/53698035/failed-to-get-convolution-algorithm-this-is-probably-because-cudnn-failed-to-in)
 
 위의 댓글에 해결책이 있음.
 
@@ -36,6 +36,8 @@ os.environ['TF_FORCE_GPU_ALLOW_GROWTH'] = 'true'
 ```
 
 를 넣으니 실패없이 넘어감.
+
+stackoverflow 최고!!
 
 
 
