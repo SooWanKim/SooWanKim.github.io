@@ -8,20 +8,21 @@ categories: [ML]
 
 딥러닝 강의를 공부하던중에
 
-https://github.com/hunkim/DeepLearningZeroToAll/blob/master/tf2/tf2-11-1-mnist_cnn.py에 예제를 로컬에서 테스트하는데
+https://github.com/hunkim/DeepLearningZeroToAll/blob/master/tf2/tf2-11-1-mnist_cnn.py
 
+예제를 로컬에서 테스트
 
 ```
 Failed to get convolution algorithm. This is probably because cuDNN failed to initialize, so try looking to see if a warning log message was printed above.
 	 [[node sequential/conv2d/Conv2D (defined at d:\project\python\deeplearningzerotoall\DeepLearningZeroToAll\tf2\tf2-11-1-mnist_cnn.py:42) ]]
 
 ```
-사용버전은 : python 3.74 64bit, CUDA v10.2, Cudnn은 7.64
 
 위와 같은 에러가 발생함. 내용은 모델에 Conv2D사용할때 문제가 생기는거 같아서 찾아보니
 
 CUDA, Tensorflow,cuDNN, NVIDIA 버전이 안맞거나, 메모리가 부족하다고 함
 
+**사용버전은 : python 3.74 64bit, CUDA v10.2, Cudnn은 7.64**
 
 ## 해결 방안
 
