@@ -10,15 +10,23 @@ categories: [ML]
 
 [https://github.com/hunkim/DeepLearningZeroToAll/blob/master/tf2/tf2-11-1-mnist_cnn.py](https://github.com/hunkim/DeepLearningZeroToAll/blob/master/tf2/tf2-11-1-mnist_cnn.py)
 
-예제를 로컬에서 테스트
+[https://github.com/hunkim/DeepLearningZeroToAll/blob/master/tf2/tf2-12-4-rnn_long_char.py](https://github.com/hunkim/DeepLearningZeroToAll/blob/master/tf2/tf2-12-4-rnn_long_char.py)
 
+두 예제를 로컬에서 테스트 했을때 각각
+
+cnn fail
 ```
 Failed to get convolution algorithm. This is probably because cuDNN failed to initialize, so try looking to see if a warning log message was printed above.
 	 [[node sequential/conv2d/Conv2D (defined at d:\project\python\deeplearningzerotoall\DeepLearningZeroToAll\tf2\tf2-11-1-mnist_cnn.py:42) ]]
 
 ```
 
-위와 같은 에러가 발생함. 내용은 모델에 Conv2D사용할때 문제가 생기는거 같아서 찾아보니
+rnn fail
+```
+ Fail to find the dnn implementation.
+ ```
+
+위와 같은 에러가 발생함. 구글링해서 찾아보니
 
 CUDA, Tensorflow,cuDNN, NVIDIA 버전이 안맞거나, 메모리가 부족하다고 함
 
