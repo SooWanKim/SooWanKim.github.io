@@ -10,16 +10,16 @@ categories: [ML]
 
 모두를 위한 딥러닝. 한강의당 평균 10~20분 사이고, 쉽게 설명해 주신다. 예제도 github에 올라와 있다.
 
-https://www.youtube.com/watch?v=BS6O0zOGX4E&list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm
+[https://www.youtube.com/watch?v=BS6O0zOGX4E&list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm](https://www.youtube.com/watch?v=BS6O0zOGX4E&list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm)
 
-https://github.com/hunkim/DeepLearningZeroToAll
+[https://github.com/hunkim/DeepLearningZeroToAll](https://github.com/hunkim/DeepLearningZeroToAll)
 
 
 ***
 
 간단한 Python 수식으로 딥러닝 기초를 가르쳐준다. 총 2권으로 되어 있다.
 
-[![밑바닥부터 시작하는 딥러닝](http://image.yes24.com/Goods/3563528/800x0){: width="200" height="300"}](http://www.yes24.com/Product/Goods/34970929?
+[![밑바닥부터 시작하는 딥러닝](http://image.yes24.com/goods/34970929/800x0){: width="200" height="300"}](http://www.yes24.com/Product/Goods/34970929?
 scode=032&OzSrank=2)
 
 
@@ -28,13 +28,13 @@ scode=032&OzSrank=2)
 이건 읽어야 됨...
 
 
-[![밑바닥부터 시작하는 딥러닝](http://image.yes24.com/Goods/3563528/800x0){: width="200" height="300"}](http://www.yes24.com/Product/Goods/89959711?scode=032&OzSrank=1)
+[![밑바닥부터 시작하는 딥러닝](http://image.yes24.com/goods/89959711/800x0){: width="200" height="300"}](http://www.yes24.com/Product/Goods/89959711?scode=032&OzSrank=1)
 
 ***
 
 케라스 공식 홈페이지
 
-https://keras.io/
+[https://keras.io/](https://keras.io/)
 
 API, Tutorial이 잘 되어있다. Tutorial은 특히 카테고리별로 나뉘어져 있어 좋다.
 
@@ -43,7 +43,7 @@ API, Tutorial이 잘 되어있다. Tutorial은 특히 카테고리별로 나뉘�
 
 예제를 레고로 쉽게 설명해 주신다.
 
-https://tykimos.github.io/lecture/
+[https://tykimos.github.io/lecture/](https://tykimos.github.io/lecture/)
 
 
 ##
