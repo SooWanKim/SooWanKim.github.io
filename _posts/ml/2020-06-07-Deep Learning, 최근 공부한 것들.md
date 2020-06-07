@@ -46,7 +46,7 @@ API, Tutorial이 잘 되어있다. Tutorial은 특히 카테고리별로 나뉘�
 [https://tykimos.github.io/lecture/](https://tykimos.github.io/lecture/)
 
 
-##
+## 게임
 
 게임에 적용해서 공부 한다면 animation key frame 데이터들로 다른 animation 생성.
 
