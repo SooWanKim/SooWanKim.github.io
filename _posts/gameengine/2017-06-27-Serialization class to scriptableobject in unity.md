@@ -38,7 +38,11 @@ public class ObjectInfo
 
 ***
 
-class를 serialize하기 위해서는 attribute에 **[System.Serializable]** 추가해 줘야 한다. class 멤버 변수 타입중에  List는 되는데 dictionary는 되지 않아서 따로 만들어야된다
+class를 serialize하기 위해서는 attribute에 **[System.Serializable]** 추가해 줘야 한다.
+
+## Dictionary를 Serialize 하기
+
+List는 되는데 Dictionary는 되지 않아서 따로 만들어야 된다.
 
 **ScriptableObject**을 상속받는 class의 data를 List<TKey>, List<TValue> 로 만듬.
 
@@ -50,10 +54,12 @@ public class ScriptableAsset<TKey, TValue> : ScriptableObject
 }
 ```
 
+
 ```c#
 // ObjectInfo List<string>, List<ObjectInfo>정보를 갖게 된다.
 public class ObjectInfoAsset : ScriptableAsset<string, ObjectInfo> { }
 ```
+
 
 ```c#
 // dictionary를 List에 넣기 위해서 따로 만든 class
@@ -96,6 +102,7 @@ public void OnAfterDeserialize()   // deserialize하고 나서 List에 있는 ke
 	}
 }
 
+
 ***
 
 DataInfoAsset은  key정보는 List<int>, value정보는 List<string, Dictionary<string, string>>을 갖게 된다.
@@ -125,6 +132,7 @@ AssetDatabase.SaveAssets();
 ```c#
 BuildPipeline.BuildAssetBundles()
 ```
+
 
 ***
 
