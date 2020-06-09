@@ -22,7 +22,7 @@ public class ObjectInfo
 
 ***
 
-ObjectInfo class에 name, position, rotation의 값을 unity editor상에서 세팅한것을 asset 하여 게임에서 읽어 사용한다.
+ObjectInfo class에 name, position, rotation의 값을 unity editor상에서 세팅한것을 asset으로 변경해서 게임에서 읽어 사용한다.
 
 # 1.Serialize할 class 만들기
 
