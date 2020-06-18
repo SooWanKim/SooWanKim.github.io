@@ -16,11 +16,13 @@ Atlas는 포함된 상태로 빌드된다.
 
 Memory에 올라가게 된다. Assetbundle하나당 Atlas 하나씩 불러오기 때문에 Memory에 문제가 된다.
 
-AssetBundle도 쓰고 SpriteAtlas 시스템을 사용하려면 Include in Build를 해제하고 빌드 및 AssetBundle을 뽑아야 된다.
+AssetBundle도 쓰고 SpriteAtlas 시스템을 사용하려면 Include in Build를 해제하고 빌드, AssetBundle을 뽑아야 된다.
 
-이렇게 하면 AssetBundle에는 Atlas는 빠진 상태로 빌드되고 Scene에 배치된 Sprite도 연결된 SpriteAtlas를 사용하게 된다.
+이렇게 하면 AssetBundle에는 Atlas는 빠진 상태로 빌드되고 AssetBundle에 포함된 Sprite도 연결된 SpriteAtlas를 사용하게 된다.
 
-이 방식을 쓰기위해서는 SpriteAtlas를 AssetBundle로 만들어야 하고 LateBinding을 할때 AssetBundle을 불러와서 생성해야한다.
+이 방식을 쓰기위해서는 SpriteAtlas를 AssetBundle로 만들어야 하고 LateBinding이 호출될때
+
+Sprite Atlas AssetBundle을 불러와서 생성 해야한다.
 
 ***
 

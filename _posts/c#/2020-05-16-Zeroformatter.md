@@ -6,14 +6,18 @@ categories: [C#,GameEngine]
 
 ## 개선하려는 작업
 
-UnityEngine을 사용하는 Project에서 GameData를 binary로 저장, 읽어서 사용하고 있는데
+UnityEngine을 사용하면서 GameData를 binary로 저장, 읽어서 사용하고 있는데
+
 GameData의 내용을 읽어 들일때 값 하나 하나 파싱 하면서 읽고 있다.
+
 새로운 Data Table이 추가되면 개별 파서를 만들고 읽어 들이는게 불편하다.
 
 현재 이런 구조:
+
 **GameData -> Binary -> GameLoad -> Binary Parsing**
 
 변경하려는 구조:
+
 **GameData를 DataClass에 값을 입력 -> DataClass Serialize -> GameLoad -> DataClass DeSerialize**
 
 DataClass, Parser는 GameData에 따라서  [T4](https://soowankim.github.io/2019-02-20/TextTemplateTransformationToolkit/)로 Runtime에 자동 생성하게 한다.
@@ -24,11 +28,13 @@ GameData를 읽고 .tt(T4확장자)파일에 값들을 넘겨주고 DataClass �
 
 DataClass와 Parser를 자동 생성하고, Editor에서 GameData를 읽어 와서 DataClass에 넣는것은 잘됨.
 
-C# Serializezation.Formatter에 있는 BinaryFormatter와  [ZeroFormatter](https://github.com/neuecc/ZeroFormatter)의 속도와 크기를 비교해서 어느것을 사용할지 결정하는 작업을 진행함.
+C# Serializezation.Formatter에 있는 BinaryFormatter와  [ZeroFormatter](https://github.com/neuecc/ZeroFormatter)의 속도와 크기를 비교해서 어느것을 사용할지
+
+결정하는 작업을 진행함.
 
 ## C# BinaryFormatter
 
-간단한 사용
+사용법
 
 ```cs
 public static byte[] SerializeClass(object classInstance)
@@ -58,7 +64,7 @@ public static object DeserializeClass(byte[] bytes)
 
 ```
 
-DeserializeClass는 object type을 리턴하지만, 사용하는 DataClass로 캐스팅 해야 된다.
+DeserializeClass는 object Type을 리턴하지만, 사용하는 Type으로 캐스팅 해야 된다.
 
 ## ZeroFormatter 사용
 
@@ -66,13 +72,13 @@ DeserializeClass는 object type을 리턴하지만, 사용하는 DataClass로 �
 
 이미지에서 보듯이 Serialize, Deserialize 속도, 용량에서 압도적으로 좋다.
 
-하지만 현재 쓰는 Unity에서 사용하려면 Serialize, Deserialize하기 위해서 별도의 tool을 돌려서 .cs파일을 생성해야된다
+하지만 Unity에서 사용하려면 Serialize, Deserialize하기 위해서 별도의 tool을 돌려서 .cs파일을 생성 해야된다.
 
 여기서 생성되는 .cs파일은 Serialize하려는 class들의 정보이며 attribute를 붙여줘야 생성된다.
 
 ***
 
-Class 사용법
+## Class 사용법
 
 [ZeroFormattable] 붙여줘야하며, 변수에는 index순서를 넣어줘야 한다.
 [Serializable]는 BinaryFormatter와 비교하기위해 넣어준것.
