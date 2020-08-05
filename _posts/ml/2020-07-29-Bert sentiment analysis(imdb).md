@@ -39,4 +39,4 @@ loss categorical_crossentropy 사용
 
 ## colab link
 
-[https://github.com/SooWanKim/practice_nlp/blob/master/IMDB%20Bert.ipynb]()
+[https://github.com/SooWanKim/practice_nlp/blob/master/IMDB%20Bert.ipynb](https://github.com/SooWanKim/practice_nlp/blob/master/IMDB%20Bert.ipynb)
