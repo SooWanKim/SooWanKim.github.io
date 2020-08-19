@@ -12,9 +12,9 @@ import numpy as np
 import random
 import tensorflow as tf
 
-learning_rate = 0.001
+learning_rate = 0.02
 batch_size = 100
-training_epochs = 10
+training_e0
 nb_classes = 10
 
 (x_train, y_train), (x_test2, y_test) = tf.keras.datasets.mnist.load_data()
