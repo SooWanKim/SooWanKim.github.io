@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mnist BatchNormalization
+title: Fashion Mnist BatchNormalization
 categories: [ML]
 ---
 
@@ -12,16 +12,21 @@ import numpy as np
 import random
 import tensorflow as tf
 
-learning_rate = 0.02
+random.seed(777)  # for reproducibility
+learning_rate = 0.001
 batch_size = 100
-training_e0
+training_epochs = 10
 nb_classes = 10
 
-(x_train, y_train), (x_test2, y_test) = tf.keras.datasets.mnist.load_data()
+# (x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()
+(x_train, y_train), (x_test, y_test) = tf.keras.datasets.fashion_mnist.load_data()
 print(x_train.shape)
 
-x_train = x_train.reshape(x_train.shape[0], 28 * 28)
-x_test = x_test2.reshape(x_test2.shape[0], 28 * 28)
+class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat',
+               'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
+
+x_train = x_train.reshape(x_train.shape[0], 28 * 28) / 255.0
+x_test = x_test.reshape(x_test.shape[0], 28 * 28) / 255.0
 
 y_train = tf.keras.utils.to_categorical(y_train, nb_classes)
 y_test = tf.keras.utils.to_categorical(y_test, nb_classes)
@@ -47,7 +52,10 @@ model.fit(x_train, y_train, batch_size=batch_size, epochs=training_epochs)
 y_predicted = model.predict(x_test)
 for x in range(0, 10):
     random_index = random.randint(0, x_test.shape[0] - 1)
-    print("index: ", random_index, "actual y: ", np.argmax(y_test[random_index]), "predicted y: ", np.argmax(y_predicted[random_index]))
+    prdicted_index = np.argmax(y_predicted[random_index])
+    print("index: ", random_index, "actual y: ", np.argmax(y_test[random_index]), "predicted y: ", prdicted_index)
+    print(class_names[prdicted_index])
+
 
 # evaluate test set
 evaluation = model.evaluate(x_test, y_test)
