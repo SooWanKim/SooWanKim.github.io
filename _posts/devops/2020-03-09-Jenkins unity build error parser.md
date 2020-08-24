@@ -5,18 +5,18 @@ categories: [Devops, Python, Unity]
 ---
 
 
-## 목적
+## 사용 목적
 
 Jenkins에서 실행되는 Unity Build Error를 요약하여 원하는곳(메신저, 아웃룩)에 알림
 
-Unity build방식이 unity static 함수를 jenkins에서 bat을 통해 실행하는 방식이라 runtime에 나오는 error를 알아야 한다.
+Unity build방식이 unity static 함수를 jenkins에서 bat을 통해 실행하는 방식이라 runtime에 나오는 error를 알아야 한다.(함수가 호출되고 나오는 error)
 
 compile time ([Jenkins-code-build-check](https://soowankim.github.io/devops/gameengine/2020/01/16/Jenkins-code-build-check.html))은 스케쥴링하면서
 
 체크하고 있음
 
 
-## 방법
+## 사용 방법
 
 
 ```groovy
@@ -28,11 +28,11 @@ project/unity/myproject/my_log.txt"
 1. MyBuilder.BuildTarget라는 빌드용 함수를 호출하고, 빌드시에 생성되는 log를 지정된 경로에 만든다.
 2. 빌드 실패시 간단한 규칙으로 파싱하는 parser를 실행
 3. parser에서 unity error만 추출한 별도의 파일 생성
-4. jenkins에서 추출된 log 파일 read
+4. jenkins pipeline에서 추출된 log 파일 read
 5. 메신저 및 메일로 발송
 
 
-## unity log 추출 parser
+## python으로 unity log 추출 parser 만들기
 
 ```python
 
@@ -103,7 +103,7 @@ write_error_log(error_list)
 
 ```
 
-## error log 읽어 들이고 발송하는 jenkins pipeline code
+## error log 읽고 발송하는 jenkins pipeline code
 
 ```groovy
 
