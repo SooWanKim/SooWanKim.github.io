@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Making photo ui image in unity
+title: Making spine skeletonmecanim in unity
 categories: [C#, GameEngine]
 ---
 
