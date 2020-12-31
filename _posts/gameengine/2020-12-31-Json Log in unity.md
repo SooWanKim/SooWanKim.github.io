@@ -4,7 +4,6 @@ title: Json Log in unity
 categories: [C#, GameEngine]
 ---
 
-
 ## 기능
 
 Type T에 따라 Class를 json으로 변환하고 log로 보내는 기능 구현
@@ -100,9 +99,9 @@ public class UserItemLog : ISendLog
 
 ```c#
 
-AnalyticsLogManager.Instance.SendLog<UserItemLog>();
-
 사용시에 Type 전달, 보내는건 각 Class에서 개별 구현
+
+LogManager.Instance.SendLog<UserItemLog>();
 
 ```
 ***
