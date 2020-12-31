@@ -40,3 +40,40 @@ public static float GetSignAngle(Vector3 v1, Vector3 v2)
   return sign * Vector3.Angle(v1, v2);
 }
 ```
+
+## GetAngleTwoVector
+``` c#
+public static float GetAngleTwoVector(Vector2 v1, Vector2 v2)
+{
+    return Mathf.Acos(Vector2.Dot(v1, v2)) * (180 / Mathf.PI);
+}
+
+public static float GetNegativeAngle(Vector3 v1, Vector3 v2)
+{
+    int sign = Vector3.Cross(v1, v2).z < 0 ? -1 : 1;
+    return sign * Vector3.Angle(v1, v2);
+}
+```
+
+## DirectionToAngle, AngleToDirection
+``` c#
+public static float DirectionToAngle(float x, float y)
+{
+    return DirectionToAngle(new Vector2(x, y));
+}
+
+public static float DirectionToAngle(Vector2 direction)
+{
+    return Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+}
+
+public static float DirectionToAngle(Vector3 direction)
+{
+    return Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+}
+
+public static Vector2 AngleToDirection(float degree)
+{
+    var radius = degree * Mathf.Deg2Rad;
+    return new Vector2(Mathf.Cos(radius), Mathf.Sin(radius));
+}
