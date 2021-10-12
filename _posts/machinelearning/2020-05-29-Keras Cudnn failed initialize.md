@@ -1,7 +1,7 @@
 ---
 layout: post
 title: keras Cudnn failed to initialize
-categories: [ML]
+categories: [MachineLearning]
 ---
 
 ## 실패 상황

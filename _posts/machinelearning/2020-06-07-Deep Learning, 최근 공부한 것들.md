@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Deep Learning, 최근 공부한 것들
-categories: [ML]
+categories: [MachineLearning]
 ---
 
 책과 유튜브로 딥러닝 공부를 하고 있다. 목표는 Django + 간단한 모델 테스트

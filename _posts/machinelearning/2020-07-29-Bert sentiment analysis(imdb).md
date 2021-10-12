@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bert sentiment analysis(imdb)
-categories: [ML]
+categories: [MachineLearning]
 ---
 
 ## IMDB bert

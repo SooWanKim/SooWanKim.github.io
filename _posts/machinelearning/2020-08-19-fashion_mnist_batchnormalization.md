@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Fashion Mnist BatchNormalization
-categories: [ML]
+categories: [MachineLearning]
 ---
 
 ## BatchNormalization 사용하기
