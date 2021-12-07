@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Using firebse analytics in unity
-categories: [GameEngine, Devops]
+categories: [Unity, Devops]
 ---
 
 ## 사용 목적

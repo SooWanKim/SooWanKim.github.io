@@ -1,7 +1,7 @@
 ---
 layout: post
 title: UnrealEngine FStreamableManager assetLoader
-categories: [C++, GameEngine]
+categories: [C++]
 ---
 
 ##  FstreamableManager 구조체를 통한 UnrealEngine에서 런타임으로 애셋을 로딩

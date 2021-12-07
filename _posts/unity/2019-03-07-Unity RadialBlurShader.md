@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Unity RadialBlurShader
-categories: [GameEngine]
+categories: [Unity]
 ---
 
 CenterPos 중심으로 Blur를 설정한다.

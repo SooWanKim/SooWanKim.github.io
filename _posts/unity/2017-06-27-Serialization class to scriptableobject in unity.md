@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Serialization class to scriptableobject in unity
-categories: [C#,GameEngine]
+categories: [C#,Unity]
 
 ---
 

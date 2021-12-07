@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Using spriteAtlas lateBinding in unity (SpriteAtlas AssetBundle)
-categories: [C#,GameEngine]
+categories: [C#,Unity]
 ---
 
 ## 사용 방법

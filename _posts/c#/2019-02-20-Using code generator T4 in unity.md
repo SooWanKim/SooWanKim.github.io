@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Unity에서 C# T4 code generator로 cs 파일 자동 생성하기
-categories: [C#, GameEngine]
+categories: [C#, Unity]
 ---
 
 ## T4를 사용해서 cs 파일 변수 전달해서 만들기**

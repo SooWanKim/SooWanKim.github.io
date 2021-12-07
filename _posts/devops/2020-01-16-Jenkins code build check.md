@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Jenkins code build check(Unity)
-categories: [Devops, GameEngine]
+categories: [Devops, Unity]
 ---
 
 ## 목적

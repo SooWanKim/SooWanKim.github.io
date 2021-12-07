@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Making spine skeletonmecanim in unity
-categories: [C#, GameEngine]
+categories: [C#, Unity]
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PreviewRender in Custom EditorWindow
-categories: [C#, GameEngine]
+categories: [C#, Unity]
 ---
 ## 기능
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Json Log in unity
-categories: [C#, GameEngine]
+categories: [C#, Unity]
 ---
 
 ## 기능

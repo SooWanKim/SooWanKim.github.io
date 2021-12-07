@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Making photo ui image in unity
-categories: [C#, GameEngine]
+categories: [C#, Unity]
 ---
 
 ## 기능
 
 SpriteRenderer의 bound(rect)값과 position으로 photo image를 만들어서 ui raw image에 넣는다
 
-원하는 크기의 사진을 만들어서 ui에 입힌다고 생각하면 된다. 
+원하는 크기의 사진을 만들어서 ui에 입힌다고 생각하면 된다.
 
 ## 코드
 

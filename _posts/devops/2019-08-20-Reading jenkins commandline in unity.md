@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Reading jenkins commandline in unity
-categories: [C#, GameEngine,Devops]
+categories: [C#, Unity,Devops]
 ---
 
 ## 사용 목적

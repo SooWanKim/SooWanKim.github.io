@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Using ADB apk install and launch
-categories: [GameEngine]
+categories: [Unity]
 ---
 
 ## 목적

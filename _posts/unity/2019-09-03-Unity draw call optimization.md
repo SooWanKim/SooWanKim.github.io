@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Unity draw call optimization
-categories: [GameEngine]
+categories: [Unity]
 ---
 
 ##  Dynamic Batching

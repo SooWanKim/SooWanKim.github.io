@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Unity vector, quaternion rotate api
-categories: [C#, GameEngine]
+categories: [C#, Unity]
 ---
 
 ##  Vector Rotate
@@ -12,7 +12,7 @@ direction = Quaternion.Euler(0.0f, 0.0f, deltaAngle) * direction;
 
 ```c#
 Vector2 toTarget = (target.position - transform.position).normalized;
-float step = Time.deltaTime * rotateAngleSpeed * Mathf.Deg2Rad; // radian?? ??
+float step = Time.deltaTime * rotateAngleSpeed * Mathf.Deg2Rad; 
 rotateVector = Vector3.RotateTowards(rotateVector, toTarget, step, 0.0f);
 ```
 
