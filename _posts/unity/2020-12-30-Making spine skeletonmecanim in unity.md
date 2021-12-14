@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Making spine skeletonmecanim in unity
+title: Create spine skeletonmecanim in unity
 categories: [C#, Unity]
 ---
 
