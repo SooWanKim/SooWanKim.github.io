@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Jenkins unity build error parser
+title: Jenkins unity build error parser and notification
 categories: [Devops, Python, Unity]
 ---
 
