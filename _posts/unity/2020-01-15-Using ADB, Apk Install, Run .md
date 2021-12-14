@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Using ADB apk install and launch
+title: ADB apk install and launch
 categories: [Unity]
 ---
 
