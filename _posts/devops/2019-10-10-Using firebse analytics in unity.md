@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Using firebse analytics in unity
+title: Set firebse analytics in unity
 categories: [Unity, Devops]
 ---
 
