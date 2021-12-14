@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Reading jenkins commandline in unity
+title: Jenkins commandline in unity
 categories: [C#, Unity,Devops]
 ---
 
