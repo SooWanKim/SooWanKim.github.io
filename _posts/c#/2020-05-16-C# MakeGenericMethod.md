@@ -16,7 +16,7 @@ void Func()
     GenericClass gClass = new GenericClass();
 
     // 문제 발생
-    gClass.GenericFunc()
+    gClass.GenericFunc<classType>()
 }
 
 public class GenericClass
@@ -32,7 +32,7 @@ public class GenericClass
 ```
 
 
-### gClass.GenericFunc() 호출할때 object type이 아닌 classType으로 gClass.GenericFunc()를 호출하고 싶다.
+### gClass.GenericFunc() 호출할때 object type이 아닌 classType으로 gClass.GenericFunc<classType>()를 호출하고 싶다.
 
 문제는  classType은 변수이기 때문에 gClass.GenericFunc<classType>은 사용할 수 없다.
 
