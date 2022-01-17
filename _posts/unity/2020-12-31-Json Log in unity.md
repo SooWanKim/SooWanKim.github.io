@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Json Log in unity
+title: Create Json log and send in Unity
 categories: [C#, Unity]
 ---
 
@@ -24,7 +24,7 @@ public interface ISendLog
 	void SendLog();
 }
 
-public class LogManager : SingletonNoMono<LogManager>
+public class LogManager : Singleton<LogManager>
 {
 	Dictionary<Type, ISendLog> m_Logs = new Dictionary<Type, ISendLog>();
 
@@ -82,13 +82,12 @@ public class UserItemLog : ISendLog
 
 	public void SendLog()
 	{
-		itemtype = 'some itmetype'
-        itemid = 'some itemid'
-        itemgrade = 'some itemgrade'
-        itemlevel =  'some itemlevel'
+		itemtype = "some itmetype"
+        	itemid = "some itemid"
+        	itemgrade = "some itemgrade"
+        	itemlevel =  "some itemlevel"
 
 		string jsonEncoded = JsonConvert.SerializeObject(this);
-        // 이 부분은 플랫폼에 따라 변함
 		SomePlatform.Log("LogKey", jsonEncoded);
 	}
 }

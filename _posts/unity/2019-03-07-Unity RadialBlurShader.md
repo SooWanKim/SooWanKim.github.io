@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Unity RadialBlurShader
+title: RadialBlurShader in unity
 categories: [Unity]
 ---
 

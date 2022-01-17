@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Making photo ui image in unity
+title: Create screenshot ui image in unity
 categories: [C#, Unity]
 ---
 

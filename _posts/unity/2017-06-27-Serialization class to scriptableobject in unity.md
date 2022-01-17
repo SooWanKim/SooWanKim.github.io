@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Serialization class to scriptableobject in unity
+title: Serialize class in unity(scriptableobject)
 categories: [C#,Unity]
 
 ---

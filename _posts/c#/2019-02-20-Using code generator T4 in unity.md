@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Unity에서 C# T4 code generator로 cs 파일 자동 생성하기
+title:  C# T4 code generator in unity
 categories: [C#, Unity]
 ---
 

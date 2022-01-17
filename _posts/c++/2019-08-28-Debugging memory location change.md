@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Debugging memory location change
+title:  Memory Debugging
 categories: [C++]
 ---
 
