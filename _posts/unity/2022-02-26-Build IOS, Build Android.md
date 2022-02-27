@@ -49,7 +49,7 @@ public static void BuildIOS()
 
 	var enableSceneArray =  sceneList.ToArray();
 
-    GenericBuild(enableSceneArray, buildTargetPath, BuildTargetGroup.iOS, BuildTarget.iOS, BuildOptions.None);
+    Build(enableSceneArray, buildTargetPath, BuildTargetGroup.iOS, BuildTarget.iOS, BuildOptions.None);
 }
 
 // 에디터 상단메뉴에 추가
@@ -89,7 +89,26 @@ public static void BuildAndroid()
 
 	var enableSceneArray =  sceneList.ToArray();
 
-	GenericBuild(m_SceneArray, buildTargetPath, BuildTargetGroup.Android, BuildTarget.Android, BuildOptions.None);
+	Build(m_SceneArray, buildTargetPath, BuildTargetGroup.Android, BuildTarget.Android, BuildOptions.None);
+}
+
+static void Build(string[] sceneArray, string targetPath, BuildTargetGroup buildTargetGroup, BuildTarget buildTarget, BuildOptions buildOptions)
+{
+    Caching.ClearCache();
+
+    EditorUserBuildSettings.SwitchActiveBuildTarget(buildTargetGroup, buildTarget);
+
+    BuildReport buildReport = BuildPipeline.BuildPlayer(sceneArray, targetPath, buildTarget, buildOptions);
+    BuildSummary summary = buildReport.summary;
+    if (summary.result == BuildResult.Failed)
+    {
+        throw new Exception("BuildPlayer failure: " + report);
+    }
+
+    else if (summary.result == BuildResult.Succeeded)
+    {
+        Debug.Log("Build Succeeded: " + summary.totalSize + " bytes");
+    }
 }
 
 ```
