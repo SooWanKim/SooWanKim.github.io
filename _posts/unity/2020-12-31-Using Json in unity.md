@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Create Json log and send in Unity
+title: Using Json in Unity
 categories: [C#, Unity]
 ---
 
 ## 기능
 
-Type T에 따라 Class를 json으로 변환하고 log로 보내는 기능 구현
+Type T에 따라 Class를 json으로 변환
 
 ## 코드
 
@@ -18,13 +18,13 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-// 전달할 객체가 상속받아야 할 인터페이스
+// 전달할 개별 LogClass가 상속받아야 할 인터페이스
 public interface ISendLog
 {
 	void SendLog();
 }
 
-public class LogManager : Singleton<LogManager>
+public class LogManager
 {
 	Dictionary<Type, ISendLog> m_Logs = new Dictionary<Type, ISendLog>();
 
@@ -83,12 +83,12 @@ public class UserItemLog : ISendLog
 	public void SendLog()
 	{
 		itemtype = "some itmetype"
-        	itemid = "some itemid"
-        	itemgrade = "some itemgrade"
-        	itemlevel =  "some itemlevel"
+    	itemid = "some itemid"
+    	itemgrade = "some itemgrade"
+    	itemlevel =  "some itemlevel"
 
 		string jsonEncoded = JsonConvert.SerializeObject(this);
-		SomePlatform.Log("LogKey", jsonEncoded);
+		SomePlatform.Log(jsonEncoded);
 	}
 }
 
@@ -96,11 +96,12 @@ public class UserItemLog : ISendLog
 
 ***
 
-```c#
-
 사용시에 Type 전달, 보내는건 각 Class에서 개별 구현
 
-LogManager.Instance.SendLog<UserItemLog>();
+```c#
+// singleton구현하면 다르게 사용
+var logManager = new LogManager();
+logManager.SendLog<UserItemLog>();
 
 ```
 ***
