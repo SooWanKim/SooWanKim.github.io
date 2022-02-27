@@ -14,7 +14,6 @@ Texture, 3DModel에 텍스쳐품질, 필터세팅, 애니메이션 품질, 메�
 ```c#
 public class MyAssetPostprocessor : AssetPostprocessor
 {
-	// Before the texture is imported
 	public void OnPreprocessTexture()
 	{
 
