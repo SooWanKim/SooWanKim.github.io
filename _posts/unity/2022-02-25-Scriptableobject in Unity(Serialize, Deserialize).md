@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Serialize, Deserialize class in unity (Scriptableobject)
+title: Scriptableobject Serialize, Deserialize  in unity
 categories: [C#,Unity]
 
 ---
