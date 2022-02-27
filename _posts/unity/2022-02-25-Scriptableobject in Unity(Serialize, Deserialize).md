@@ -22,9 +22,9 @@ class를 serialize하기 위해서는 attribute에 **[System.Serializable]** 추
 [System.Serializable]
 public class ObjectInfo
 {
-	public string name;
-	public Vector3 position;
-	public Vector3 rotation;
+    public string name;
+    public Vector3 position;
+    public Vector3 rotation;
 }
 ```
 
@@ -39,8 +39,8 @@ List는 되는데 Dictionary는 되지 않아서 별도로 ScriptableObject 상�
 ```c#
 public class ScriptableAsset<TKey, TValue> : ScriptableObject
 {
-	public List<TKey> _listKey = new List<TKey>();
-	public List<TValue> _listValue = new List<TValue>();
+    public List<TKey> _listKey = new List<TKey>();
+    public List<TValue> _listValue = new List<TValue>();
 }
 
 // key에 string, value에 objectInfo가 들어가는 asset
@@ -54,41 +54,41 @@ public class ObjectInfoAsset : ScriptableAsset<string, ObjectInfo> { }
 [Serializable]
 public class SerializableDictionary<TKey, TValue> : Dictionary<TKey, TValue>, ISerializationCallbackReceiver
 {
-	[SerializeField]
-	public List<TKey> keys = new List<TKey>();
-	[SerializeField]
-	public List<TValue> values = new List<TValue>();
+    [SerializeField]
+    public List<TKey> keys = new List<TKey>();
+    [SerializeField]
+    public List<TValue> values = new List<TValue>();
 
     // serialize하기전에 dictionary에 있는 key값과 value를 옮겨 넣는다.
-	public void OnBeforeSerialize()
-	{
-		keys.Clear();
-		values.Clear();
-		var enumer = GetEnumerator();
-		while (enumer.MoveNext())
-		{
-			keys.Add(enumer.Current.Key);
-			values.Add(enumer.Current.Value);
-		}
-	}
+    public void OnBeforeSerialize()
+    {
+        keys.Clear();
+        values.Clear();
+        var enumer = GetEnumerator();
+        while (enumer.MoveNext())
+        {
+            keys.Add(enumer.Current.Key);
+            values.Add(enumer.Current.Value);
+        }
+    }
 }
 
 // Deserialize하고 나서 List에 있는 key값과 value를 dictionary에 옮겨 넣는다.
 public void OnAfterDeserialize()
 {
-	this.Clear();
-	int keysCount = keys.Count;
-	int valuesCount = values.Count;
+    this.Clear();
+    int keysCount = keys.Count;
+    int valuesCount = values.Count;
 
-	if (keysCount == 0)
-	{
-		return;
-	}
+    if (keysCount == 0)
+    {
+        return;
+    }
 
-	for (int i = 0; i < keysCount; i++)
-	{
-		this.Add(keys[i], values[i]);
-	}
+    for (int i = 0; i < keysCount; i++)
+    {
+        this.Add(keys[i], values[i]);
+    }
 }
 
 

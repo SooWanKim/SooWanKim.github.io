@@ -39,15 +39,15 @@ public static void BuildIOS()
 
     // BuildSetting에 추가된 Scene 목록 가져 오기
     List<string> sceneList = new List<string>();
-	foreach (EditorBuildSettingsScene scene in EditorBuildSettings.scenes)
-	{
-		if (!scene.enabled)
-			continue;
+    foreach (EditorBuildSettingsScene scene in EditorBuildSettings.scenes)
+    {
+        if (!scene.enabled)
+            continue;
 
-		sceneList.Add(scene.path);
-	}
+        sceneList.Add(scene.path);
+    }
 
-	var enableSceneArray =  sceneList.ToArray();
+    var enableSceneArray =  sceneList.ToArray();
 
     Build(enableSceneArray, buildTargetPath, BuildTargetGroup.iOS, BuildTarget.iOS, BuildOptions.None);
 }
@@ -56,40 +56,40 @@ public static void BuildIOS()
 [MenuItem("Build/Build Android")]
 public static void BuildAndroid()
 {
-	PlayerSettings.applicationIdentifier = "com.my.android";
+    PlayerSettings.applicationIdentifier = "com.my.android";
 
     // 원하는 symbol을 넣거나 삭제 할 수 있다.(ex DEBUG, TEST, SDK,,,)
     string defineSymbols = PlayerSettings.GetScriptingDefineSymbolsForGroup(BuildTargetGroup.Android);
     defineSymbols += ";MySymbol"
     PlayerSettings.SetScriptingDefineSymbolsForGroup(BuildTargetGroup.Android, defineSymbols);
 
-	PlayerSettings.Android.bundleVersionCode = "1.0.0";
+    PlayerSettings.Android.bundleVersionCode = "1.0.0";
 
     // gradle로 빌드
     EditorUserBuildSettings.androidBuildSystem = AndroidBuildSystem.Gradle;
 
     char sep = Path.DirectorySeparatorChar;
-	string buildDirectory = Path.GetFullPath(".") + sep + "Build";
+    string buildDirectory = Path.GetFullPath(".") + sep + "Build";
 
     // apk 생성 위치
-	string buildTargetPath = buildDirectory + "/Android.apk";
+    string buildTargetPath = buildDirectory + "/Android.apk";
 
-	if (Directory.Exists(buildDirectory) == false)
-		Directory.CreateDirectory(buildDirectory);
+    if (Directory.Exists(buildDirectory) == false)
+        Directory.CreateDirectory(buildDirectory);
 
     // BuildSetting에 추가된 Scene 목록 가져 오기
     List<string> sceneList = new List<string>();
-	foreach (EditorBuildSettingsScene scene in EditorBuildSettings.scenes)
-	{
-		if (!scene.enabled)
-			continue;
+    foreach (EditorBuildSettingsScene scene in EditorBuildSettings.scenes)
+    {
+        if (!scene.enabled)
+            continue;
 
-		sceneList.Add(scene.path);
-	}
+        sceneList.Add(scene.path);
+    }
 
-	var enableSceneArray =  sceneList.ToArray();
+    var enableSceneArray =  sceneList.ToArray();
 
-	Build(m_SceneArray, buildTargetPath, BuildTargetGroup.Android, BuildTarget.Android, BuildOptions.None);
+    Build(m_SceneArray, buildTargetPath, BuildTargetGroup.Android, BuildTarget.Android, BuildOptions.None);
 }
 
 static void Build(string[] sceneArray, string targetPath, BuildTargetGroup buildTargetGroup, BuildTarget buildTarget, BuildOptions buildOptions)

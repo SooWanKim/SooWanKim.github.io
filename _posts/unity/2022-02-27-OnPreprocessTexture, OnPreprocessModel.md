@@ -11,12 +11,12 @@ Texture, 3DModel에 텍스쳐품질, 필터세팅, 애니메이션 품질, 메�
 
 ## 샘플코드
 
-```
+```c#
 public class MyAssetPostprocessor : AssetPostprocessor
 {
-	public void OnPreprocessTexture()
-	{
-		TextureImporter texture_Importer = (TextureImporter)assetImporter;
+    public void OnPreprocessTexture()
+    {
+        TextureImporter texture_Importer = (TextureImporter)assetImporter;
         texture_Importer.textureCompression = TextureImporterCompression.Uncompressed;
         texture_Importer.filterMode = FilterMode.Point;
 
