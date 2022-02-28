@@ -3,7 +3,6 @@ layout: post
 title: PreviewRenderUtility in Unity EditorWindow
 categories: [C#, Unity]
 ---
-## 기능
 
 컨텐츠 생산에 용이하게 EditorWindow를 상속받은 Custom Editor 를 자주 사용하는데
 여기에 GameObject를 그려야 되는 이슈가 있어 찾아보니

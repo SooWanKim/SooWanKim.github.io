@@ -2,10 +2,9 @@
 layout: post
 title: Scriptableobject Serialize, Deserialize  in unity
 categories: [C#,Unity]
-
 ---
 
-##  ScriptableObject 사용하여 class serialize, deserialize 하기
+ScriptableObject 사용하여 class serialize, deserialize 하기
 
 **ScriptableObject**을 사용하여 class를 serialize하여 asset으로 export
 
