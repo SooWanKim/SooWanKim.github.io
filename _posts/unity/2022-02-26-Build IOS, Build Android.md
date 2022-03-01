@@ -4,7 +4,7 @@ title: Build IOS, Build Android
 categories: [C#, Unity]
 ---
 
-GenericBuild를 사용하는 IOS, Android Build
+기본적인 IOS Build, Android Build
 
 
 ## 샘플코드
