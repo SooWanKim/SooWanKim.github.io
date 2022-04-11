@@ -8,8 +8,6 @@ categories: [ETC, Python]
 
 이진탐색을 기본, 재귀로 구현
 
-## 코드
-
 ### BinarySearch
 ```python
 def binary_search(sorted_list, item):

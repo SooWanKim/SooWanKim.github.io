@@ -4,12 +4,6 @@ title: Using jira server in teams
 categories: [Devops]
 ---
 
-## 목적
-
-회사에서 메신저를 Teams를 쓰고있는데 Jira와 연동하면 작업하기 좋을 거 같아서 사용
-
-***
-
 ## 기능
 
 Teams 채팅방에서 Jira 이슈들을 생성 및 편집 가능하고, 채팅방에 Filter 및 Assign 상태에 따라 볼 수 있게 tab을 추가할 수 있습니다..

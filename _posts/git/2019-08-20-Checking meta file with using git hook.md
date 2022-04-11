@@ -4,7 +4,7 @@ title: Checking meta file with using git hook
 categories: [Git]
 ---
 
-##  precommit 사용하기 Unity Meta에서 커밋 체크
+##  precommit 사용하기
 
 유니티3D 프로젝트를 git으로 버전관리할 때 불편한 점 중에 하나는 빈 디렉토리의 meta파일
 
@@ -19,7 +19,6 @@ A팀원은 meta파일을 계속 자동 추가해서 커밋하고 B팀원은 meta
 이 현상을 방지하기 위해 사용할 수 있는 방법 중 하나가 git의 hook을 활용하는 방법입니다.
 
 hook은 어떤 이벤트가 생겼을 때 자동으로 특정 스크립트를 실행하도록 할 수 있도록 하는 기능입니다.
-
 
 여기서는 불필요한 meta 파일이 커밋되지 않도록 pre-commit hook을 사용해서 막아보려고 합니다.
 

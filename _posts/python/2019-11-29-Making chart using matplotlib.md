@@ -11,11 +11,6 @@ categories: [Python]
 
 ![](/assets/images/2019-11-29-Python%20matplotlib/2019-11-29-11-46-00.png)
 
-## 실제 사용한곳
-
-- 날짜별 error 통계를 차트로 만들어서 메일링으로 공유
-
-
 ## test용 코드
 
 ```python

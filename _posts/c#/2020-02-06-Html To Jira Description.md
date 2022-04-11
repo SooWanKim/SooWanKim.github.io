@@ -6,8 +6,6 @@ categories: [C#]
 
 ## 목적
 
-웹크롤러로 얻어온 Html 정보로 Jira Issue를 생성할 때, Jira Description의 renderer 설정을 변경할 수 없어서 wiki형식으로 넣어야 된다.
-
 Html Tag가 있는 text를 Description에 넣을때 Html tag를 text, img, table에 맞게 별도 파싱 해야되서 공수가 크다.
 
 이렇게 안하고 자동으로 html -> wiki 변경할 수 있는법을 찾아봄.

@@ -4,15 +4,13 @@ title: Zeroformatter in Unity
 categories: [C#,Unity]
 ---
 
-## 개선하려는 작업
+## 작업
 
-UnityEngine을 사용하면서 GameData를 binary로 저장, 읽어서 사용하고 있는데
+UnityEngine을 사용하면서 GameData를 binary로 저장, 읽는 부분을 개선하고 싶음
 
-GameData의 내용을 읽어 들일때 값 하나 하나 파싱 하면서 읽고 있다.
+GameData의 내용을 읽어 들일때 값 하나 하나 파싱 하면서 읽는부분을 간편하게 변경!
 
-새로운 Data Table이 추가되면 개별 파서를 만들고 읽어 들이는게 불편하다.
-
-현재 이런 구조:
+변경전 구조:
 
 **GameData -> Binary -> GameLoad -> Binary Parsing**
 
@@ -28,13 +26,9 @@ GameData를 읽고 .tt(T4확장자)파일에 값들을 넘겨주고 DataClass �
 
 DataClass와 Parser를 자동 생성하고, Editor에서 GameData를 읽어 와서 DataClass에 넣는것은 잘됨.
 
-C# Serializezation.Formatter에 있는 BinaryFormatter와  [ZeroFormatter](https://github.com/neuecc/ZeroFormatter)의 속도와 크기를 비교해서 어느것을 사용할지
+C# Serializezation.Formatter에 있는 BinaryFormatter와  [ZeroFormatter](https://github.com/neuecc/ZeroFormatter)의 속도와 크기를 비교해서 어느것을 사용할지 결정하는 작업을 테스트
 
-결정하는 작업을 진행함.
-
-## C# BinaryFormatter
-
-사용법
+## Test C# BinaryFormatter
 
 ```cs
 public static byte[] SerializeClass(object classInstance)
@@ -66,7 +60,7 @@ public static object DeserializeClass(byte[] bytes)
 
 DeserializeClass는 object Type을 리턴하지만, 사용하는 Type으로 캐스팅 해야 된다.
 
-## ZeroFormatter 사용
+## ZeroFormatter
 
 ![](/assets/images/2020-05-16-Zeroformatter/2020-05-16-17-35-19.png)
 
@@ -168,14 +162,13 @@ void GenerateZeroformatterClass()
 
         var process = System.Diagnostics.Process.Start(start);
         process.WaitForExit();
-        Debug.Log("end");
     }
 }
 ```
 
 ***
 
-Serialize, Deserialize
+## ZeroFormatter Serialize, Deserialize
 
 ```cs
 public static byte[] Serialize<T>(T serializeClass)
@@ -204,7 +197,7 @@ DataClass를 만들고 DataClass안의 listdata에 Base_Data를 10000개 넣는�
 
 그리고 serialize 용량, deserialize 속도를 비교.
 
-serialize 속도 비교는 하지 않는 이유가 serialize는 Editor에서 사용 하는거라 엄청 느리지 않는 이상 크게 의미가 없다.
+serialize 속도 비교 하지 않는 이유가 serialize는 Editor에서 사용 하는거라 엄청 느리지 않는 이상 크게 의미가 없다.
 
 
 ```cs

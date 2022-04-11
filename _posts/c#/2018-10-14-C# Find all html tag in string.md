@@ -6,13 +6,13 @@ categories: [C#]
 
 ## Regex를 사용해서 string안에 HTMLTag 다찾기
 
-```cs
+```c#
 string pattern2 = @"(<[^>]*>)";
 var allTagList = new List<string>();
 
-var matches2 = Regex.Matches(inputHTML, pattern2);
-for (int i = 0; i < matches2.Count; i++)
+var patternMatch = Regex.Matches(inputHTML, pattern2);
+for (int i = 0; i < patternMatch.Count; i++)
 {
-    allTagList.Add(matches2[i].ToString());
+    allTagList.Add(patternMatch[i].ToString());
 }
 ```

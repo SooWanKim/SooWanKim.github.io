@@ -12,7 +12,7 @@ categories: [Python]
 
 확인해 보니 서버쪽 **socket option**이 **TCP_NODELAY**로 세팅이 안되어 있음.
 
-**TCP_DELAY**는  [Nagle](http://egloos.zum.com/depiness/v/772710) 알고리즘을 사용함.
+**TCP_DELAY**는  [Nagle](http://egloos.zum.com/depiness/v/772710) 알고리즘을 사용.
 
-네트워크가 지연되는 상태에서 packet을 쌓아놓고 보냄.
+네트워크가 지연되는 상태에서 packet을 쌓아놓고 보내기때문에 네트워크 상태가 안좋은 와이파이 상황에서는 패킷을 모아놓고 보낸다.
 

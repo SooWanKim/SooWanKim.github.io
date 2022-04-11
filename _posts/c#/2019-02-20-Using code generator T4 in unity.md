@@ -4,7 +4,7 @@ title:  C# T4 code generator in unity
 categories: [C#, Unity]
 ---
 
-## T4를 사용해서 cs 파일 변수 전달해서 만들기**
+## T4를 사용해서 Unity Code Generator 구현
 
 ```c#
 using System;
@@ -84,7 +84,7 @@ public class CodeGeneratorEditor : Editor
     {
         none,
         player,
-        fish,
+        monster,
     }
 
     GenerateType m_CodeType = GenerateType.player;
@@ -161,15 +161,15 @@ public class CodeGeneratorEditor : Editor
 
                         break;
                     }
-                case GenerateType.fish:
+                case GenerateType.monster:
                     {
-                        FishStateTemplate page = new FishStateTemplate();
+                        MonsterStateTemplate page = new MonsterStateTemplate();
                         page.Session = new TextTemplatingSession();
                         page.Session["StateName"] = m_ClassName;
                         page.Initialize();
 
                         string pageContent = page.TransformText();
-                        System.IO.File.WriteAllText($"{filePath}/Fish{m_ClassName}State.cs", pageContent);
+                        System.IO.File.WriteAllText($"{filePath}/Monster{m_ClassName}State.cs", pageContent);
                         break;
                     }
             }

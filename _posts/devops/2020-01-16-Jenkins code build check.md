@@ -6,14 +6,16 @@ categories: [Devops, Unity]
 
 ## 목적
 
-일반적으로 개별 작업자들 환경에서는 compile error가 나지 않지만, 빌드 해야되는 저장소(Jenkins에서 설정한)에서는 error가 날 수 있어서(define, platform, code 미반영의 이유로)
+일반적으로 개별 작업자들 환경에서는 compile error가 나지 않지만,
+
+빌드 해야되는 저장소(Jenkins에서 설정한)에서는 error가 날 수 있어서(define, platform, code 미반영의 이유로)
+
 빌드를 진행 해야하는 담당자가 빌드를 진행할시에 이것을 체크하기 힘들고, 시간도 오래 걸리고, 원인 추적하기도 힘들다.
 
 **unity build를 jenkins로 진행할 때 define 설정이나 플랫폼에 따른 빌드실패가 종종 발생해서 진행**
 
 
 ## jenkins에서 plugin 설정방법
-
 
 Warning Next Generation 플러그인을 젠킨스 마스터에 설치하고
 

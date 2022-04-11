@@ -4,11 +4,7 @@ title: PreviewRenderUtility in Unity EditorWindow
 categories: [C#, Unity]
 ---
 
-컨텐츠 생산에 용이하게 EditorWindow를 상속받은 Custom Editor 를 자주 사용하는데
-여기에 GameObject를 그려야 되는 이슈가 있어 찾아보니
-PreviewRenderUtility로 GameObject 그릴 수 있는게 가능.
-
-아래와 인스펙터 원하는 GameObject를 추가하여 그리는게 가능하다.
+아래와 같이 원하는 GameObject를 인스펙터에 추가하여 그리는게 가능하다.
 
 ![](/assets/images/2021-04-14-PreviewRender%20in%20Custom%20EditorWindow/여기에%20EditorWindow에%20추가된%20이미지.png)
 

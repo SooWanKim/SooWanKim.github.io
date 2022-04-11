@@ -17,7 +17,7 @@ post {
         success{
             echo "success"
             mail (bcc: '',
-                subject: """[중요메일] - Successful - ${env.JOB_NAME}""",
+                subject: """ - Successful - ${env.JOB_NAME}""",
                 body: """BUILD_TIME:${env.CLIENT_BUILD_TIME}\nBUILD_NUMBER:${BUILD_NUMBER}\nBUILD_URL:"${env.BUILD_URL}" """,
                 cc: '',
                 from: '받는사람메일주소',
@@ -27,7 +27,7 @@ post {
         failure{
             echo "failure"
             mail (bcc: '',
-                subject: """[중요메일] - Failure - ${env.JOB_NAME} - BuildNumber:${BUILD_NUMBER}  currentBuild.displayName """,
+                subject: """ - Failure - ${env.JOB_NAME} - BuildNumber:${BUILD_NUMBER}  currentBuild.displayName """,
                 body: """BUILD_TIME:${env.CLIENT_BUILD_TIME}\nBUILD_NUMBER:${BUILD_NUMBER}\nBUILD_URL:"${env.BUILD_URL}" """,
                 cc: '',
                 from: '받는사람메일주소',

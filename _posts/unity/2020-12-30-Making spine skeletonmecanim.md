@@ -4,7 +4,6 @@ title: Create spine skeletonmecanim
 categories: [C#, Unity]
 ---
 
-
 ## 기능
 
 spine을 export하면 나오는 json, text(byte), png 3개의 파일로 skeletonmecanim을 생성한다.

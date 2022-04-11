@@ -14,7 +14,7 @@ Atlas는 포함된 상태로 빌드된다.
 
 용량만 커지는게 아니라 실제로 Game에서 AssetBundle을 불러와서 사용 하면 빌드에 포함된 Atlas가 있는데도
 
-Memory에 올라가게 된다. Assetbundle하나당 Atlas 하나씩 불러오기 때문에 Memory에 문제가 된다.
+Memory에 올라가게 된다. Assetbundle하나당 Atlas 하나씩 불러오기 때문에 Memory 중복 문제가 된다.
 
 AssetBundle도 쓰고 SpriteAtlas 시스템을 사용하려면 Include in Build를 해제하고 빌드, AssetBundle을 뽑아야 된다.
 

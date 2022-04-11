@@ -14,12 +14,10 @@ psutil 모듈에서 process 정보를 얻어 올 수 있음
 
 ```python
 
-process_name = 실행하고 있는 python 파일 이름
-
 for q in psutil.process_iter():
     try:
         if q.name() == 'python.exe':
-            if len(q.cmdline()) > 1 and process_name in q.cmdline()[1]:
+            if len(q.cmdline()) > 1 and '실행하고 있는 python 파일 이름' in q.cmdline()[1]:
                 print("존재")
 
     except psutil.AccessDenied:
