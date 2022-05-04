@@ -14,7 +14,7 @@ Blender, Max, Maya에서 3D Model정보에 가중치값을 세팅한 blendshape 
 3D 모델에 별도의 애니메이션 key없이 Blender에서 shape key를 잡아 놓으면, 유니티에서 애니메이션을 연출 할 수 있다.
 
 
-[blend shape 이름과 인덱스를 연결해주는 코드 튜토리얼]https://github.com/Glauz/Unity3D-CharacterCustomizationTutorial
+[blend shape 이름과 인덱스를 연결해주는 코드 튜토리얼](https://github.com/Glauz/Unity3D-CharacterCustomizationTutorial)
 
 ***
 
