@@ -8,11 +8,9 @@ Blender, Max, Maya에서 3D Model정보에 가중치값을 세팅한 blendshape 
 
 나무애니메이션을 예로 들면 작은 나무의 모델이 Base key이고, 스케일 업된 나무의 모델이 shape key이면 가중치에 따라서 나무가 자라는 연출을 할 수 있다.
 
-
 [Blender blend shape](https://www.youtube.com/watch?v=Uzw5zHLoyDM)
 
 3D 모델에 별도의 애니메이션 key없이 Blender에서 shape key를 잡아 놓으면, 유니티에서 애니메이션을 연출 할 수 있다.
-
 
 [blend shape 이름과 인덱스를 연결해주는 코드 튜토리얼](https://github.com/Glauz/Unity3D-CharacterCustomizationTutorial)
 
@@ -20,8 +18,9 @@ Blender, Max, Maya에서 3D Model정보에 가중치값을 세팅한 blendshape 
 
 blendshape face animation in unity test 
 
+https://flame.is.tue.mpg.de/download.php
 
-https://flame.is.tue.mpg.de/download.php 에서 얼굴을 스캔한 데이터로 학습한 모델을 통해 blend shape key값이 있는 3d face mesh를 제공한다. 
+얼굴을 스캔한 데이터로 학습한 모델을 통해 blend shape key값이 있는 3d face mesh를 제공한다. 
 
 Blender add-on을 사용해서 blendshape key값이 있는 얼굴 메시를 자동으로 생성할 수 았으며 .fbx형태로 추출할 수 있다.
 
