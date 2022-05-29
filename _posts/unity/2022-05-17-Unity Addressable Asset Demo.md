@@ -4,6 +4,8 @@ title: Unity Addressable Asset System
 categories: [Unity]
 ---
 
+[Addressables Asset Example](https://github.com/SooWanKim/SoowanAddressablesAsset)
+
 유니티에서 지원하는 애셋번들 관리 시스템
 패키지매니저를 통해 설치
 
