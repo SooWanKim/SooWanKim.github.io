@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Unity Nlendshape
+title: Unity Blendshape
 categories: [C#, Unity]
 ---
 
