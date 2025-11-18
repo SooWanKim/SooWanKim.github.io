@@ -12,3 +12,7 @@ categories: [Unity]
 
 노드방식에 익숙해지면 **AUTOMATIC1111**보다 빠르게 local에서 cpu를 사용해 애셋을 생성할 수 있다.
 ![](/assets/images/2025-11-17-Test%20ComfyUI/2025-11-17-18-31-24.png)
+
+image to image
+프롬프트에는 **fancy axe, fantasy, epic, metal, full body**만 입력
+![](/assets/images/2025-11-17-Test%20ComfyUI/2025-11-18-11-35-49.png)
