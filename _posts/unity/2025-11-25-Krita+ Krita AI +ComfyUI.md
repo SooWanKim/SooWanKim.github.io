@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Test ComfyUI
+title: Krita + Krita AI + ComfyUI
 categories: [Unity]
 ---
 
