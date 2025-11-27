@@ -16,3 +16,6 @@ categories: [Unity]
 image to image
 프롬프트에는 **fancy axe, fantasy, epic, metal, full body**만 입력
 ![](/assets/images/2025-11-17-Test%20ComfyUI/2025-11-18-11-35-49.png)
+
+
+![](/assets/images/2025-11-17-Test%20ComfyUI/2025-11-27-16-33-02.png)
